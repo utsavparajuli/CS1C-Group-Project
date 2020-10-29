@@ -1,0 +1,333 @@
+﻿****Baseline story point estimate value of one = one hour of development for one developer****
+
+------------------------------ User Story 1 - Kate Steer ------------------------------
+
+#1 As a user, I should be able enter testimonials and access other user testimonials.
+
+DESCRIPTION:
+	The program provides a page of customer testimonials. The user will be able to enter their own as well.
+
+TASKS:
+	As a user, I can access prior satisfied customer testimonials.
+	As a user, I can enter my own testimonial about 2D Graphics Modeler. 
+	As an administrator, I can add and delete testimonials.
+
+TESTS:
+	Verify that a user can successfully enter in own testimonial.
+	Verify valid input.
+	Verify that a user is notified of their submission.
+	Verify that a date is posted along with submission.
+	Verify that a user can view prior testimonials.
+	Verify that an administrator can add and delete testimonials.
+	Verify that testimonials are persistent between executions.
+
+ASSIGNEE: 
+	Utsav, create system to enter user testimonials.
+	Brandon, create a system to access testimonials.
+
+ESTIMATION: 8
+
+PRIORITY: 6
+
+DONE:
+	Customer views testimonial page, complete with prior satisfied customer testimonials.
+	The user enters their own in a prompt box. User submits and is notified of a complete upload. 
+	Entered testimonial posted onto page. 
+	Administrators can add or delete. All task, test conditions satisfied.	
+
+---------------------------------------------------------------------------------------
+
+------------------------------ User Story 2 - Kate Steer ------------------------------
+
+#2 As a user, I should be able to access contact information and information about the team.
+
+DESCRIPTION:
+	The program provides a contact us page, complete with team name, logo and Q/A about the program.
+
+TASKS:
+	As a user, I can view team contact information, including name, logo and program information.
+
+TESTS:
+	Verify that a user can access the contact us page.
+	Verify the information is displayed correctly, including formatting.
+
+ASSIGNEE: 
+	Behrad, implement a page for a user to contact us.
+    Kate, create a team logo and a Q & A page.
+
+ESTIMATION: 10
+
+PRIORITY: 4
+
+DONE:
+	Users can access the complete contact us page, including team information, logo and other program information. 
+	All tasks and test conditions satisfied.	
+
+---------------------------------------------------------------------------------------
+
+------------------------------ User Story 3 - James Dowty -----------------------------
+
+#3 As a user, I can see all of the graphic objects on my screen.
+
+DESCRIPTION:
+	The program will display all of the graphics objects, such as shapes and text, for the user to see.  The graphics objects will be seen in the display area with the shape IDs displayed above each shape.
+
+TASKS:
+	As a user, I can see all of the graphics objects in the display area.
+	As a user, I can see the shape IDs displayed above their corresponding shapes.
+	As a user, I can see a display area of at least 1000(horizontal) x 500(vertical) pixels.
+	As an administrator, pixel (0,0) is in the upper left corner of the display area.
+	As an administrator, pixel (1000, 500) is in the bottom right corner of the display area.
+
+TESTS:
+	Verify every object is shown in the display area
+	Verify that each shape has an ID displayed above it
+	Verify that each ID corresponds with the shape below it.
+	Verify that the size of the display area is 1000 x 500 pixels.
+	Verify that the top left most pixel is (0,0)
+	Verify that the bottom right most pixel is (1000, 500)
+
+ASSIGNEE: 
+	Ahazz, create a display area for the shapes.
+	Nick, make the program display the shapes in the display area.
+
+ESTIMATION: 12
+
+PRIORITY: 2
+
+DONE:
+	Shape file is loaded into program
+	Shapes are all displayed
+	All task, test conditions satisfied
+
+---------------------------------------------------------------------------------------
+
+---------------------------- User Story 4 - Joey Campbell -----------------------------
+
+#4 As a user, I can store a shape’s properties in an external file
+
+DESCRIPTION:
+    Using file stream input, the program can read in a list various shapes and properties
+    Some of the shape’s properties are size/dimension, brush style/color, text style/color, and a unique ID
+    If need be, a user can adjust shapes.txt to enter their own custom shapes
+
+TASKS:
+	The program should be able to read in from an external I/O file
+	Variables need to be created for a shape’s properties 
+	A user should know the correct format to enter a shape’s properties into the text file so that the program reads in the data properly
+
+
+TESTS:
+    Verify that the text file’s input and output runs smoothly
+    Verify that there is a clear format for a user to enter in their shapes
+	Verify that user input is checked for any invalid data (like an integer instead of a string)
+
+ASSIGNEE: 
+	Joey, make the program locate and read in .txt file.
+	James, make the program separate different shapes and attributes into memory.
+
+ESTIMATION: 10
+
+PRIORITY: 1
+
+DONE:
+    A shape’s various properties are able to be read in from the program
+    Variables for each property have specific names
+    The user has a clear understanding for how the files should be written
+    Each shape that is read in from the shapes.txt file is stored into a memory-efficient vector
+
+---------------------------------------------------------------------------------------
+
+---------------------------- User Story 5 - Brandon Nguyen ----------------------------
+
+#5 As a user, I can render shapes and texts and be able to move shapes around the screen
+
+DESCRIPTION: 
+	The user can use a move shape to move the shapes  and texts across the screen and           all changes will be renderable. It will be visible to the user that a change is being made. 
+	All these functions can only be accessed by an administrator. The user can use these tools to help move a shape into a desired location. 
+
+TASKS:
+	An administrator should be able to move shapes to any desired location. 
+	The user should be able to see the rendered area being moved to. 
+	The user should be able to do similar action with texts.
+
+TESTS: 
+	Verify that only an administrator can be able to access these features.
+	Verify that there is a rendering area.
+	Verify that a shape has to be moved to a desired location.
+	Verify that this action is the action that the user wants (ie. confirmation)
+
+ASSIGNEE: 
+	Tim, allow the move tools to only be accessed by an administrator.	
+	Behrad, make a tool to move shapes on the screen.
+
+ESTIMATION: 15
+
+PRIORITY: 5
+
+DONE: 
+	The user has to be able to log in as an Administrator to be able to perform these functions. 
+	The function will let the user move shapes and objects to any desired location, or any area. 
+	It should prompt the user a confirmation message saying if the desired, location is where the user wants it. 
+	All shapes and texts should be renderable and seen in the rendering area. 
+
+---------------------------------------------------------------------------------------
+
+---------------------------- User Story 6 - Utsav Parajuli ----------------------------
+
+#6 As a user, I should be able to add and remove shapes via an add/remove shape form.
+
+DESCRIPTION:
+	The user of the program can add or remove shapes. This action is completed via an add/remove shape form. Along with the ability to add and remove shapes, the user can perform the same tasks on the texts being rendered.
+	The changes made are only accessible by the administrator and can be found in the rendering area.
+
+TASKS:
+	As a user I should be able to add and remove shapes, including text, being rendered.
+	As a user I should be able to fill out a form that will result in adding or removing a shape.
+	
+TESTS:
+	Verify that the user is able to fill out the form to add/remove shape
+	Verify the user is able to add/remove shapes and texts after filling the form
+	Verify that the change made by user to add/remove is saved in memory
+
+ASSIGNEE: 
+	Joey, create a form that allows the user to enter info to add/remove shapes.
+	James, Implement a way to move the shapes once the form is filled out.
+
+ESTIMATION: 12
+
+PRIORITY: 3
+
+DONE:
+	The shapes are successfully added or removed as instructed by the user.
+	Changes made by users to add/remove shapes are saved and changes are visible to administrators.
+
+---------------------------------------------------------------------------------------
+
+------------------------------ User Story 7 - Nicholas Lozano ------------------------------
+
+#7 As a user, I can produce a detailed list of all of my shapes.
+
+DESCRIPTION:
+	The user can produce a list of all shapes at any time. The produced list will have the listed shapes sorted by their id. All properties of the listed shapes will be visible.
+
+TASKS:
+	As a user I should be able to produce the list of shapes at any time.
+	As a user I should be able to read the list in sorted order according to shape id.
+	As a user I should be able to see all properties of the shapes that are listed.
+
+TESTS:
+	Verify that the option to produce and view the shape list is available at any time.
+	Verify the user is able to see all current shapes and their full properties on the list.
+	Verify that the list is sorted by shape id.
+	Verify that the list is easy to read and consistent in its format.
+
+ASSIGNEE: 
+	Utsav, create a function to sort all of the shape data.
+	Brandon, create a page or a window to display the list of shape data.
+
+ESTIMATION: 8
+
+PRIORITY: 10
+
+DONE:
+	The user can successfully view the list of shapes at any time. 
+	The list shows all information of each shape and is sorted by each shape's id.
+
+---------------------------------------------------------------------------------------
+
+----------------------------- User Story 8 - Tim Diersing -----------------------------
+
+#4 As a user, I can produce a list of the shape that have an area
+
+DESCRIPTION:
+	The user can get a list of all shapes that have an area. These will be sorted by area and the   
+	shape type, id, and area are included in the list.This list can be called at any time.
+
+TASKS:
+	As a user I should be able to get a list of shapes at any time.
+	As a user I should be able to read this list sorted by area.
+	As a user I should see the shape type, id, and area in this list for each shape.
+ 
+TESTS:
+       Verify that the option to create a list of shapes is available at any time.
+       Verify that this list can be created with only shapes with an area.
+       Verify that this list is sorted by the area.
+       Verify that this list contains the shape type, id, and area for each shape.
+
+ASSIGNEE: 
+	Brandon, Create a way to get and sort shape data.
+	Nick, create a page or window to display the list of shape data.
+
+ESTIMATION: 10
+
+PRIORITY: 7
+
+DONE:
+	The user can successfully view a list of shapes with area at any time. This list is sorted by     
+	the area and includes the shapes type, id, and area.
+
+---------------------------------------------------------------------------------------
+
+---------------------------- User Story 9 - Behrad Moussavi ---------------------------
+
+#9 As a user, I should be able to list all my shapes
+
+DESCRIPTION:
+	User should be able to see a shaping list report sorted 
+	by perimeter at any time that they require in the program.
+	Also it will show some detailed information about the shapes 
+TASKS:
+	As a user, I should be able to see the shape type
+	As a user, I should be able to see the shape ID
+	As a user, I should be able to see the shape perimeter 
+TESTS:
+	Verify that the report has included all those 3 tasks for each shape.
+	Verify that the report information will change according to the shapes.
+
+ASSIGNEE: 
+	Utsav, Create a way to sort the shape data by perimeter.
+	Kate, create a page or a window to display the shape data.
+
+ESTIMATION: 12
+
+PRIORITY: 8
+
+DONE:
+	User is able to see the ID, type, and most importantly the perimeter of each shape. 
+	All the shape information should be saved after the user has chosen a specific shape.
+       
+---------------------------------------------------------------------------------------
+
+----------------------------- User Story 10 - Ahazz Khan ------------------------------
+
+#10 As a user, I should be able to save my canvas.
+	
+DESCRIPTION:
+	User should be able to save changes made to the file
+	Program should automatically save changes soon after they are made
+	User should be able to save the file as another file type (Example .png) 
+	
+TASKS:
+	As a user, I should be able to save my canvas whenever I want.
+	As a user, I should be able to check the save history of my canvas.
+	
+TESTS: 
+	Verify that the user has made a change to be saved. 
+	Verify that each save file is in a list.
+	
+ASSIGNEE:
+	Ahazz, create a function to output the data into a file.
+	Tim, create an interface for the user to easily save the file.
+	
+ESTIMATION: 12
+	
+PRIORITY: 9
+	
+DONE: 
+	Program automatically saves canvas
+	User can manually save canvas
+	User can change file type through save function
+	User can view a history of save files
+
+---------------------------------------------------------------------------------------
