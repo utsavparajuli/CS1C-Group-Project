@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="MainLoginTitle">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -27,7 +27,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;2D Graphics Modeler&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="TeamNameLoginTitle">
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -40,27 +40,7 @@
      <string>Scrum and Coke</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>260</y>
-      <width>181</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>290</y>
-      <width>181</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="LoginButton">
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -72,6 +52,38 @@
     <property name="text">
      <string>Login</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>260</y>
+      <width>189</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="UsernamePasswordLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="UsernameLabel">
+       <property name="text">
+        <string>Username</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="UsernameEntry"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="PasswordLabel">
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="PasswordEntry"/>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
