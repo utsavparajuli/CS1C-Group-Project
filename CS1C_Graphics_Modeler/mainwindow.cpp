@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->IncorrectPasswordLabel->setVisible(false); //Hide login error message on startup
 }
 
 MainWindow::~MainWindow()
@@ -13,20 +14,34 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
+/*************************************************************************
+ * MainWindow::on_LoginButton_clicked()
+ * -----------------------------------------------------------------------
+ * This function tests if the username/password is correct.  If so, the
+ * MainPage is displayed with administrator privileges.  If not, an error
+ * message is displayed.
+ * ***********************************************************************/
 void MainWindow::on_LoginButton_clicked()
 {
-    //ui->LoginButton->setText("Changed");
-    if(ui->UsernameEntry->text() == "Admin" && ui->PasswordEntry->text() == "Admin")
+    if(ui->UsernameEntry->text() == "Admin" && ui->PasswordEntry->text() == "Admin") //Checking if entries are correct
     {
-        ui->LoginButton->setText("Verified");
-        // Start Program for admin
+        ui->stackedWidget->setCurrentIndex(1); //Changing to MainPage
+        ui->IncorrectPasswordLabel->setVisible(false); //Hiding error message
     }
     else
     {
-        ui->LoginButton->setText("Failed");
-        // Start Program for user
+        ui->IncorrectPasswordLabel->setVisible(true); //Displaying error message
     }
 }
 
-
+/*************************************************************************
+ * MainWindow::on_LoginButtonGuest_clicked()
+ * -----------------------------------------------------------------------
+ * This function switches to the MainPage without a username/password with
+ * "guest user" privileges.
+ * ***********************************************************************/
+void MainWindow::on_LoginButtonGuest_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1); //Changing to MainPage
+    ui->IncorrectPasswordLabel->setVisible(false); //Hiding error message
+}

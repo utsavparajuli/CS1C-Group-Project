@@ -17,7 +17,9 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,15 +28,22 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QStackedWidget *stackedWidget;
+    QWidget *LoginPage;
+    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
     QLabel *MainLoginTitle;
     QLabel *TeamNameLoginTitle;
-    QPushButton *LoginButton;
-    QWidget *layoutWidget;
-    QFormLayout *UsernamePasswordLayout;
+    QFormLayout *UsernamePasswordLayout_2;
     QLabel *UsernameLabel;
     QLineEdit *UsernameEntry;
     QLabel *PasswordLabel;
     QLineEdit *PasswordEntry;
+    QLabel *IncorrectPasswordLabel;
+    QPushButton *LoginButton;
+    QPushButton *LoginButtonGuest;
+    QLabel *LoginUserNoteTitle;
+    QWidget *MainPage;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -43,47 +52,88 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1012, 627);
+        MainWindow->setAutoFillBackground(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        MainLoginTitle = new QLabel(centralwidget);
-        MainLoginTitle->setObjectName(QString::fromUtf8("MainLoginTitle"));
-        MainLoginTitle->setGeometry(QRect(390, 190, 251, 31));
-        TeamNameLoginTitle = new QLabel(centralwidget);
-        TeamNameLoginTitle->setObjectName(QString::fromUtf8("TeamNameLoginTitle"));
-        TeamNameLoginTitle->setGeometry(QRect(460, 220, 101, 16));
-        LoginButton = new QPushButton(centralwidget);
-        LoginButton->setObjectName(QString::fromUtf8("LoginButton"));
-        LoginButton->setGeometry(QRect(470, 320, 75, 23));
-        layoutWidget = new QWidget(centralwidget);
+        stackedWidget = new QStackedWidget(centralwidget);
+        stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
+        stackedWidget->setGeometry(QRect(0, 0, 1011, 581));
+        LoginPage = new QWidget();
+        LoginPage->setObjectName(QString::fromUtf8("LoginPage"));
+        layoutWidget = new QWidget(LoginPage);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(410, 260, 189, 57));
-        UsernamePasswordLayout = new QFormLayout(layoutWidget);
-        UsernamePasswordLayout->setObjectName(QString::fromUtf8("UsernamePasswordLayout"));
-        UsernamePasswordLayout->setContentsMargins(0, 0, 0, 0);
+        layoutWidget->setGeometry(QRect(380, 200, 345, 201));
+        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        MainLoginTitle = new QLabel(layoutWidget);
+        MainLoginTitle->setObjectName(QString::fromUtf8("MainLoginTitle"));
+
+        verticalLayout->addWidget(MainLoginTitle, 0, Qt::AlignHCenter);
+
+        TeamNameLoginTitle = new QLabel(layoutWidget);
+        TeamNameLoginTitle->setObjectName(QString::fromUtf8("TeamNameLoginTitle"));
+
+        verticalLayout->addWidget(TeamNameLoginTitle, 0, Qt::AlignHCenter);
+
+        UsernamePasswordLayout_2 = new QFormLayout();
+        UsernamePasswordLayout_2->setObjectName(QString::fromUtf8("UsernamePasswordLayout_2"));
         UsernameLabel = new QLabel(layoutWidget);
         UsernameLabel->setObjectName(QString::fromUtf8("UsernameLabel"));
 
-        UsernamePasswordLayout->setWidget(0, QFormLayout::LabelRole, UsernameLabel);
+        UsernamePasswordLayout_2->setWidget(0, QFormLayout::LabelRole, UsernameLabel);
 
         UsernameEntry = new QLineEdit(layoutWidget);
         UsernameEntry->setObjectName(QString::fromUtf8("UsernameEntry"));
 
-        UsernamePasswordLayout->setWidget(0, QFormLayout::FieldRole, UsernameEntry);
+        UsernamePasswordLayout_2->setWidget(0, QFormLayout::FieldRole, UsernameEntry);
 
         PasswordLabel = new QLabel(layoutWidget);
         PasswordLabel->setObjectName(QString::fromUtf8("PasswordLabel"));
 
-        UsernamePasswordLayout->setWidget(1, QFormLayout::LabelRole, PasswordLabel);
+        UsernamePasswordLayout_2->setWidget(1, QFormLayout::LabelRole, PasswordLabel);
 
         PasswordEntry = new QLineEdit(layoutWidget);
         PasswordEntry->setObjectName(QString::fromUtf8("PasswordEntry"));
+        PasswordEntry->setEchoMode(QLineEdit::Password);
 
-        UsernamePasswordLayout->setWidget(1, QFormLayout::FieldRole, PasswordEntry);
+        UsernamePasswordLayout_2->setWidget(1, QFormLayout::FieldRole, PasswordEntry);
 
+
+        verticalLayout->addLayout(UsernamePasswordLayout_2);
+
+        IncorrectPasswordLabel = new QLabel(layoutWidget);
+        IncorrectPasswordLabel->setObjectName(QString::fromUtf8("IncorrectPasswordLabel"));
+        IncorrectPasswordLabel->setTextFormat(Qt::AutoText);
+
+        verticalLayout->addWidget(IncorrectPasswordLabel, 0, Qt::AlignHCenter);
+
+        LoginButton = new QPushButton(layoutWidget);
+        LoginButton->setObjectName(QString::fromUtf8("LoginButton"));
+
+        verticalLayout->addWidget(LoginButton, 0, Qt::AlignHCenter);
+
+        LoginButtonGuest = new QPushButton(layoutWidget);
+        LoginButtonGuest->setObjectName(QString::fromUtf8("LoginButtonGuest"));
+
+        verticalLayout->addWidget(LoginButtonGuest, 0, Qt::AlignHCenter);
+
+        LoginUserNoteTitle = new QLabel(layoutWidget);
+        LoginUserNoteTitle->setObjectName(QString::fromUtf8("LoginUserNoteTitle"));
+        QFont font;
+        font.setItalic(true);
+        LoginUserNoteTitle->setFont(font);
+
+        verticalLayout->addWidget(LoginUserNoteTitle, 0, Qt::AlignHCenter);
+
+        stackedWidget->addWidget(LoginPage);
+        MainPage = new QWidget();
+        MainPage->setObjectName(QString::fromUtf8("MainPage"));
+        stackedWidget->addWidget(MainPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1012, 25));
+        menubar->setGeometry(QRect(0, 0, 1012, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -99,9 +149,12 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         MainLoginTitle->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">2D Graphics Modeler</span></p></body></html>", nullptr));
         TeamNameLoginTitle->setText(QCoreApplication::translate("MainWindow", "Scrum and Coke", nullptr));
-        LoginButton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         UsernameLabel->setText(QCoreApplication::translate("MainWindow", "Username", nullptr));
         PasswordLabel->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
+        IncorrectPasswordLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#ff0000;\">Incorrect Username/Password</span></p></body></html>", nullptr));
+        LoginButton->setText(QCoreApplication::translate("MainWindow", "Login As Admin", nullptr));
+        LoginButtonGuest->setText(QCoreApplication::translate("MainWindow", "Login As Guest", nullptr));
+        LoginUserNoteTitle->setText(QCoreApplication::translate("MainWindow", "*To login as a Guest, no username or password is required", nullptr));
     } // retranslateUi
 
 };
