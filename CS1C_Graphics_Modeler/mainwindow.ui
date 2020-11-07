@@ -117,7 +117,21 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="MainPage"/>
+    <widget class="QWidget" name="MainPage">
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>200</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>sup JOEEEYYYYYYYYYY</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -126,7 +140,7 @@
      <x>0</x>
      <y>0</y>
      <width>1012</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
