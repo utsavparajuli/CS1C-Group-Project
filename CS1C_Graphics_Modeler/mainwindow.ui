@@ -27,7 +27,7 @@
      </rect>
     </property>
     <widget class="QWidget" name="LoginPage">
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>380</x>
