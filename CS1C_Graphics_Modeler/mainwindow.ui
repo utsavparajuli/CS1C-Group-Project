@@ -13,13 +13,16 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="MainLoginTitle">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>390</x>
       <y>190</y>
-      <width>201</width>
+      <width>251</width>
       <height>31</height>
      </rect>
     </property>
@@ -30,9 +33,9 @@
    <widget class="QLabel" name="TeamNameLoginTitle">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>460</x>
       <y>220</y>
-      <width>81</width>
+      <width>101</width>
       <height>16</height>
      </rect>
     </property>
@@ -43,23 +46,23 @@
    <widget class="QPushButton" name="LoginButton">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>450</x>
       <y>320</y>
-      <width>75</width>
-      <height>23</height>
+      <width>100</width>
+      <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string>Login</string>
+     <string>Login As Admin</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>410</x>
       <y>260</y>
       <width>189</width>
-      <height>48</height>
+      <height>57</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="UsernamePasswordLayout">
@@ -85,6 +88,37 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="LoginButtonGuest">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>350</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Login As Guest</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LoginUserNoteTitle">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>390</y>
+      <width>351</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>*To login as a Guest, no username or password is required</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -92,7 +126,7 @@
      <x>0</x>
      <y>0</y>
      <width>1012</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
