@@ -21,6 +21,7 @@ void MainWindow::on_LoginButton_clicked()
     {
         ui->LoginButton->setText("Verified");
         // Start Program for admin
+        ui->stackedWidget->setCurrentIndex(1);
     }
     else
     {
@@ -29,4 +30,7 @@ void MainWindow::on_LoginButton_clicked()
     }
 }
 
-
+void MainWindow::on_LogoutButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
