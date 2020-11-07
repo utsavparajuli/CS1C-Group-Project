@@ -19,6 +19,7 @@ private slots:
     void on_LoginButton_clicked();
 
     void on_LogoutButton_clicked();
+    void on_LoginButtonGuest_clicked();
 
 private:
     Ui::MainWindow *ui;

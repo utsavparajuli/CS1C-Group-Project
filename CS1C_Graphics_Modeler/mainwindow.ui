@@ -31,9 +31,9 @@
       <property name="geometry">
        <rect>
         <x>380</x>
-        <y>180</y>
+        <y>200</y>
         <width>345</width>
-        <height>204</height>
+        <height>201</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -71,9 +71,23 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="PasswordEntry"/>
+          <widget class="QLineEdit" name="PasswordEntry">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
          </item>
         </layout>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="IncorrectPasswordLabel">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Incorrect Username/Password&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+        </widget>
        </item>
        <item alignment="Qt::AlignHCenter">
         <widget class="QPushButton" name="LoginButton">
@@ -89,7 +103,7 @@
          </property>
         </widget>
        </item>
-       <item>
+       <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="LoginUserNoteTitle">
          <property name="font">
           <font>
@@ -169,7 +183,7 @@
      <x>0</x>
      <y>0</y>
      <width>1012</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
