@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
 <<<<<<< HEAD
-<<<<<<< HEAD
 <!-- Written by QtCreator 4.13.2, 2020-11-08T16:54:19. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{5539e0df-4412-4064-af12-394a5b5a675b}</value>
-=======
-<!-- Written by QtCreator 4.13.2, 2020-11-06T17:38:09. -->
-<qtcreator>
- <data>
-  <variable>EnvironmentId</variable>
-  <value type="QByteArray">{b949cfbe-9c46-4e1d-9de1-c79cd2d332d2}</value>
->>>>>>> parent of 755beb2... Updating Merge
 =======
 <!-- Written by QtCreator 4.13.2, 2020-11-06T17:38:09. -->
 <qtcreator>
@@ -111,13 +103,8 @@
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">0</value>
 <<<<<<< HEAD
-<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_clang_64bit-Debug</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_clang_64bit-Debug</value>
-=======
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Source\VSCode\C++\CS1C Source\CS1C Group Project - Shapes Painter\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
->>>>>>> parent of 755beb2... Updating Merge
 =======
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Source\VSCode\C++\CS1C Source\CS1C Group Project - Shapes Painter\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
@@ -173,13 +160,8 @@
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">2</value>
 <<<<<<< HEAD
-<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_clang_64bit-Release</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_clang_64bit-Release</value>
-=======
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Source\VSCode\C++\CS1C Source\CS1C Group Project - Shapes Painter\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Release</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Release</value>
->>>>>>> parent of 755beb2... Updating Merge
 =======
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Source\VSCode\C++\CS1C Source\CS1C Group Project - Shapes Painter\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Release</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Release</value>
@@ -235,13 +217,8 @@
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">0</value>
 <<<<<<< HEAD
-<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_clang_64bit-Profile</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_clang_64bit-Profile</value>
-=======
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Source\VSCode\C++\CS1C Source\CS1C Group Project - Shapes Painter\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Profile</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Profile</value>
->>>>>>> parent of 755beb2... Updating Merge
 =======
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Source\VSCode\C++\CS1C Source\CS1C Group Project - Shapes Painter\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Profile</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Profile</value>
@@ -370,13 +347,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
 <<<<<<< HEAD
-<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
-=======
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
->>>>>>> parent of 755beb2... Updating Merge
 =======
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
@@ -393,11 +365,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
 <<<<<<< HEAD
-<<<<<<< HEAD
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/utsavparajuli/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_clang_64bit-Debug/CS1C_Graphics_Modeler.app/Contents/MacOS</value>
-=======
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
->>>>>>> parent of 755beb2... Updating Merge
 =======
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
 >>>>>>> parent of 755beb2... Updating Merge
