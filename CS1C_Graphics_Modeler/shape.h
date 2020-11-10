@@ -5,17 +5,16 @@
 #include <QPainter>
 #include <QLabel>
 #include <QFont>
+#include <QString>
 
 using namespace std;
+enum class ShapeType { NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Text};
 
 class shape
 {
 
 public:
-        enum class ShapeType { NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Text};
-
-        //constructor
-        shape(QPaintDevice* device = nullptr, int shapeId = -1, ShapeType = ShapeType::NoShape);
+        shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = ShapeType::NoShape);
 
         //destructor
         virtual ~shape() { };
@@ -33,17 +32,18 @@ public:
         //functions that will set the shape, pen and brush
         void set_ShapeId(int id);
         void set_Shape(ShapeType shape);
-        void set_pen(Qt::GlobalColor, int width, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle);
-        void set_pen(Qt::GlobalColor);
-        void set_brush(Qt::GlobalColor, Qt::BrushStyle);
+        void set_pen(Qt::GlobalColor color, int width, Qt::PenStyle penStyle, Qt::PenCapStyle penCapStyle, Qt::PenJoinStyle penJoinStyle);
+        void set_pen(Qt::GlobalColor color);
+        void set_brush(Qt::GlobalColor color, Qt::BrushStyle brushStyle);
 
         //functions for text
-        void set_text(string text, Qt::GlobalColor, Qt::AlignmentFlag, int pointSize, string fontFamily, QFont::Style, QFont::Weight);
-        void set_text_color(Qt::GlobalColor);
+        void set_text(string text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, string fontFamily, QFont::Style style, QFont::Weight weight);
+        void set_text_color(Qt::GlobalColor color);
 
 
         //default settings for brush and pen
         void default_style();
+        void draw_rect(int width, int height);
 
         //equality operator overloading
         bool operator==(const shape& otherShape) const;
@@ -58,7 +58,7 @@ public:
         virtual double calcArea() = 0;
 
 protected:
-        QPainter get_qpainter();
+        QPainter& get_qpainter();
 
 private:
         QPainter  qpainter;
