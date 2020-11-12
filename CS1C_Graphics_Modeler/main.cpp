@@ -9,10 +9,16 @@
 
 #include <QApplication>
 
+#include "parser.h"//***TSET CODE***
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+
+    QString file = "shapes.txt";
+    parser(file);//***TEST CODE***
+
     return a.exec();
 }
