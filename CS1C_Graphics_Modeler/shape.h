@@ -60,6 +60,8 @@ public:
 protected:
         QPainter& get_qpainter();
 
+        // hello
+
 private:
         QPainter  qpainter;
         int       shapeId;
