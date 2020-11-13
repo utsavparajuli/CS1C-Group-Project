@@ -1,4 +1,4 @@
-YOYOYOYOY
+
 ShapeId: 1
 ShapeType: Line
 ShapeDimensions: 20, 90, 100, 20
