@@ -61,7 +61,5 @@ private:
         QPen      pen;
         QBrush    brush;
         ShapeType shapeType;
-        QFont     font;
-        QLabel    text;
 };
 #endif // SHAPE_H
