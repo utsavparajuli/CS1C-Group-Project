@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "line.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -56,4 +58,8 @@ void MainWindow::on_LoginButtonGuest_clicked()
     ui->IncorrectPasswordLabel->setVisible(false); //Hiding error message
     ui->UsernameEntry->setText("");
     ui->PasswordEntry->setText(""); //Setting username/password entries empty after login
+
+    /*********************
+     * test script
+     * ******************/
 }

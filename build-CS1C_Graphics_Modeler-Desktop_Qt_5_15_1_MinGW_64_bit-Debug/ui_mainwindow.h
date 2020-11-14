@@ -21,6 +21,7 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "DrawingWidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -50,6 +51,7 @@ public:
     QLabel *WelcomeTitle;
     QLabel *WhichUserTitle;
     QLabel *UserLabel;
+    QWidget *DrawingWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -167,11 +169,14 @@ public:
 
         formLayout->setWidget(1, QFormLayout::FieldRole, UserLabel);
 
+        DrawingWidget = new QWidget(MainPage);
+        DrawingWidget->setObjectName(QString::fromUtf8("DrawingWidget"));
+        DrawingWidget->setGeometry(QRect(20, 80, 971, 491));
         stackedWidget->addWidget(MainPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1012, 21));
+        menubar->setGeometry(QRect(0, 0, 1012, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

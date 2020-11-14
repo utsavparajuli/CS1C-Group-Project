@@ -85,7 +85,8 @@ void parser(const QString fileName)
 
 void ParseLine(QTextStream &file, int ShapeID)
 {
-    qDebug() << file.readLine();
+    QStringList dimensions = file.readLine().remove(0, 17).split(", ");
+    qDebug() << dimensions;
     qDebug() << file.readLine();
     qDebug() << file.readLine();
     qDebug() << file.readLine();
