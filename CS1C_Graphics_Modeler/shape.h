@@ -36,11 +36,6 @@ public:
         void set_pen(Qt::GlobalColor color);
         void set_brush(Qt::GlobalColor color, Qt::BrushStyle brushStyle);
 
-        //functions for text
-        void set_text(string text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, string fontFamily, QFont::Style style, QFont::Weight weight);
-        void set_text_color(Qt::GlobalColor color);
-
-
         //default settings for brush and pen
         void default_style();
         void draw_rect(int width, int height);
