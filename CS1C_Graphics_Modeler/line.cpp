@@ -2,7 +2,6 @@
 #include <cmath>
 
 line::~line(){}
-//virtual void draw(const int x_cord, const int y_cord) override;
 
 void line::draw(const int x_cord, const int y_cord)
 {

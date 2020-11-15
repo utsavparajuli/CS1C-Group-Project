@@ -14,7 +14,7 @@ class shape
 {
 
 public:
-        shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = ShapeType::NoShape);
+    shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = ShapeType::NoShape);
 
         //destructor
         virtual ~shape() { };

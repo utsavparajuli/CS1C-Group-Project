@@ -54,6 +54,7 @@ public:
     QWidget *DrawingWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
+    class DrawingWidget *drawArea;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -140,6 +141,10 @@ public:
         LogoutButton = new QPushButton(MainPage);
         LogoutButton->setObjectName(QString::fromUtf8("LogoutButton"));
         LogoutButton->setGeometry(QRect(30, 10, 80, 25));
+
+        drawArea = new class DrawingWidget(MainPage);
+        drawArea->setGeometry(QRect(50, 50, 1000, 1000));
+
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         layoutWidget1->setGeometry(QRect(340, 20, 321, 46));
@@ -169,9 +174,7 @@ public:
 
         formLayout->setWidget(1, QFormLayout::FieldRole, UserLabel);
 
-        DrawingWidget = new QWidget(MainPage);
-        DrawingWidget->setObjectName(QString::fromUtf8("DrawingWidget"));
-        DrawingWidget->setGeometry(QRect(20, 80, 971, 491));
+
         stackedWidget->addWidget(MainPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);

@@ -1,5 +1,6 @@
 #include "shape.h"
 
+
 shape::shape(QPaintDevice* device, int id, ShapeType shape)
     :qpainter{device}, shapeId{id}, shapeType{shape}
 {
@@ -86,3 +87,4 @@ void shape::draw_rect(int width, int height)
 //{
 //    //text.setStyleSheet
 //}
+

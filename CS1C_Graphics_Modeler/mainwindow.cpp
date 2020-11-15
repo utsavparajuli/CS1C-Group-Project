@@ -62,4 +62,7 @@ void MainWindow::on_LoginButtonGuest_clicked()
     /*********************
      * test script
      * ******************/
+    line testLine(ui->drawArea);
+    testLine.setPoints(QPoint(10, 10), QPoint(500, 10));
+    testLine.draw(1, 1);
 }
