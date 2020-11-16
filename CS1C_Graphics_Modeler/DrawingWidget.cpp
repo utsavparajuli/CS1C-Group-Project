@@ -1,16 +1,17 @@
 #include "DrawingWidget.h"
-#include <QPainter>
-#include <QDebug>
 
+
+// DRAWS ALL SHAPES
 void DrawingWidget::paintEvent(QPaintEvent*)
 {
-    QPainter painter(this);
-    //painter.drawLine(100, 100, 200, 100);
-    //painter.drawLine(100, 120, 200, 120);
+    for(int i = 0; i < shapeVector->size(); i++)
+        (*shapeVector)[i]->draw(1, 1);
 }
 
 DrawingWidget::DrawingWidget(QWidget *parent)
     :QWidget(parent)
 {
+    QString file = "shapes.txt";
+    shapeVector = parser(file, this);
 
 }

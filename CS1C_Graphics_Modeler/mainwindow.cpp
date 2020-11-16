@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "line.h"
 #include <QDebug>
+#include "parser.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->IncorrectPasswordLabel->setVisible(false); //Hide login error message on startup
     ui->stackedWidget->setCurrentIndex(0); //Starting program on the login page
+
+
 }
 
 MainWindow::~MainWindow()
@@ -62,7 +65,7 @@ void MainWindow::on_LoginButtonGuest_clicked()
     /*********************
      * test script
      * ******************/
-    line testLine(ui->drawArea);
-    testLine.setPoints(QPoint(10, 10), QPoint(500, 10));
-    testLine.draw(1, 1);
+//    line testLine(ui->drawArea);
+//    testLine.setPoints(QPoint(10, 10), QPoint(500, 10));
+//    testLine.draw(1, 1);
 }

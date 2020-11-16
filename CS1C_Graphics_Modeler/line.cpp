@@ -1,14 +1,15 @@
 #include "line.h"
 #include <cmath>
+#include <QDebug>
 
 line::~line(){}
 
 void line::draw(const int x_cord, const int y_cord)
 {
-    get_qpainter().setPen(get_pen());
-    get_qpainter().setBrush(get_brush());
+//    get_qpainter().setPen(get_pen());
+//    get_qpainter().setBrush(get_brush());
     //drawID();
-    get_qpainter().drawLine(begin, end);
+//    get_qpainter().drawLine(begin, end);
 }
 
 void line::move(int x, int y)

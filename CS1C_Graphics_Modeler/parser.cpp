@@ -1,11 +1,9 @@
 #include "parser.h"
-#include <QCoreApplication>
-#include <QTextStream>
-#include <QDebug>
-#include <QMessageBox>
 
-void parser(const QString fileName)
+custom::vector<shape*>* parser(const QString fileName, QPaintDevice *device)
 {
+    custom::vector<shape*> *shapeVector = new custom::vector<shape*>();
+
     int ShapeID = 1;
 
     //Storing the path to the .txt file in filePath
@@ -21,7 +19,7 @@ void parser(const QString fileName)
         QMessageBox fileNotFoundError;
         fileNotFoundError.setText("ERROR: Input file (\"" + fileName +"\") not found!");
         fileNotFoundError.exec();
-        return;
+        exit(-1);
     }
 
     QTextStream input(&inputFile);
@@ -30,13 +28,15 @@ void parser(const QString fileName)
     while(!input.atEnd())
     {
         input.readLine();  //Reading in the first blank line
-        input.readLine(); //Throwing away shapeID (shapes will be numbered in the order they are read in)
+        input.readLine();  //Throwing away shapeID (shapes will be numbered in the order they are read in)
         textLine = input.readLine().remove(0, 11); //Reading in shape type
 
         if(textLine == "Line")
         {
             qDebug() << "\nPrinting Line";
-            ParseLine(input, ShapeID);
+            qDebug() << "CAPACITY  " << shapeVector->size();
+            shapeVector->push_back(ParseLine(input, ShapeID, device));
+            qDebug() << "CAPACITY  " << shapeVector->size();
         }
         else if(textLine == "Polyline")
         {
@@ -81,17 +81,34 @@ void parser(const QString fileName)
         ShapeID++;
     }
 
+    return shapeVector;
 }
 
-void ParseLine(QTextStream &file, int ShapeID)
+line* ParseLine(QTextStream &file, int ShapeID, QPaintDevice *device)
 {
+    line *tempLine = new line(device);
+
+    tempLine->set_ShapeId(ShapeID);
+
+    // GETS ATTRIBUTES FOR LINE
     QStringList dimensions = file.readLine().remove(0, 17).split(", ");
-    qDebug() << dimensions;
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
+
+    QString tempWidth = file.readLine().remove(0, 11);
+    int penWidth = tempWidth.toInt();
+
+    QString penColor = file.readLine().remove(0, 11);
+    QString penStyle = file.readLine().remove(0, 11);
+    QString penCapStyle = file.readLine().remove(0, 13);
+    QString penJoinStyle = file.readLine().remove(0, 14);
+
+    // SETS ATTRIBUTES FOR LINE
+    tempLine->setPoints(QPoint(dimensions[0].toInt(), dimensions[1].toInt()),
+                        QPoint(dimensions[2].toInt(), dimensions[3].toInt()));
+
+    tempLine->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
+                      stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle));
+
+    return tempLine;
 }
 
 void ParsePolyline(QTextStream &file, int ShapeID)
@@ -174,4 +191,62 @@ void ParseText(QTextStream &file, int ShapeID)
     qDebug() << file.readLine();
     qDebug() << file.readLine();
     qDebug() << file.readLine();
+}
+
+Qt::GlobalColor stringToColor(QString line)
+{
+    if(line == "white")
+        return Qt::GlobalColor::white;
+    else if (line == "black")
+        return Qt::GlobalColor::black;
+    else if (line == "red")
+        return Qt::GlobalColor::red;
+    else if (line == "green")
+        return Qt::GlobalColor::green;
+    else if (line == "blue")
+        return Qt::GlobalColor::blue;
+    else if (line == "cyan")
+        return Qt::GlobalColor::cyan;
+    else if (line == "magenta")
+        return Qt::GlobalColor::magenta;
+    else if(line == "yellow")
+        return Qt::GlobalColor::yellow;
+    else if(line == "gray")
+        return Qt::GlobalColor::gray;
+}
+
+Qt::PenStyle stringToPenStyle(QString line)
+{
+    if(line == "SolidLine")
+        return Qt::PenStyle::SolidLine;
+    else if (line == "DashLine")
+        return Qt::PenStyle::DashLine;
+    else if (line == "DotLine")
+        return Qt::PenStyle::DotLine;
+    else if (line == "DashDotLine")
+        return Qt::PenStyle::DashDotLine;
+    else if (line == "DashDotDotLine")
+        return Qt::PenStyle::DashDotDotLine;
+    else if (line == "NoPen")
+        return Qt::PenStyle::SolidLine;
+}
+
+Qt::PenCapStyle stringToPenCapStyle(QString line)
+{
+    if(line == "SquareCap")
+        return Qt::PenCapStyle::SquareCap;
+    else if (line == "FlatCap")
+        return Qt::PenCapStyle::FlatCap;
+    else if (line == "RoundCap")
+        return Qt::PenCapStyle::RoundCap;
+}
+
+Qt::PenJoinStyle stringToPenJoinStyle(QString line)
+{
+    if(line == "BevelJoin")
+        return Qt::PenJoinStyle::BevelJoin;
+    else if (line == "MiterJoin")
+        return Qt::PenJoinStyle::MiterJoin;
+    else if (line == "RoundJoin")
+       return Qt::PenJoinStyle::RoundJoin;
 }

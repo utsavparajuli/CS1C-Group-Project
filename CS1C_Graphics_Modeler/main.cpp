@@ -17,8 +17,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    QString file = "shapes.txt";
-    parser(file);//***TEST CODE***
+
 
     return a.exec();
 }

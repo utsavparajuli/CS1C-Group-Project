@@ -57,6 +57,9 @@ public:
         virtual double calcPerimeter() = 0;
         virtual double calcArea() = 0;
 
+        // TESTNIG
+        int getID() {return shapeId;}
+
 protected:
         QPainter& get_qpainter();
 

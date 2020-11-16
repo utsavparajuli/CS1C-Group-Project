@@ -2,24 +2,22 @@
 #define DRAWINGWIDGET_H
 
 #include <QWidget>
+#include <QPainter>
+#include <QDebug>
+#include "line.h"
+#include "vector.h"
+#include "parser.h"
 
 class DrawingWidget : public QWidget
 {
 public:
-    enum class ShapeType { NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Text};
     explicit DrawingWidget(QWidget *parent = nullptr);
-
-    void setShape(ShapeType);
-    void setBegin(QPoint);
-    void setEnd(QPoint);
 
 protected:
     void paintEvent(QPaintEvent *event);
 
 private:
-    ShapeType shape;
-    QPoint begin;
-    QPoint end;
+    custom::vector<shape*>* shapeVector;
 };
 
 #endif // DRAWINGWIDGET_H
