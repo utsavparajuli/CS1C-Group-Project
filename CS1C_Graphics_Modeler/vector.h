@@ -63,8 +63,6 @@ public:
         rhs.size_v = 0;
         rhs.space = 0;
     }
-
-
   
     vector& operator=(vector&& rhs) noexcept // move assignment
     {

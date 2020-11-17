@@ -14,7 +14,7 @@ class shape
 {
 
 public:
-        shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = ShapeType::NoShape);
+    shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = ShapeType::NoShape);
 
         //destructor
         virtual ~shape() { };
@@ -47,10 +47,13 @@ public:
         bool operator<(const shape& otherShape) const;
 
         //virtual methods
-        virtual void draw(const int x_cord, const int y_cord) = 0;
+        virtual void draw(QPaintDevice *device) = 0;
         virtual void move(const int x_cord, const int y_cord) = 0;
         virtual double calcPerimeter() = 0;
         virtual double calcArea() = 0;
+
+        // TESTNIG
+        int getID() {return shapeId;}
 
 protected:
         QPainter& get_qpainter();

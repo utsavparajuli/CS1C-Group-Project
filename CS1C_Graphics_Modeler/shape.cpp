@@ -86,3 +86,18 @@ void shape::draw_rect(int width, int height)
 {
     qpainter.drawRect(QRect(0, 0, width, height));
 }
+
+
+//void shape::set_text(string text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, string fontFamily, QFont::Style style, QFont::Weight weight)
+//{
+//    font.setStyle(style);
+//    text.
+
+
+//}
+
+//void shape::set_text_color(Qt::GlobalColor color)
+//{
+//    //text.setStyleSheet
+//}
+
