@@ -17,8 +17,8 @@
 
 //void shapeParser(custom::vector<shape*>&, const QString fileName); //PROTOTYPE
 
-custom::vector<shape*>* parser(const QString fileName, QPaintDevice *device);
-line* ParseLine(QTextStream &file, int ShapeID, QPaintDevice *device);
+custom::vector<shape*>* parser(const QString fileName);
+line* ParseLine(QTextStream &file, int ShapeID);
 void ParsePolyline(QTextStream &file, int ShapeID);
 void ParsePolygon(QTextStream &file, int ShapeID);
 void ParseRectangle(QTextStream &file, int ShapeID);

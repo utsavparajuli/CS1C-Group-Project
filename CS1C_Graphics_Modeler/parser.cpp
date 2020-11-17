@@ -1,6 +1,6 @@
 #include "parser.h"
 
-custom::vector<shape*>* parser(const QString fileName, QPaintDevice *device)
+custom::vector<shape*>* parser(const QString fileName)
 {
     custom::vector<shape*> *shapeVector = new custom::vector<shape*>();
 
@@ -33,10 +33,7 @@ custom::vector<shape*>* parser(const QString fileName, QPaintDevice *device)
 
         if(textLine == "Line")
         {
-            qDebug() << "\nPrinting Line";
-            qDebug() << "CAPACITY  " << shapeVector->size();
-            shapeVector->push_back(ParseLine(input, ShapeID, device));
-            qDebug() << "CAPACITY  " << shapeVector->size();
+            shapeVector->push_back(ParseLine(input, ShapeID));
         }
         else if(textLine == "Polyline")
         {
@@ -84,9 +81,9 @@ custom::vector<shape*>* parser(const QString fileName, QPaintDevice *device)
     return shapeVector;
 }
 
-line* ParseLine(QTextStream &file, int ShapeID, QPaintDevice *device)
+line* ParseLine(QTextStream &file, int ShapeID)
 {
-    line *tempLine = new line(device);
+    line *tempLine = new line();
 
     tempLine->set_ShapeId(ShapeID);
 
@@ -104,10 +101,8 @@ line* ParseLine(QTextStream &file, int ShapeID, QPaintDevice *device)
     tempLine->setPoints(QPoint(dimensions[0].toInt(), dimensions[1].toInt()),
                         QPoint(dimensions[2].toInt(), dimensions[3].toInt()));
 
-    qDebug() << penColor;
     tempLine->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
                       stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle));
-    qDebug() << tempLine->get_pen();
     return tempLine;
 }
 

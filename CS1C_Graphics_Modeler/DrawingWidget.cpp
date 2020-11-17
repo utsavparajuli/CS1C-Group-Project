@@ -13,6 +13,6 @@ DrawingWidget::DrawingWidget(QWidget *parent)
     :QWidget(parent)
 {
     QString file = "shapes.txt";
-    shapeVector = parser(file, this);
+    shapeVector = parser(file);
 
 }

@@ -1,8 +1,8 @@
 #include "shape.h"
 
 //constructor
-shape::shape(QPaintDevice* device, int id, ShapeType shape)
-    :qpainter{device}, shapeId{id}, shapeType{shape}
+shape::shape(int id, ShapeType shape)
+    :shapeId{id}, shapeType{shape}
 {
     pen = Qt::SolidLine;
     brush = Qt::NoBrush;
@@ -14,14 +14,6 @@ ShapeType shape::get_shape() const
 {
     return shapeType;
 }
-
-
-//returns the qpainter
-QPainter& shape::get_qpainter()
-{
-    return qpainter;
-}
-
 
 //returns the pen
 const QPen& shape::get_pen() const
@@ -76,17 +68,7 @@ void shape::default_style()
 {
     pen = Qt::SolidLine;
     brush = Qt::NoBrush;
-
-    qpainter.setPen(pen);
-    qpainter.setBrush(brush);
 }
-
-//drawing rectagnle
-void shape::draw_rect(int width, int height)
-{
-    qpainter.drawRect(QRect(0, 0, width, height));
-}
-
 
 //void shape::set_text(string text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, string fontFamily, QFont::Style style, QFont::Weight weight)
 //{

@@ -14,7 +14,7 @@ class shape
 {
 
 public:
-    shape(QPaintDevice* device = nullptr, int id = -1, ShapeType shape = ShapeType::NoShape);
+    shape(int id = -1, ShapeType shape = ShapeType::NoShape);
 
         //destructor
         virtual ~shape() { };
@@ -55,11 +55,7 @@ public:
         // TESTNIG
         int getID() {return shapeId;}
 
-protected:
-        QPainter& get_qpainter();
-
 private:
-        QPainter  qpainter;
         int       shapeId;
         QPen      pen;
         QBrush    brush;

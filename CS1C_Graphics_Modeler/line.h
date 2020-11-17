@@ -6,7 +6,7 @@
 class line: public shape
 {
 public:
-    line(QPaintDevice* device = NULL, int id = -1) : shape{device, id, ShapeType::Line}{};
+    line(int id = -1) : shape{id, ShapeType::Line}{};
     virtual ~line()override;
     void setPoints(const QPoint &begin, const QPoint &end);
     void move(const int x_cord, const int y_cord)override;
