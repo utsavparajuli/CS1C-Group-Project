@@ -10,7 +10,7 @@ public:
     virtual ~line()override;
     void setPoints(const QPoint &begin, const QPoint &end);
     void move(const int x_cord, const int y_cord)override;
-    void draw(const int x_cord, const int y_cord)override;
+    void draw(QPaintDevice *device)override;
     double calcPerimeter() override; //need to write implementation
     double calcArea() override; //need to write implementation
 

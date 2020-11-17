@@ -234,7 +234,7 @@ release/moc_mainwindow.cpp: ../CS1C_Graphics_Modeler/mainwindow.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qicon.h \
 		release/moc_predefs.h \
 		C:/Qt/5.15.1/mingw81_64/bin/moc.exe
-	C:\Qt\5.15.1\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.15.1/mingw81_64/mkspecs/win32-g++ -I"C:/Source/VSCode/C++/CS1C Source/CS1C Group Project - Shapes Painter/CS1C-Group-Project/CS1C_Graphics_Modeler" -IC:/Qt/5.15.1/mingw81_64/include -IC:/Qt/5.15.1/mingw81_64/include/QtWidgets -IC:/Qt/5.15.1/mingw81_64/include/QtGui -IC:/Qt/5.15.1/mingw81_64/include/QtANGLE -IC:/Qt/5.15.1/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\CS1C_Graphics_Modeler\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\5.15.1\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.15.1/mingw81_64/mkspecs/win32-g++ -I"C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/CS1C_Graphics_Modeler" -IC:/Qt/5.15.1/mingw81_64/include -IC:/Qt/5.15.1/mingw81_64/include/QtWidgets -IC:/Qt/5.15.1/mingw81_64/include/QtGui -IC:/Qt/5.15.1/mingw81_64/include/QtANGLE -IC:/Qt/5.15.1/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\CS1C_Graphics_Modeler\mainwindow.h -o release\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -367,7 +367,26 @@ release/DrawingWidget.o: ../CS1C_Graphics_Modeler/DrawingWidget.cpp ../CS1C_Grap
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpainter.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
+		../CS1C_Graphics_Modeler/line.h \
+		../CS1C_Graphics_Modeler/shape.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPen \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		../CS1C_Graphics_Modeler/vector.h \
+		../CS1C_Graphics_Modeler/parser.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QCoreApplication \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPaintDevice
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\DrawingWidget.o ..\CS1C_Graphics_Modeler\DrawingWidget.cpp
 
 release/line.o: ../CS1C_Graphics_Modeler/line.cpp ../CS1C_Graphics_Modeler/line.h \
@@ -483,7 +502,8 @@ release/line.o: ../CS1C_Graphics_Modeler/line.cpp ../CS1C_Graphics_Modeler/line.
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\line.o ..\CS1C_Graphics_Modeler\line.cpp
 
 release/main.o: ../CS1C_Graphics_Modeler/main.cpp ../CS1C_Graphics_Modeler/mainwindow.h \
@@ -613,8 +633,15 @@ release/main.o: ../CS1C_Graphics_Modeler/main.cpp ../CS1C_Graphics_Modeler/mainw
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		../CS1C_Graphics_Modeler/line.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QCoreApplication \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPaintDevice
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\CS1C_Graphics_Modeler\main.cpp
 
 release/mainwindow.o: ../CS1C_Graphics_Modeler/mainwindow.cpp ../CS1C_Graphics_Modeler/mainwindow.h \
@@ -764,14 +791,23 @@ release/mainwindow.o: ../CS1C_Graphics_Modeler/mainwindow.cpp ../CS1C_Graphics_M
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QVBoxLayout \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QWidget \
 		../CS1C_Graphics_Modeler/DrawingWidget.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPainter \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpainter.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
 		../CS1C_Graphics_Modeler/line.h \
 		../CS1C_Graphics_Modeler/shape.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPen \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPainter \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpainter.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug
+		../CS1C_Graphics_Modeler/vector.h \
+		../CS1C_Graphics_Modeler/parser.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QCoreApplication \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPaintDevice
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\CS1C_Graphics_Modeler\mainwindow.cpp
 
 release/parser.o: ../CS1C_Graphics_Modeler/parser.cpp ../CS1C_Graphics_Modeler/parser.h \
@@ -889,6 +925,7 @@ release/parser.o: ../CS1C_Graphics_Modeler/parser.cpp ../CS1C_Graphics_Modeler/p
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		../CS1C_Graphics_Modeler/line.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QCoreApplication \
@@ -897,7 +934,8 @@ release/parser.o: ../CS1C_Graphics_Modeler/parser.cpp ../CS1C_Graphics_Modeler/p
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPaintDevice
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\parser.o ..\CS1C_Graphics_Modeler\parser.cpp
 
 release/shape.o: ../CS1C_Graphics_Modeler/shape.cpp ../CS1C_Graphics_Modeler/shape.h \

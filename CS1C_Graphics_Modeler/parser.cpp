@@ -93,11 +93,10 @@ line* ParseLine(QTextStream &file, int ShapeID, QPaintDevice *device)
     // GETS ATTRIBUTES FOR LINE
     QStringList dimensions = file.readLine().remove(0, 17).split(", ");
 
-    QString tempWidth = file.readLine().remove(0, 11);
+    QString penColor = file.readLine().remove(0, 10);
+    QString tempWidth = file.readLine().remove(0, 10);
     int penWidth = tempWidth.toInt();
-
-    QString penColor = file.readLine().remove(0, 11);
-    QString penStyle = file.readLine().remove(0, 11);
+    QString penStyle = file.readLine().remove(0, 10);
     QString penCapStyle = file.readLine().remove(0, 13);
     QString penJoinStyle = file.readLine().remove(0, 14);
 
@@ -105,9 +104,10 @@ line* ParseLine(QTextStream &file, int ShapeID, QPaintDevice *device)
     tempLine->setPoints(QPoint(dimensions[0].toInt(), dimensions[1].toInt()),
                         QPoint(dimensions[2].toInt(), dimensions[3].toInt()));
 
+    qDebug() << penColor;
     tempLine->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
                       stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle));
-
+    qDebug() << tempLine->get_pen();
     return tempLine;
 }
 

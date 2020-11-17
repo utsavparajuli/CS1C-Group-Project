@@ -52,7 +52,7 @@ public:
         bool operator<(const shape& otherShape) const;
 
         //virtual methods
-        virtual void draw(const int x_cord, const int y_cord) = 0;
+        virtual void draw(QPaintDevice *device) = 0;
         virtual void move(const int x_cord, const int y_cord) = 0;
         virtual double calcPerimeter() = 0;
         virtual double calcArea() = 0;

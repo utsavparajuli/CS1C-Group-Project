@@ -4,12 +4,18 @@
 
 line::~line(){}
 
-void line::draw(const int x_cord, const int y_cord)
+void line::draw(QPaintDevice *device)
 {
 //    get_qpainter().setPen(get_pen());
 //    get_qpainter().setBrush(get_brush());
     //drawID();
-//    get_qpainter().drawLine(begin, end);
+    QPainter painter;
+    painter.begin(device);
+    painter.setPen(get_pen());
+    //qDebug() << get_pen();
+    painter.setBrush(get_brush());
+    painter.drawLine(begin, end);
+    painter.end();
 }
 
 void line::move(int x, int y)
