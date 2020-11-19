@@ -11,10 +11,12 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    polyline.cpp \
     shape.cpp
 
 HEADERS += \
     mainwindow.h \
+    polyline.h \
     shape.h \
     vector.h
 
