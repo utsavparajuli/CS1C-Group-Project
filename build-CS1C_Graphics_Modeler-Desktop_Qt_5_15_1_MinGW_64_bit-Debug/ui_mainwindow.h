@@ -21,6 +21,7 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "DrawingWidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -50,8 +51,10 @@ public:
     QLabel *WelcomeTitle;
     QLabel *WhichUserTitle;
     QLabel *UserLabel;
+    QWidget *DrawingWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
+    class DrawingWidget *drawArea;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -138,6 +141,10 @@ public:
         LogoutButton = new QPushButton(MainPage);
         LogoutButton->setObjectName(QString::fromUtf8("LogoutButton"));
         LogoutButton->setGeometry(QRect(30, 10, 80, 25));
+
+        drawArea = new class DrawingWidget(MainPage);
+        drawArea->setGeometry(QRect(50, 50, 1000, 1000));
+
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         layoutWidget1->setGeometry(QRect(340, 20, 321, 46));
@@ -167,11 +174,12 @@ public:
 
         formLayout->setWidget(1, QFormLayout::FieldRole, UserLabel);
 
+
         stackedWidget->addWidget(MainPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1012, 21));
+        menubar->setGeometry(QRect(0, 0, 1012, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
