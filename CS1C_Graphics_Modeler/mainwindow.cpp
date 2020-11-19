@@ -69,3 +69,38 @@ void MainWindow::on_LoginButtonGuest_clicked()
 //    testLine.setPoints(QPoint(10, 10), QPoint(500, 10));
 //    testLine.draw(1, 1);
 }
+
+void MainWindow::on_TestimonialsButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_DoneButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_AddTestimonialButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::on_BackTTestimonialButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_ViewTestimonialsButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+void MainWindow::on_BackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
