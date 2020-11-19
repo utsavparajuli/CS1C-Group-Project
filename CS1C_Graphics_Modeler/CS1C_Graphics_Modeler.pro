@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     parser.cpp \
+    polyline.cpp \
     shape.cpp
 
 HEADERS += \
@@ -21,6 +22,7 @@ HEADERS += \
     line.h \
     mainwindow.h \
     parser.h \
+    polyline.h \
     shape.h \
     vector.h
 
