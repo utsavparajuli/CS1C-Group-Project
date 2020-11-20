@@ -106,14 +106,34 @@ line* ParseLine(QTextStream &file, int ShapeID)
     return tempLine;
 }
 
-void ParsePolyline(QTextStream &file, int ShapeID)
+polyline* ParsePolyline(QTextStream &file, int ShapeID)
 {
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
+    polyline *tempPolyline = new polyline();
+
+    tempPolyline->set_ShapeId(ShapeID);
+
+    QStringList dimensions = file.readLine().remove(0, 17).split(", ");
+
+    QPoint *pointArray = new QPoint[dimensions.size() / 2];
+
+    int point = 0;
+    for(int i = 0; i < dimensions.size() / 2; i++)
+    {
+        pointArray[i] = QPoint(dimensions[point].toInt(), dimensions[point + 1].toInt());
+        point += 2;
+    }
+
+    QString penColor = file.readLine().remove(0, 10);
+    QString tempWidth = file.readLine().remove(0, 10);
+    int penWidth = tempWidth.toInt();
+    QString penStyle = file.readLine().remove(0, 10);
+    QString penCapStyle = file.readLine().remove(0, 13);
+    QString penJoinStyle = file.readLine().remove(0, 14);
+
+    tempPolyline->setPoints(pointArray, dimensions.size() / 2);
+
+    tempPolyline->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
+                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
 }
 
 void ParsePolygon(QTextStream &file, int ShapeID)

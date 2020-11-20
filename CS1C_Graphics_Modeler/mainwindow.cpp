@@ -27,14 +27,13 @@ void MainWindow::colorChange()
     case 1 : ui->stackedWidget->setStyleSheet("background-color:red");
              colorCounter = 2;
              break;
-    case 2 : ui->stackedWidget->setStyleSheet("background-color:green");
+    case 2 : ui->stackedWidget->setStyleSheet("background-color:magenta");
              colorCounter = 3;
              break;
     case 3 : ui->stackedWidget->setStyleSheet("background-color:blue");
              colorCounter = 1;
              break;
     }
-
 }
 
 

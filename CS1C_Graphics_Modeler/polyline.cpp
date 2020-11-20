@@ -10,7 +10,10 @@ void polyline::draw(QPaintDevice *device)
     painter.begin(device);
     painter.setPen(get_pen());
     painter.setBrush(get_brush());
+
     painter.drawPolyline(points, pointCount);
+
+
     painter.end();
 }
 

@@ -4,6 +4,7 @@
 #include "vector.h"
 #include "shape.h"
 #include "line.h"
+#include "polyline.h"
 
 #include <QString>
 #include <QFile>
@@ -19,7 +20,7 @@
 
 custom::vector<shape*>* parser(const QString fileName);
 line* ParseLine(QTextStream &file, int ShapeID);
-void ParsePolyline(QTextStream &file, int ShapeID);
+polyline* ParsePolyline(QTextStream &file, int ShapeID);
 void ParsePolygon(QTextStream &file, int ShapeID);
 void ParseRectangle(QTextStream &file, int ShapeID);
 void ParseSquare(QTextStream &file, int ShapeID);
