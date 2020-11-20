@@ -59,7 +59,7 @@ void MainWindow::on_LoginButton_clicked()
     {
         //ui->IncorrectPasswordLabel->setVisible(true); //Displaying error message
         QMessageBox passwordBox;
-        passwordBox.setText("INCORRECT PASSWORD!!!\n>:(");
+        passwordBox.setText("RAVE MODE ACTIVATED!!!");
         passwordBox.exec();
 
         QTimer *timer = new QTimer(this);
