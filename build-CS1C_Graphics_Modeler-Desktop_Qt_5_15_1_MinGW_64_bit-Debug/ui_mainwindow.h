@@ -143,7 +143,8 @@ public:
         LogoutButton->setGeometry(QRect(30, 10, 80, 25));
 
         drawArea = new class DrawingWidget(MainPage);
-        drawArea->setGeometry(QRect(50, 50, 1000, 1000));
+        drawArea->setGeometry(QRect(50, 70, 900, 500));
+        drawArea->setStyleSheet("border: 1px solid black; background-color:white;");
 
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));

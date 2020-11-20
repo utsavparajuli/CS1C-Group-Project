@@ -19,9 +19,11 @@ private slots:
     void on_LoginButton_clicked();
     void on_LogoutButton_clicked();
     void on_LoginButtonGuest_clicked();
+    void colorChange();
 
 private:
     Ui::MainWindow *ui;
+    int colorCounter;
 
 };
 #endif // MAINWINDOW_H

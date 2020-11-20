@@ -28,6 +28,7 @@ public:
         const QPen& get_pen() const;
         const QBrush& get_brush() const;
         const QLabel get_text() const;
+        QPainter& get_painter(){return painter;}
 
         //functions that will set the shape, pen and brush
         void set_ShapeId(int id);
@@ -60,5 +61,6 @@ private:
         QPen      pen;
         QBrush    brush;
         ShapeType shapeType;
+        QPainter  painter;
 };
 #endif // SHAPE_H

@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include "line.h"
 #include <QDebug>
-#include "parser.h"
+#include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->IncorrectPasswordLabel->setVisible(false); //Hide login error message on startup
     ui->stackedWidget->setCurrentIndex(0); //Starting program on the login page
-
+    colorCounter = 1;
 
 }
 
@@ -19,6 +19,24 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::colorChange()
+{
+    switch(colorCounter)
+    {
+    case 1 : ui->stackedWidget->setStyleSheet("background-color:red");
+             colorCounter = 2;
+             break;
+    case 2 : ui->stackedWidget->setStyleSheet("background-color:green");
+             colorCounter = 3;
+             break;
+    case 3 : ui->stackedWidget->setStyleSheet("background-color:blue");
+             colorCounter = 1;
+             break;
+    }
+
+}
+
 
 /*************************************************************************
  * MainWindow::on_LoginButton_clicked()
@@ -39,7 +57,15 @@ void MainWindow::on_LoginButton_clicked()
     }
     else
     {
-        ui->IncorrectPasswordLabel->setVisible(true); //Displaying error message
+        //ui->IncorrectPasswordLabel->setVisible(true); //Displaying error message
+        QMessageBox passwordBox;
+        passwordBox.setText("INCORRECT PASSWORD!!!\n>:(");
+        passwordBox.exec();
+
+        QTimer *timer = new QTimer(this);
+        connect(timer, SIGNAL(timeout()), this, SLOT(colorChange()));
+        timer->start(25);
+
     }
 }
 
@@ -61,11 +87,4 @@ void MainWindow::on_LoginButtonGuest_clicked()
     ui->IncorrectPasswordLabel->setVisible(false); //Hiding error message
     ui->UsernameEntry->setText("");
     ui->PasswordEntry->setText(""); //Setting username/password entries empty after login
-
-    /*********************
-     * test script
-     * ******************/
-//    line testLine(ui->drawArea);
-//    testLine.setPoints(QPoint(10, 10), QPoint(500, 10));
-//    testLine.draw(1, 1);
 }

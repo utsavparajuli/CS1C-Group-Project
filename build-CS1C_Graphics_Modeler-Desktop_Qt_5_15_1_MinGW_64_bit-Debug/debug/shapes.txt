@@ -25,3 +25,12 @@ PenWidth: 2
 PenStyle: DashDotLine
 PenCapStyle: FlatCap
 PenJoinStyle: MiterJoin
+
+ShapeId: 4
+ShapeType: Line
+ShapeDimensions: 10, 100, 1000, 100
+PenColor: yellow
+PenWidth: 5
+PenStyle: SolidLine
+PenCapStyle: FlatCap
+PenJoinStyle: MiterJoin

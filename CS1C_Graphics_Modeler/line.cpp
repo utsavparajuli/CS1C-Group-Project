@@ -6,10 +6,8 @@ line::~line(){}
 
 void line::draw(QPaintDevice *device)
 {
-//    get_qpainter().setPen(get_pen());
-//    get_qpainter().setBrush(get_brush());
     //drawID();
-    QPainter painter;
+    QPainter &painter = get_painter();
     painter.begin(device);
     painter.setPen(get_pen());
     //qDebug() << get_pen();

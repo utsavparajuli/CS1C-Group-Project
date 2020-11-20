@@ -14,5 +14,4 @@ DrawingWidget::DrawingWidget(QWidget *parent)
 {
     QString file = "shapes.txt";
     shapeVector = parser(file);
-
 }
