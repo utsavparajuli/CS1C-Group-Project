@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="LoginPage">
      <widget class="QWidget" name="layoutWidget">
@@ -81,16 +81,6 @@
           </widget>
          </item>
         </layout>
-       </item>
-       <item alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="IncorrectPasswordLabel">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;Incorrect Username/Password&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::AutoText</enum>
-         </property>
-        </widget>
        </item>
        <item alignment="Qt::AlignHCenter">
         <widget class="QPushButton" name="LoginButton">

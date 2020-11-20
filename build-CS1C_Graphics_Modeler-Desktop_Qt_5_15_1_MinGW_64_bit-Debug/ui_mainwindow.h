@@ -40,7 +40,6 @@ public:
     QLineEdit *UsernameEntry;
     QLabel *PasswordLabel;
     QLineEdit *PasswordEntry;
-    QLabel *IncorrectPasswordLabel;
     QPushButton *LoginButton;
     QPushButton *LoginButtonGuest;
     QLabel *LoginUserNoteTitle;
@@ -51,10 +50,10 @@ public:
     QLabel *WelcomeTitle;
     QLabel *WhichUserTitle;
     QLabel *UserLabel;
-    QWidget *DrawingWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     class DrawingWidget *drawArea;
+
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -111,12 +110,6 @@ public:
 
         verticalLayout->addLayout(UsernamePasswordLayout);
 
-        IncorrectPasswordLabel = new QLabel(layoutWidget);
-        IncorrectPasswordLabel->setObjectName(QString::fromUtf8("IncorrectPasswordLabel"));
-        IncorrectPasswordLabel->setTextFormat(Qt::AutoText);
-
-        verticalLayout->addWidget(IncorrectPasswordLabel, 0, Qt::AlignHCenter);
-
         LoginButton = new QPushButton(layoutWidget);
         LoginButton->setObjectName(QString::fromUtf8("LoginButton"));
 
@@ -144,7 +137,7 @@ public:
 
         drawArea = new class DrawingWidget(MainPage);
         drawArea->setGeometry(QRect(50, 70, 900, 500));
-        drawArea->setStyleSheet("border: 1px solid black; background-color:white;");
+        drawArea->setStyleSheet("border: 3px solid black; background-color:white;");
 
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
@@ -175,7 +168,6 @@ public:
 
         formLayout->setWidget(1, QFormLayout::FieldRole, UserLabel);
 
-
         stackedWidget->addWidget(MainPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -188,7 +180,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -201,7 +193,6 @@ public:
         TeamNameLoginTitle->setText(QCoreApplication::translate("MainWindow", "Scrum and Coke", nullptr));
         UsernameLabel->setText(QCoreApplication::translate("MainWindow", "Username", nullptr));
         PasswordLabel->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
-        IncorrectPasswordLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#ff0000;\">Incorrect Username/Password</span></p></body></html>", nullptr));
         LoginButton->setText(QCoreApplication::translate("MainWindow", "Login As Admin", nullptr));
         LoginButtonGuest->setText(QCoreApplication::translate("MainWindow", "Login As Guest", nullptr));
         LoginUserNoteTitle->setText(QCoreApplication::translate("MainWindow", "*To login as a Guest, no username or password is required", nullptr));

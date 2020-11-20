@@ -6,49 +6,42 @@ polyline::~polyline(){}
 
 void polyline::draw(QPaintDevice *device)
 {
-//    get_qpainter().setPen(get_pen());
-//    get_qpainter().setBrush(get_brush());
-    //drawID();
-    QPainter painter;
+    QPainter &painter = get_painter();
     painter.begin(device);
     painter.setPen(get_pen());
-    //qDebug() << get_pen();
     painter.setBrush(get_brush());
-    painter.drawLine(p1, p2);
-    painter.drawLine(p2, p3);
-    painter.drawLine(p3, p4);
+    painter.drawPolyline(points, pointCount);
     painter.end();
 }
 
 // NEED HELP WITH MOVE
 void polyline::move(int x, int y)
 {
-    QPoint offset (p4 - p1);
-    QPoint tempOne(QPoint(x,y));
-    QPoint tempTwo(QPoint(x,y)+offset);
-    if(tempOne.x()<1000 &&tempOne.y()<500 && tempTwo.x()<1000 && tempTwo.y()<500)
-    {
-        p1 = tempOne;
-        p4 = tempOne+offset;
-    }
+//    QPoint offset (p4 - p1);
+//    QPoint tempOne(QPoint(x,y));
+//    QPoint tempTwo(QPoint(x,y)+offset);
+//    if(tempOne.x()<1000 &&tempOne.y()<500 && tempTwo.x()<1000 && tempTwo.y()<500)
+//    {
+//        p1 = tempOne;
+//        p4 = tempOne+offset;
+//    }
+    return;
 }
 
-void polyline::setPoints(const QPoint &p1, const QPoint &p2, const QPoint &p3, const QPoint &p4)
+void polyline::setPoints(QPoint* newPoints, int count)
 {
-    this->p1 = p1;
-    this->p2 = p2;
-    this->p3 = p3;
-    this->p4 = p4;
+    points = newPoints;
+    pointCount = count;
 }
 
 double polyline::calcPerimeter()
 {
-    return 0;
+    return 0; //To edit!
 }
 
 double polyline::calcArea()
 {
-    return 0;
+    return 0; //To edit!
 }
 
 //void Line::drawID()
