@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <QMessageBox>
+#include <QMediaPlayer>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -58,6 +59,14 @@ void MainWindow::on_LoginButton_clicked()
         QMessageBox raveMessageBox;
         raveMessageBox.setText("RAVE MODE ACTIVATED!!!  >:D");
         raveMessageBox.exec();
+
+        QMediaPlayer *player;
+        player = new QMediaPlayer;
+        QString musicFilePath = qApp->applicationDirPath();
+        musicFilePath.append('/' + QString("RaveMusic.mp3"));
+        player->setMedia(QUrl::fromLocalFile(musicFilePath));
+        player->setVolume(50);
+        player->play();
 
         QTimer *timer = new QTimer(this);
         connect(timer, SIGNAL(timeout()), this, SLOT(colorChange()));

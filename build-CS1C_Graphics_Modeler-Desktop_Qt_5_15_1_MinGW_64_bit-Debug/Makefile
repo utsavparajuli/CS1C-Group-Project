@@ -248,8 +248,10 @@ Makefile: ../CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro C:/Qt/5.15.1/mingw8
 		C:/Qt/5.15.1/mingw81_64/mkspecs/features/yacc.prf \
 		C:/Qt/5.15.1/mingw81_64/mkspecs/features/lex.prf \
 		../CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro \
+		C:/Qt/5.15.1/mingw81_64/lib/Qt5Multimedia.prl \
 		C:/Qt/5.15.1/mingw81_64/lib/Qt5Widgets.prl \
 		C:/Qt/5.15.1/mingw81_64/lib/Qt5Gui.prl \
+		C:/Qt/5.15.1/mingw81_64/lib/Qt5Network.prl \
 		C:/Qt/5.15.1/mingw81_64/lib/Qt5Core.prl \
 		C:/Qt/5.15.1/mingw81_64/lib/qtmain.prl \
 		C:/Qt/5.15.1/mingw81_64/mkspecs/features/build_pass.prf
@@ -432,8 +434,10 @@ C:/Qt/5.15.1/mingw81_64/mkspecs/features/exceptions.prf:
 C:/Qt/5.15.1/mingw81_64/mkspecs/features/yacc.prf:
 C:/Qt/5.15.1/mingw81_64/mkspecs/features/lex.prf:
 ../CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro:
+C:/Qt/5.15.1/mingw81_64/lib/Qt5Multimedia.prl:
 C:/Qt/5.15.1/mingw81_64/lib/Qt5Widgets.prl:
 C:/Qt/5.15.1/mingw81_64/lib/Qt5Gui.prl:
+C:/Qt/5.15.1/mingw81_64/lib/Qt5Network.prl:
 C:/Qt/5.15.1/mingw81_64/lib/Qt5Core.prl:
 C:/Qt/5.15.1/mingw81_64/lib/qtmain.prl:
 C:/Qt/5.15.1/mingw81_64/mkspecs/features/build_pass.prf:
