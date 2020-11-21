@@ -28,10 +28,19 @@ void MainWindow::colorChange()
     case 1 : ui->stackedWidget->setStyleSheet("background-color:red");
              colorCounter = 2;
              break;
-    case 2 : ui->stackedWidget->setStyleSheet("background-color:magenta");
+    case 2 : ui->stackedWidget->setStyleSheet("background-color:green");
              colorCounter = 3;
              break;
     case 3 : ui->stackedWidget->setStyleSheet("background-color:blue");
+             colorCounter = 4;
+             break;
+    case 4 : ui->stackedWidget->setStyleSheet("background-color:yellow");
+             colorCounter = 5;
+             break;
+    case 5 : ui->stackedWidget->setStyleSheet("background-color:cyan");
+             colorCounter = 6;
+             break;
+    case 6 : ui->stackedWidget->setStyleSheet("background-color:magenta");
              colorCounter = 1;
              break;
     }
@@ -56,10 +65,6 @@ void MainWindow::on_LoginButton_clicked()
     }
     else if(ui->UsernameEntry->text() == "RAVE" && ui->PasswordEntry->text() == "RAVE")
     {
-        QMessageBox raveMessageBox;
-        raveMessageBox.setText("RAVE MODE ACTIVATED!!!  >:D");
-        raveMessageBox.exec();
-
         QMediaPlayer *player;
         player = new QMediaPlayer;
         QString musicFilePath = qApp->applicationDirPath();
@@ -70,7 +75,11 @@ void MainWindow::on_LoginButton_clicked()
 
         QTimer *timer = new QTimer(this);
         connect(timer, SIGNAL(timeout()), this, SLOT(colorChange()));
-        timer->start(25);
+        timer->start(50);
+
+        QMessageBox raveMessageBox;
+        raveMessageBox.setText("RAVE MODE ACTIVATED!!!  >:D");
+        raveMessageBox.exec();
     }
     else
     {
