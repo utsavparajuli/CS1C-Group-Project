@@ -75,7 +75,7 @@ void MainWindow::on_LoginButton_clicked()
 
         QTimer *timer = new QTimer(this);
         connect(timer, SIGNAL(timeout()), this, SLOT(colorChange()));
-        timer->start(50);
+        timer->start(416);
 
         QMessageBox raveMessageBox;
         raveMessageBox.setText("RAVE MODE ACTIVATED!!!  >:D");
