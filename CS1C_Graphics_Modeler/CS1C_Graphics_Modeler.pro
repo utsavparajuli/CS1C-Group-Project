@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     DrawingWidget.cpp \
+    ellipse.cpp \
     line.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 
 HEADERS += \
     DrawingWidget.h \
+    ellipse.h \
     line.h \
     mainwindow.h \
     parser.h \
