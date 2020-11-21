@@ -56,8 +56,7 @@ custom::vector<shape*>* parser(const QString fileName)
         }
         else if(textLine == "Ellipse")
         {
-            qDebug() << "\nPrinting Ellipse";
-            ParseEllipse(input, ShapeID);
+            shapeVector->push_back(ParseEllipse(input, ShapeID));
         }
         else if(textLine == "Circle")
         {
@@ -173,16 +172,29 @@ void ParseSquare(QTextStream &file, int ShapeID)
     qDebug() << file.readLine();
 }
 
-void ParseEllipse(QTextStream &file, int ShapeID)
+ellipse* ParseEllipse(QTextStream &file, int ShapeID)
 {
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
+    QStringList dimensions = file.readLine().remove(0, 17).split(", ");
+
+    QString penColor = file.readLine().remove(0, 10);
+    QString tempWidth = file.readLine().remove(0, 10);
+    int penWidth = tempWidth.toInt();
+    QString penStyle = file.readLine().remove(0, 10);
+    QString penCapStyle = file.readLine().remove(0, 13);
+    QString penJoinStyle = file.readLine().remove(0, 14);
+    QString brushColor = file.readLine().remove(0, 12);
+    QString brushStyle = file.readLine().remove(0, 12);
+
+    ellipse *tempEllipse = new ellipse(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
+
+    tempEllipse->set_ShapeId(ShapeID);
+
+    tempEllipse->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
+                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+
+    tempEllipse->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+
+    return tempEllipse;
 }
 
 void ParseCircle(QTextStream &file, int ShapeID)
@@ -265,4 +277,16 @@ Qt::PenJoinStyle stringToPenJoinStyle(QString line)
         return Qt::PenJoinStyle::MiterJoin;
     else if (line == "RoundJoin")
        return Qt::PenJoinStyle::RoundJoin;
+}
+
+Qt::BrushStyle stringToBrushStyle(QString line)
+{
+    if(line == "SolidPattern")
+        return Qt::BrushStyle::SolidPattern;
+    else if (line == "HorPattern")
+        return Qt::BrushStyle::HorPattern;
+    else if (line == "VerPattern")
+        return Qt::BrushStyle::VerPattern;
+    else if (line == "NoBrush")
+        return Qt::BrushStyle::NoBrush;
 }

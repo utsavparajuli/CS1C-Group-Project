@@ -10,7 +10,7 @@
  *  Ellipse can be styled with different pens and brushes.
  */
 
-class Ellipse: public shape
+class ellipse: public shape
 {
 public:
 
@@ -21,7 +21,7 @@ public:
     *  width, height values.
     */
 
-    Ellipse();
+    ellipse(){};
 
     // Overloaded Ellipse constructor
     /* Function calls setShape() and setPoint() functions
@@ -30,7 +30,7 @@ public:
     *  width, height values that were passed.
     */
 
-    Ellipse(int x, int y, int width, int height);
+    ellipse(int x, int y, int width, int height);
 
     // Ellipse copy constructor
     /* Copy constructor for Ellipse objects
@@ -38,14 +38,14 @@ public:
      * passed by const reference.
     */
 
-     Ellipse(const Ellipse& source);
+     ellipse(const ellipse& source);
 
     // Ellipse destructor
     /* Destructor is called automatically.
      * Overrides base class virtual destructor.
     */
 
-    ~Ellipse()override;
+    ~ellipse()override;
 
 
     // setter function setCenter sets QPoint center

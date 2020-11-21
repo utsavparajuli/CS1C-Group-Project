@@ -1,17 +1,6 @@
 #include "ellipse.h"
 
-Ellipse::Ellipse():shape()
-{
-    set_Shape(ShapeType::Ellipse);
-    // default values for the ellipse
-    setCenter(100, 100);
-    setWidth(10);
-    setHeight(10);
-}
-
-
-
-Ellipse::Ellipse(int x, int y, int width, int height):shape()
+ellipse::ellipse(int x, int y, int width, int height):shape()
 {
     set_Shape(ShapeType::Ellipse);
     setCenter(x, y);
@@ -21,7 +10,7 @@ Ellipse::Ellipse(int x, int y, int width, int height):shape()
 
 
 
-Ellipse::Ellipse(const Ellipse& source)
+ellipse::ellipse(const ellipse& source)
 {
     x = source.getX();
     y = source.getY();
@@ -32,11 +21,11 @@ Ellipse::Ellipse(const Ellipse& source)
 
 
 
-Ellipse::~Ellipse() {}
+ellipse::~ellipse() {}
 
 
 
-void Ellipse::setCenter(int newx, int newy)
+void ellipse::setCenter(int newx, int newy)
 {
     x = newx;
     y = newy;
@@ -44,54 +33,54 @@ void Ellipse::setCenter(int newx, int newy)
 
 
 
-void Ellipse::setWidth(int width)
+void ellipse::setWidth(int width)
 {
     this->width = width;
 }
 
 
 
-void Ellipse::setHeight(int height)
+void ellipse::setHeight(int height)
 {
     this->height = height;
 }
 
 
-int Ellipse::getX()const
+int ellipse::getX()const
 {
     return x;
 }
 
 
 
-int Ellipse::getY()const
+int ellipse::getY()const
 {
     return y;
 }
 
 
 
-int Ellipse::getWidth()const
+int ellipse::getWidth()const
 {
     return width;
 }
 
 
 
-int Ellipse::getHeight()const
+int ellipse::getHeight()const
 {
     return height;
 }
 
 
 
-QString Ellipse::getShapeID()const
+QString ellipse::getShapeID()const
 {
     return stringID;
 }
 
 
-void Ellipse::draw(QPaintDevice *device)
+void ellipse::draw(QPaintDevice *device)
 {
     QPainter &painter = get_painter();
     painter.begin(device);
@@ -107,7 +96,7 @@ void Ellipse::draw(QPaintDevice *device)
 
 
 
-void Ellipse::drawID()
+void ellipse::drawID()
 {
 //    // Int variables that hold the coordinates for left most point of the object
 //    int leftmostPoint;  // < leftmostpoint holds the x- axis value
@@ -125,7 +114,7 @@ void Ellipse::drawID()
 
 
 
-void Ellipse::move(const int x,const int y)
+void ellipse::move(const int x,const int y)
 {
 //    QPoint newCenter(QPoint(x, y));
 
@@ -139,14 +128,14 @@ void Ellipse::move(const int x,const int y)
 
 
 
-double Ellipse::calcPerimeter()
+double ellipse::calcPerimeter()
 {
     return (width * 2) + (height * 2);
 }
 
 
 
-double Ellipse::calcArea()
+double ellipse::calcArea()
 {
     return width * height;
 }
