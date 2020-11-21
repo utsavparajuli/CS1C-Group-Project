@@ -10,8 +10,8 @@ PenJoinStyle: MiterJoin
 
 ShapeId: 2
 ShapeType: Polyline
-ShapeDimensions: 460, 90, 470, 20, 530, 40, 540, 80
-PenColor: green
+ShapeDimensions: 460, 90, 470, 20, 530, 40, 540, 80, 460, 90
+PenColor: blue
 PenWidth: 6
 PenStyle: SolidLine
 PenCapStyle: FlatCap

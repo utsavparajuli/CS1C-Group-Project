@@ -37,8 +37,7 @@ custom::vector<shape*>* parser(const QString fileName)
         }
         else if(textLine == "Polyline")
         {
-            qDebug() << "\nPrinting Polyline";
-            ParsePolyline(input, ShapeID);
+            shapeVector->push_back(ParsePolyline(input, ShapeID));
         }
         else if(textLine == "Polygon")
         {
@@ -134,6 +133,8 @@ polyline* ParsePolyline(QTextStream &file, int ShapeID)
 
     tempPolyline->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
                           stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+
+    return tempPolyline;
 }
 
 void ParsePolygon(QTextStream &file, int ShapeID)
