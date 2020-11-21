@@ -8,7 +8,7 @@
 #include <QString>
 
 using namespace std;
-enum class ShapeType { NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Text};
+enum class ShapeType { NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Square, Text};
 
 class shape
 {

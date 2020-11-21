@@ -1,0 +1,10 @@
+release/DrawingWidget.o
+release/ellipse.o
+release/line.o
+release/main.o
+release/mainwindow.o
+release/parser.o
+release/polyline.o
+release/shape.o
+release/square.o
+release/moc_mainwindow.o

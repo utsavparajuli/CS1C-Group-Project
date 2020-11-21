@@ -17,7 +17,8 @@ SOURCES += \
     mainwindow.cpp \
     parser.cpp \
     polyline.cpp \
-    shape.cpp
+    shape.cpp \
+    square.cpp
 
 HEADERS += \
     DrawingWidget.h \
@@ -27,6 +28,7 @@ HEADERS += \
     parser.h \
     polyline.h \
     shape.h \
+    square.h \
     vector.h
 
 FORMS += \

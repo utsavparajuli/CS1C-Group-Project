@@ -6,6 +6,7 @@
 #include "line.h"
 #include "polyline.h"
 #include "ellipse.h"
+#include "square.h"
 
 #include <QString>
 #include <QFile>
@@ -24,7 +25,7 @@ line* ParseLine(QTextStream &file, int ShapeID);
 polyline* ParsePolyline(QTextStream &file, int ShapeID);
 void ParsePolygon(QTextStream &file, int ShapeID);
 void ParseRectangle(QTextStream &file, int ShapeID);
-void ParseSquare(QTextStream &file, int ShapeID);
+square* ParseSquare(QTextStream &file, int ShapeID);
 ellipse* ParseEllipse(QTextStream &file, int ShapeID);
 void ParseCircle(QTextStream &file, int ShapeID);
 void ParseText(QTextStream &file, int ShapeID);

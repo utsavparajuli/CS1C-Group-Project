@@ -51,8 +51,7 @@ custom::vector<shape*>* parser(const QString fileName)
         }
         else if(textLine == "Square")
         {
-            qDebug() << "\nPrinting Square";
-            ParseSquare(input, ShapeID);
+            shapeVector->push_back(ParseSquare(input, ShapeID));
         }
         else if(textLine == "Ellipse")
         {
@@ -160,16 +159,30 @@ void ParseRectangle(QTextStream &file, int ShapeID)
     qDebug() << file.readLine();
 }
 
-void ParseSquare(QTextStream &file, int ShapeID)
+square* ParseSquare(QTextStream &file, int ShapeID)
 {
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
+    QStringList dimensions = file.readLine().remove(0, 17).split(", ");
+
+    QString penColor = file.readLine().remove(0, 10);
+    QString tempWidth = file.readLine().remove(0, 10);
+    int penWidth = tempWidth.toInt();
+    QString penStyle = file.readLine().remove(0, 10);
+    QString penCapStyle = file.readLine().remove(0, 13);
+    QString penJoinStyle = file.readLine().remove(0, 14);
+    QString brushColor = file.readLine().remove(0, 12);
+    QString brushStyle = file.readLine().remove(0, 12);
+
+    square *tempSquare = new square();
+    tempSquare->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt());
+
+    tempSquare->set_ShapeId(ShapeID);
+
+    tempSquare->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
+                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+
+    tempSquare->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+
+    return tempSquare;
 }
 
 ellipse* ParseEllipse(QTextStream &file, int ShapeID)
