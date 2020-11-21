@@ -70,14 +70,6 @@ public:
 
     void setHeight(int height);
 
-    // getter function returns a QPoint value
-    /* QPoint returning function returns QPoint center
-    *  QPoint center is made up of two int values corresponding
-    *  to the (x,y) coordinates of the object's center.
-    */
-
-    QPoint getQPointCenter()const;
-
     // function that returns the y value of the ellipse center
 
     int getX()const;
@@ -108,7 +100,7 @@ public:
     *  \param y is the center y position of the ellipse
     */
 
-    void draw(const int x = 0, const int y = 0)override;
+    void draw(QPaintDevice*)override;
 
     // move function changes the position of the object
     /* Overrides base class virtual function.
@@ -144,7 +136,8 @@ public:
     void drawID();
 
 private:
-    QPoint center;
+    int x;
+    int y;
     int width;
     int height;
     QString stringID;

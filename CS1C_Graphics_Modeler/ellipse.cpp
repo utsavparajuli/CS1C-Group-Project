@@ -23,7 +23,8 @@ Ellipse::Ellipse(int x, int y, int width, int height):shape()
 
 Ellipse::Ellipse(const Ellipse& source)
 {
-    center = source.getQPointCenter();
+    x = source.getX();
+    y = source.getY();
     width = source.getWidth();
     height = source.getHeight();
     stringID = source.getShapeID();
@@ -35,10 +36,10 @@ Ellipse::~Ellipse() {}
 
 
 
-void Ellipse::setCenter(int x, int y)
+void Ellipse::setCenter(int newx, int newy)
 {
-    center.setX(x);
-    center.setY(y);
+    x = newx;
+    y = newy;
 }
 
 
@@ -56,24 +57,16 @@ void Ellipse::setHeight(int height)
 }
 
 
-
-QPoint Ellipse::getQPointCenter()const
-{
-    return center;
-}
-
-
-
 int Ellipse::getX()const
 {
-    return center.x();
+    return x;
 }
 
 
 
 int Ellipse::getY()const
 {
-    return center.y();
+    return y;
 }
 
 
@@ -98,46 +91,50 @@ QString Ellipse::getShapeID()const
 }
 
 
-
-void Ellipse::draw(const int x, const int y)
+void Ellipse::draw(QPaintDevice *device)
 {
+    QPainter &painter = get_painter();
+    painter.begin(device);
     // set the pen and brush
     get_painter().setPen(get_pen());
     get_painter().setBrush(get_brush());
     // draw the id number label for the ellipse
     //drawID();
     // draw the ellipse
-    get_painter().drawEllipse(center, width, height);
+    get_painter().drawEllipse(x, y, width, height);
+    painter.end();
 }
 
 
 
 void Ellipse::drawID()
 {
-    // Int variables that hold the coordinates for left most point of the object
-    int leftmostPoint;  // < leftmostpoint holds the x- axis value
-    int upmostPoint;    // < upmostPoint holds the y- axis value
+//    // Int variables that hold the coordinates for left most point of the object
+//    int leftmostPoint;  // < leftmostpoint holds the x- axis value
+//    int upmostPoint;    // < upmostPoint holds the y- axis value
 
-    const int VERTICAL_BUFFER = 5; // < Vertical Buffer for Drawing ID
+//    const int VERTICAL_BUFFER = 5; // < Vertical Buffer for Drawing ID
 
-    leftmostPoint = center.x() -  width;
+//    leftmostPoint = center.x() -  width;
 
-    upmostPoint = center.y() - height;
+//    upmostPoint = center.y() - height;
 
-    get_painter().drawText(leftmostPoint, upmostPoint - VERTICAL_BUFFER, stringID);
+//    get_painter().drawText(leftmostPoint, upmostPoint - VERTICAL_BUFFER, stringID);
+    return;
 }
 
 
 
 void Ellipse::move(const int x,const int y)
 {
-    QPoint newCenter(QPoint(x, y));
+//    QPoint newCenter(QPoint(x, y));
 
-    // check to make sure the new location does not go off the right edge of the canvas
-    if (newCenter.x() < 1000 && newCenter.y() < 500)
-    {
-        center = newCenter;
-    }
+//    // check to make sure the new location does not go off the right edge of the canvas
+//    if (newCenter.x() < 1000 && newCenter.y() < 500)
+//    {
+//        center = newCenter;
+//    }
+    return;
 }
 
 
