@@ -54,23 +54,22 @@ public:
     QStatusBar *statusbar;
     class DrawingWidget *drawArea;
 
-
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1012, 627);
+        MainWindow->resize(1300, 700);
         MainWindow->setAutoFillBackground(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(0, 0, 1011, 581));
+        stackedWidget->setGeometry(QRect(0, 0, 1301, 651));
         LoginPage = new QWidget();
         LoginPage->setObjectName(QString::fromUtf8("LoginPage"));
         layoutWidget = new QWidget(LoginPage);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(380, 200, 345, 204));
+        layoutWidget->setGeometry(QRect(490, 200, 345, 201));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -136,16 +135,15 @@ public:
         LogoutButton->setGeometry(QRect(30, 10, 80, 25));
 
         drawArea = new class DrawingWidget(MainPage);
-        drawArea->setGeometry(QRect(50, 70, 900, 500));
+        drawArea->setGeometry(100, 100, 1000, 500);
         drawArea->setStyleSheet("border: 3px solid black; background-color:white;");
 
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(290, 10, 421, 46));
+        layoutWidget1->setGeometry(QRect(530, 10, 321, 46));
         formLayout = new QFormLayout(layoutWidget1);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setLabelAlignment(Qt::AlignCenter);
-        formLayout->setHorizontalSpacing(7);
         formLayout->setContentsMargins(0, 0, 0, 0);
         WelcomeTitle = new QLabel(layoutWidget1);
         WelcomeTitle->setObjectName(QString::fromUtf8("WelcomeTitle"));
@@ -161,15 +159,11 @@ public:
         WhichUserTitle = new QLabel(layoutWidget1);
         WhichUserTitle->setObjectName(QString::fromUtf8("WhichUserTitle"));
         WhichUserTitle->setFont(font);
-        WhichUserTitle->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         formLayout->setWidget(1, QFormLayout::LabelRole, WhichUserTitle);
 
         UserLabel = new QLabel(layoutWidget1);
         UserLabel->setObjectName(QString::fromUtf8("UserLabel"));
-        UserLabel->setEnabled(true);
-        UserLabel->setMinimumSize(QSize(100, 0));
-        UserLabel->setLayoutDirection(Qt::LeftToRight);
 
         formLayout->setWidget(1, QFormLayout::FieldRole, UserLabel);
 
@@ -177,7 +171,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1012, 25));
+        menubar->setGeometry(QRect(0, 0, 1300, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1012</width>
-    <height>627</height>
+    <width>1300</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,18 +22,18 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1011</width>
-      <height>581</height>
+      <width>1301</width>
+      <height>651</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="LoginPage">
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>380</x>
+        <x>490</x>
         <y>200</y>
         <width>345</width>
         <height>201</height>
@@ -128,8 +128,8 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>20</y>
+        <x>530</x>
+        <y>10</y>
         <width>321</width>
         <height>46</height>
        </rect>
@@ -182,7 +182,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1012</width>
+     <width>1300</width>
      <height>20</height>
     </rect>
    </property>
