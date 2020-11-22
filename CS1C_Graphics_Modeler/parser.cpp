@@ -41,13 +41,11 @@ custom::vector<shape*>* parser(const QString fileName)
         }
         else if(textLine == "Polygon")
         {
-            qDebug() << "\nPrinting Polygon";
-            ParsePolygon(input, ShapeID);
+            shapeVector->push_back(ParsePolygon(input, ShapeID));
         }
         else if(textLine == "Rectangle")
         {
-            qDebug() << "\nPrinting Rectangle";
-            ParseRectangle(input, ShapeID);
+            shapeVector->push_back(ParseRectangle(input, ShapeID));
         }
         else if(textLine == "Square")
         {
@@ -59,13 +57,11 @@ custom::vector<shape*>* parser(const QString fileName)
         }
         else if(textLine == "Circle")
         {
-            qDebug() << "\nPrinting Circle";
-            ParseCircle(input, ShapeID);
+            shapeVector->push_back(ParseCircle(input, ShapeID));
         }
         else if(textLine == "Text")
         {
-            qDebug() << "\nPrinting Text";
-            ParseText(input, ShapeID);
+            shapeVector->push_back(ParseText(input, ShapeID));
         }
         else
         {
@@ -135,28 +131,65 @@ polyline* ParsePolyline(QTextStream &file, int ShapeID)
     return tempPolyline;
 }
 
-void ParsePolygon(QTextStream &file, int ShapeID)
+polygon* ParsePolygon(QTextStream &file, int ShapeID)
 {
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
+    QStringList dimensions = file.readLine().remove(0, 17).split(", ");
+
+    QPoint *pointArray = new QPoint[dimensions.size() / 2];
+
+    int point = 0;
+    for(int i = 0; i < dimensions.size() / 2; i++)
+    {
+        pointArray[i] = QPoint(dimensions[point].toInt(), dimensions[point + 1].toInt());
+        point += 2;
+    }
+
+    QString penColor = file.readLine().remove(0, 10);
+    QString tempWidth = file.readLine().remove(0, 10);
+    int penWidth = tempWidth.toInt();
+    QString penStyle = file.readLine().remove(0, 10);
+    QString penCapStyle = file.readLine().remove(0, 13);
+    QString penJoinStyle = file.readLine().remove(0, 14);
+    QString brushColor = file.readLine().remove(0, 12);
+    QString brushStyle = file.readLine().remove(0, 12);
+
+    polygon *tempPolygon = new polygon();
+
+    tempPolygon->set_ShapeId(ShapeID);
+
+    tempPolygon->setPoints(pointArray, dimensions.size() / 2);
+
+    tempPolygon->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
+                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+    tempPolygon->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+
+    return tempPolygon;
 }
 
-void ParseRectangle(QTextStream &file, int ShapeID)
+rectangle* ParseRectangle(QTextStream &file, int ShapeID)
 {
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
+    QStringList dimensions = file.readLine().remove(0, 17).split(", ");
+
+    QString penColor = file.readLine().remove(0, 10);
+    QString tempWidth = file.readLine().remove(0, 10);
+    int penWidth = tempWidth.toInt();
+    QString penStyle = file.readLine().remove(0, 10);
+    QString penCapStyle = file.readLine().remove(0, 13);
+    QString penJoinStyle = file.readLine().remove(0, 14);
+    QString brushColor = file.readLine().remove(0, 12);
+    QString brushStyle = file.readLine().remove(0, 12);
+
+    rectangle *tempRectangle = new rectangle();
+    tempRectangle->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
+
+    tempRectangle->set_ShapeId(ShapeID);
+
+    tempRectangle->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
+                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+
+    tempRectangle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+
+    return tempRectangle;
 }
 
 square* ParseSquare(QTextStream &file, int ShapeID)
@@ -210,28 +243,57 @@ ellipse* ParseEllipse(QTextStream &file, int ShapeID)
     return tempEllipse;
 }
 
-void ParseCircle(QTextStream &file, int ShapeID)
+circle* ParseCircle(QTextStream &file, int ShapeID)
 {
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
+    QStringList dimensions = file.readLine().remove(0, 17).split(", ");
+
+    QString penColor = file.readLine().remove(0, 10);
+    QString tempWidth = file.readLine().remove(0, 10);
+    int penWidth = tempWidth.toInt();
+    QString penStyle = file.readLine().remove(0, 10);
+    QString penCapStyle = file.readLine().remove(0, 13);
+    QString penJoinStyle = file.readLine().remove(0, 14);
+    QString brushColor = file.readLine().remove(0, 12);
+    QString brushStyle = file.readLine().remove(0, 12);
+
+    circle *tempCircle = new circle();
+
+    tempCircle->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt());
+
+    tempCircle->set_ShapeId(ShapeID);
+
+    tempCircle->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
+                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+
+    tempCircle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+
+    return tempCircle;
 }
 
-void ParseText(QTextStream &file, int ShapeID)
+text* ParseText(QTextStream &file, int ShapeID)
 {
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
-    qDebug() << file.readLine();
+    text *tempText = new text();
+
+    tempText->set_ShapeId(ShapeID);
+
+    QStringList dimensions = file.readLine().remove(0, 17).split(", ");
+    QString textString = file.readLine().remove(0, 12);
+    QString textColor = file.readLine().remove(0, 11);
+    QString textAlignment = file.readLine().remove(0, 15);
+    QString tempPointSize = file.readLine().remove(0, 15);
+    int pointSize = tempPointSize.toInt();
+    QString textFontFamily = file.readLine().remove(0, 16);
+    QString textFontStyle = file.readLine().remove(0, 15);
+    QString textFontWeight = file.readLine().remove(0, 16);
+
+   // QRect tempRect(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
+
+    tempText->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
+
+    tempText->set_text(textString, stringToColor(textColor), stringToAlignment(textAlignment), pointSize,
+                       textFontFamily, stringToTextFontStyle(textFontStyle), stringToTextFontWeight(textFontWeight));
+
+    return tempText;
 }
 
 Qt::GlobalColor stringToColor(QString line)
@@ -302,4 +364,64 @@ Qt::BrushStyle stringToBrushStyle(QString line)
         return Qt::BrushStyle::VerPattern;
     else if (line == "NoBrush")
         return Qt::BrushStyle::NoBrush;
+}
+
+Qt::AlignmentFlag stringToAlignment(QString line)
+{
+    if(line == "AlignLeft")
+    {
+        return Qt::AlignLeft;
+    }
+    else if(line == "AlignRight")
+    {
+        return Qt::AlignRight;
+    }
+    else if(line == "AlignTop")
+    {
+        return Qt::AlignTop;
+    }
+    else if(line == "AlignBottom")
+    {
+        return Qt::AlignBottom;
+    }
+    else if(line == "AlignCenter")
+    {
+        return Qt::AlignCenter;
+    }
+}
+
+QFont::Style stringToTextFontStyle(QString line)
+{
+    if(line == "StyleNormal")
+    {
+        return QFont::Style::StyleNormal;
+    }
+    else if(line == "StyleItalic")
+    {
+        return QFont::Style::StyleItalic;
+    }
+    else if(line == "StyleOblique")
+    {
+        return QFont::Style::StyleOblique;
+    }
+}
+
+QFont::Weight stringToTextFontWeight(QString line)
+{
+    if(line == "Thin")
+    {
+        return QFont::Weight::Thin;
+    }
+    else if(line == "Light")
+    {
+        return QFont::Weight::Light;
+    }
+    else if(line == "Normal")
+    {
+        return QFont::Weight::Normal;
+    }
+    else if(line == "Bold")
+    {
+        return QFont::Weight::Bold;
+    }
 }

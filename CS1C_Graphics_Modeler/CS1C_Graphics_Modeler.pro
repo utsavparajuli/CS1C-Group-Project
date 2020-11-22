@@ -11,24 +11,32 @@ CONFIG += c++11
 
 SOURCES += \
     DrawingWidget.cpp \
+    circle.cpp \
     ellipse.cpp \
     line.cpp \
     main.cpp \
     mainwindow.cpp \
     parser.cpp \
+    polygon.cpp \
     polyline.cpp \
+    rectangle.cpp \
     shape.cpp \
-    square.cpp
+    square.cpp \
+    text.cpp
 
 HEADERS += \
     DrawingWidget.h \
+    circle.h \
     ellipse.h \
     line.h \
     mainwindow.h \
     parser.h \
+    polygon.h \
     polyline.h \
+    rectangle.h \
     shape.h \
     square.h \
+    text.h \
     vector.h
 
 FORMS += \

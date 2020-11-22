@@ -5,13 +5,17 @@
 class text : public shape
 {
 public:
-    text(QPaintDevice* device = nullptr, int id = -1);
-    ~text() override {}
+     text(int id = -1) :shape{id, ShapeType::Text}{};
+     virtual ~text() override {}
 
+     void set_rect(int x, int y, int l, int w);
+     void setPoints(int x, int y, int l, int w);
+     void draw(QPaintDevice *device)override;
 
-     void set_rect(const QRect& rect);
+     void move(const int x_cord = 0, const int y_cord = 0) override;
 
-     void draw(const int x_cord = 0, const int y_cord = 0) override;
+     double calcPerimeter() override; //need to write implementation
+     double calcArea() override;
 
      //functions for text
      void set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, QString fontFamily, QFont::Style style, QFont::Weight weight);
@@ -19,14 +23,18 @@ public:
      void set_text_color(Qt::GlobalColor color);
 
 private:
-     QRect rect;
-     QString textStr {"Class Project 2 - 2D Graphics Modeler"};
-     Qt::GlobalColor color {Qt::blue};
-     Qt::AlignmentFlag alignment {Qt::AlignCenter};
-     int pointSize {10};
-     QString family {"Comic Sans MS"};
-     QFont::Style fontStyle {QFont::StyleNormal};
-     QFont::Weight weight {QFont::Normal};
+     int x;
+     int y;
+     int w;
+     int l;
+     QRect             rect;
+     QString           textStr;
+     Qt::GlobalColor   color;
+     Qt::AlignmentFlag alignment;
+     int               pointSize;
+     QString           family;
+     QFont::Style      fontStyle;
+     QFont::Weight     weight;
 };
 
 #endif // TEXT_H

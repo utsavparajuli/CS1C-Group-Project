@@ -70,7 +70,7 @@ public:
         LoginPage->setObjectName(QString::fromUtf8("LoginPage"));
         layoutWidget = new QWidget(LoginPage);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(380, 200, 345, 201));
+        layoutWidget->setGeometry(QRect(380, 200, 345, 204));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -141,10 +141,11 @@ public:
 
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(340, 20, 321, 46));
+        layoutWidget1->setGeometry(QRect(290, 10, 421, 46));
         formLayout = new QFormLayout(layoutWidget1);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setLabelAlignment(Qt::AlignCenter);
+        formLayout->setHorizontalSpacing(7);
         formLayout->setContentsMargins(0, 0, 0, 0);
         WelcomeTitle = new QLabel(layoutWidget1);
         WelcomeTitle->setObjectName(QString::fromUtf8("WelcomeTitle"));
@@ -160,11 +161,15 @@ public:
         WhichUserTitle = new QLabel(layoutWidget1);
         WhichUserTitle->setObjectName(QString::fromUtf8("WhichUserTitle"));
         WhichUserTitle->setFont(font);
+        WhichUserTitle->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         formLayout->setWidget(1, QFormLayout::LabelRole, WhichUserTitle);
 
         UserLabel = new QLabel(layoutWidget1);
         UserLabel->setObjectName(QString::fromUtf8("UserLabel"));
+        UserLabel->setEnabled(true);
+        UserLabel->setMinimumSize(QSize(100, 0));
+        UserLabel->setLayoutDirection(Qt::LeftToRight);
 
         formLayout->setWidget(1, QFormLayout::FieldRole, UserLabel);
 
@@ -172,7 +177,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1012, 20));
+        menubar->setGeometry(QRect(0, 0, 1012, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -180,7 +185,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

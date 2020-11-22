@@ -17,17 +17,6 @@ void square::move(const int x, const int y)
 
 void square::draw(QPaintDevice *device)
 {
-//    QPainter &painter = get_painter();
-//    painter.begin(device);
-//    // set the pen and brush
-//    get_painter().setPen(get_pen());
-//    get_painter().setBrush(get_brush());
-//    // draw the id number label for the ellipse
-//    //drawID();
-//    // draw the ellipse
-//    get_painter().drawEllipse(x, y, width, height);
-//    painter.end();
-
     QPainter &painter = get_painter();
     painter.begin(device);
     get_painter().setPen(get_pen());

@@ -6,7 +6,7 @@
 class polyline : public shape
 {
 public:
-    polyline(int id = -1) : shape{id, ShapeType::Line}{};
+    polyline(int id = -1) : shape{id, ShapeType::Polyline}{};
     virtual ~polyline() override;
     void setPoints(QPoint*, int);
     void move(const int x_cord, const int y_cord)override;

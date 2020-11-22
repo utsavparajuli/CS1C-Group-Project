@@ -10,7 +10,7 @@ PenJoinStyle: MiterJoin
 
 ShapeId: 2
 ShapeType: Polyline
-ShapeDimensions: 460, 90, 470, 20, 530, 40, 540, 80, 460, 90
+ShapeDimensions: 460, 90, 470, 20, 530, 40, 540, 80
 PenColor: blue
 PenWidth: 6
 PenStyle: SolidLine
@@ -19,7 +19,7 @@ PenJoinStyle: MiterJoin
 
 ShapeId: 3
 ShapeType: Polygon
-ShapeDimensions: 900, 90, 910, 20, 970, 40, 980, 80
+ShapeDimensions: 300, 90, 310, 20, 370, 40, 380, 80
 PenColor: cyan
 PenWidth: 6
 PenStyle: DashDotDotLine
@@ -52,7 +52,7 @@ BrushStyle: HorPattern
 
 ShapeId: 6
 ShapeType: Ellipse
-ShapeDimensions: 0, 0, 170, 100
+ShapeDimensions: 520, 200, 170, 100
 PenColor: black
 PenWidth: 12
 PenStyle: SolidLine
@@ -74,8 +74,8 @@ BrushStyle: SolidPattern
 
 ShapeId: 8
 ShapeType: Text
-ShapeDimensions: 250, 425, 500, 50
-TextString: Class Project 2 - 2D Graphics Modeler
+ShapeDimensions: 200, 450, 500, 50
+TextString: Class Project 2 - 2D Graphics Modeler By SCRUM AND COKE
 TextColor: blue
 TextAlignment: AlignCenter
 TextPointSize: 10
