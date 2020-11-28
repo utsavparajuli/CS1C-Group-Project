@@ -390,6 +390,8 @@ ui_mainwindow.h: ../CS1C_Graphics_Modeler/mainwindow.ui \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		../CS1C_Graphics_Modeler/vector.h \
 		../CS1C_Graphics_Modeler/parser.h \
 		../CS1C_Graphics_Modeler/polyline.h \
@@ -397,8 +399,6 @@ ui_mainwindow.h: ../CS1C_Graphics_Modeler/mainwindow.ui \
 		../CS1C_Graphics_Modeler/square.h \
 		../CS1C_Graphics_Modeler/rectangle.h \
 		../CS1C_Graphics_Modeler/circle.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		../CS1C_Graphics_Modeler/polygon.h \
 		../CS1C_Graphics_Modeler/text.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
@@ -541,6 +541,8 @@ debug/DrawingWidget.o: ../CS1C_Graphics_Modeler/DrawingWidget.cpp ../CS1C_Graphi
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		../CS1C_Graphics_Modeler/vector.h \
 		../CS1C_Graphics_Modeler/parser.h \
 		../CS1C_Graphics_Modeler/polyline.h \
@@ -548,8 +550,6 @@ debug/DrawingWidget.o: ../CS1C_Graphics_Modeler/DrawingWidget.cpp ../CS1C_Graphi
 		../CS1C_Graphics_Modeler/square.h \
 		../CS1C_Graphics_Modeler/rectangle.h \
 		../CS1C_Graphics_Modeler/circle.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		../CS1C_Graphics_Modeler/polygon.h \
 		../CS1C_Graphics_Modeler/text.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
@@ -794,7 +794,9 @@ debug/ellipse.o: ../CS1C_Graphics_Modeler/ellipse.cpp ../CS1C_Graphics_Modeler/e
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ellipse.o ..\CS1C_Graphics_Modeler\ellipse.cpp
 
 debug/line.o: ../CS1C_Graphics_Modeler/line.cpp ../CS1C_Graphics_Modeler/line.h \
@@ -911,6 +913,8 @@ debug/line.o: ../CS1C_Graphics_Modeler/line.cpp ../CS1C_Graphics_Modeler/line.h 
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\line.o ..\CS1C_Graphics_Modeler\line.cpp
 
@@ -1041,14 +1045,14 @@ debug/main.o: ../CS1C_Graphics_Modeler/main.cpp ../CS1C_Graphics_Modeler/mainwin
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		../CS1C_Graphics_Modeler/line.h \
 		../CS1C_Graphics_Modeler/polyline.h \
 		../CS1C_Graphics_Modeler/ellipse.h \
 		../CS1C_Graphics_Modeler/square.h \
 		../CS1C_Graphics_Modeler/rectangle.h \
 		../CS1C_Graphics_Modeler/circle.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		../CS1C_Graphics_Modeler/polygon.h \
 		../CS1C_Graphics_Modeler/text.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
@@ -1181,6 +1185,8 @@ debug/mainwindow.o: ../CS1C_Graphics_Modeler/mainwindow.cpp ../CS1C_Graphics_Mod
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTimer \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qtimer.h \
@@ -1323,14 +1329,14 @@ debug/parser.o: ../CS1C_Graphics_Modeler/parser.cpp ../CS1C_Graphics_Modeler/par
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		../CS1C_Graphics_Modeler/line.h \
 		../CS1C_Graphics_Modeler/polyline.h \
 		../CS1C_Graphics_Modeler/ellipse.h \
 		../CS1C_Graphics_Modeler/square.h \
 		../CS1C_Graphics_Modeler/rectangle.h \
 		../CS1C_Graphics_Modeler/circle.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		../CS1C_Graphics_Modeler/polygon.h \
 		../CS1C_Graphics_Modeler/text.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
@@ -1458,7 +1464,10 @@ debug/polygon.o: ../CS1C_Graphics_Modeler/polygon.cpp ../CS1C_Graphics_Modeler/p
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\polygon.o ..\CS1C_Graphics_Modeler\polygon.cpp
 
 debug/polyline.o: ../CS1C_Graphics_Modeler/polyline.cpp ../CS1C_Graphics_Modeler/polyline.h \
@@ -1575,6 +1584,8 @@ debug/polyline.o: ../CS1C_Graphics_Modeler/polyline.cpp ../CS1C_Graphics_Modeler
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\polyline.o ..\CS1C_Graphics_Modeler\polyline.cpp
 
@@ -1691,7 +1702,9 @@ debug/rectangle.o: ../CS1C_Graphics_Modeler/rectangle.cpp ../CS1C_Graphics_Model
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\rectangle.o ..\CS1C_Graphics_Modeler\rectangle.cpp
 
 debug/shape.o: ../CS1C_Graphics_Modeler/shape.cpp ../CS1C_Graphics_Modeler/shape.h \
@@ -1806,7 +1819,9 @@ debug/shape.o: ../CS1C_Graphics_Modeler/shape.cpp ../CS1C_Graphics_Modeler/shape
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\shape.o ..\CS1C_Graphics_Modeler\shape.cpp
 
 debug/square.o: ../CS1C_Graphics_Modeler/square.cpp ../CS1C_Graphics_Modeler/square.h \
@@ -1922,7 +1937,9 @@ debug/square.o: ../CS1C_Graphics_Modeler/square.cpp ../CS1C_Graphics_Modeler/squ
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\square.o ..\CS1C_Graphics_Modeler\square.cpp
 
 debug/text.o: ../CS1C_Graphics_Modeler/text.cpp ../CS1C_Graphics_Modeler/text.h \
@@ -2038,7 +2055,9 @@ debug/text.o: ../CS1C_Graphics_Modeler/text.cpp ../CS1C_Graphics_Modeler/text.h 
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\text.o ..\CS1C_Graphics_Modeler\text.cpp
 
 debug/moc_mainwindow.o: debug/moc_mainwindow.cpp 

@@ -13,8 +13,10 @@ void line::draw(QPaintDevice *device)
     get_painter().drawText(getIDLocation().x(), getIDLocation().y(), IdString);
 
     painter.setPen(get_pen());
-
     painter.setBrush(get_brush());
+
+    qDebug() << get_pen();
+
     painter.drawLine(begin, end);
     painter.end();
 }
