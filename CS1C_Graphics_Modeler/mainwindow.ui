@@ -211,6 +211,20 @@
        </item>
       </layout>
      </widget>
+     <widget class="DrawingWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>29</x>
+        <y>59</y>
+        <width>1141</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;
+border: 3px solid black;</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -226,6 +240,14 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DrawingWidget</class>
+   <extends>QWidget</extends>
+   <header>DrawingWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

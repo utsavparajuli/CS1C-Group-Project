@@ -57,9 +57,9 @@ public:
     QPushButton *EditShapeButton;
     QPushButton *DeleteShapeButton;
     QPushButton *TestimonialsButton;
+    DrawingWidget *widget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
-    class DrawingWidget *drawArea;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -140,11 +140,6 @@ public:
         LogoutButton = new QPushButton(MainPage);
         LogoutButton->setObjectName(QString::fromUtf8("LogoutButton"));
         LogoutButton->setGeometry(QRect(30, 10, 80, 25));
-
-        drawArea = new class DrawingWidget(MainPage);
-        drawArea->setGeometry(100, 100, 1000, 500);
-        drawArea->setStyleSheet("border: 3px solid black; background-color:white;");
-
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         layoutWidget1->setGeometry(QRect(490, 10, 241, 37));
@@ -199,6 +194,11 @@ public:
 
         horizontalLayout->addWidget(TestimonialsButton);
 
+        widget = new DrawingWidget(MainPage);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(29, 59, 1141, 541));
+        widget->setStyleSheet(QString::fromUtf8("background-color:white;\n"
+"border: 3px solid black;"));
         stackedWidget->addWidget(MainPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
