@@ -27,11 +27,14 @@ void circle::draw(QPaintDevice *device)
 {
     QPainter &painter = get_painter();
     painter.begin(device);
+
+    // draw the id number label for the circle
+    QString IdString = shapeName + " ID: " + QString::number(getID());
+    get_painter().drawText(x+radius/2-30, y-12, IdString);
+
     // set the pen and brush
     get_painter().setPen(get_pen());
     get_painter().setBrush(get_brush());
-    // draw the id number label for the circle
-    //drawID();
     // draw the circle
     get_painter().drawEllipse(x, y, radius, radius);
     painter.end();

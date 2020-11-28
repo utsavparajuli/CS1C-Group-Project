@@ -140,7 +140,7 @@ private:
     int y;
     int width;
     int height;
-    QString stringID;
+    QString shapeName;
 
 };
 

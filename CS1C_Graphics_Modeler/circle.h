@@ -18,6 +18,7 @@ private:
     int x;
     int y;
     int radius;
+    QString shapeName = "Circle";
 };
 
 
