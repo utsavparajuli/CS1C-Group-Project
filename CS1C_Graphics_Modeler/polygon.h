@@ -14,7 +14,11 @@ public:
     double calcPerimeter() override {return 0;} //need to write implementation
     double calcArea() override {return 0;} //need to write implementation
 
+    QPoint getIDLocation();
+    QPoint getLeftMostPoint(QPoint, QPoint);
+
 private:
+    QString shapeName = "Polygon";
     QPoint *points;
     int pointCount;
 };

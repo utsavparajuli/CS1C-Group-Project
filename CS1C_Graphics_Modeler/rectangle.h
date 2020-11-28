@@ -14,6 +14,7 @@ public:
     double calcArea() {return length * width;}
 
 private:
+    QString shapeName = "Rectangle";
     int x;
     int y;
     int length;

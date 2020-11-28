@@ -133,14 +133,12 @@ public:
      * an integer value to the object that displays on screen.
     */
 
-    void drawID();
-
 private:
     int x;
     int y;
     int width;
     int height;
-    QString shapeName;
+    QString shapeName = "Ellipse";
 
 };
 

@@ -29,8 +29,8 @@ void circle::draw(QPaintDevice *device)
     painter.begin(device);
 
     // draw the id number label for the circle
-    QString IdString = shapeName + " ID: " + QString::number(getID());
-    get_painter().drawText(x+radius/2-30, y-12, IdString);
+    QString IdString = construct_ID_String(shapeName, getID());
+    get_painter().drawText(x + (radius/2 - 30), y - 10, IdString);
 
     // set the pen and brush
     get_painter().setPen(get_pen());

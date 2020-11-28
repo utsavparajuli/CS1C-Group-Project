@@ -14,7 +14,10 @@ public:
     double calcPerimeter() override; //need to write implementation
     double calcArea() override; //need to write implementation
 
+    QPoint getIDLocation();
+
 private:
+    QString shapeName = "Line";
     QPoint begin;
     QPoint end;
 };

@@ -15,6 +15,7 @@ public:
     double calcArea() {return length * length;}
 
 private:
+    QString shapeName = "Square";
     int x;
     int y;
     int length;

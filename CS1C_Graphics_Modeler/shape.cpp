@@ -72,7 +72,7 @@ void shape::default_style()
 
 QString shape::construct_ID_String(QString shapeName, int shapeID)
 {
-    return shapeName + " ID: " + shapeID;
+    return shapeName + " ID: " + QString::number(shapeID);
 }
 
 //void shape::set_text(string text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, string fontFamily, QFont::Style style, QFont::Weight weight)

@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QFont>
 #include <QString>
+#include <QtMath>
 
 using namespace std;
 enum class ShapeType { NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Square, Circle, Text};
@@ -37,6 +38,7 @@ public:
         void set_pen(Qt::GlobalColor color);
         void set_brush(Qt::GlobalColor color, Qt::BrushStyle brushStyle);
 
+
         //default settings for brush and pen
         void default_style();
         void draw_rect(int width, int height);
@@ -54,7 +56,6 @@ public:
         virtual void move(const int x_cord, const int y_cord) = 0;
         virtual double calcPerimeter() = 0;
         virtual double calcArea() = 0;
-
 
         // TESTNIG
         int getID() {return shapeId;}

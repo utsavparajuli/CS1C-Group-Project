@@ -16,7 +16,6 @@ ellipse::ellipse(const ellipse& source)
     y = source.getY();
     width = source.getWidth();
     height = source.getHeight();
-    stringID = source.getShapeID();
 }
 
 
@@ -74,16 +73,14 @@ int ellipse::getHeight()const
 
 
 
-QString ellipse::getShapeID()const
-{
-    return stringID;
-}
-
-
 void ellipse::draw(QPaintDevice *device)
 {
     QPainter &painter = get_painter();
     painter.begin(device);
+
+    QString IdString = construct_ID_String(shapeName, getID());
+    get_painter().drawText(x, y - 10, IdString);
+
     // set the pen and brush
     get_painter().setPen(get_pen());
     get_painter().setBrush(get_brush());
@@ -93,26 +90,6 @@ void ellipse::draw(QPaintDevice *device)
     get_painter().drawEllipse(x, y, width, height);
     painter.end();
 }
-
-
-
-void ellipse::drawID()
-{
-//    // Int variables that hold the coordinates for left most point of the object
-//    int leftmostPoint;  // < leftmostpoint holds the x- axis value
-//    int upmostPoint;    // < upmostPoint holds the y- axis value
-
-//    const int VERTICAL_BUFFER = 5; // < Vertical Buffer for Drawing ID
-
-//    leftmostPoint = center.x() -  width;
-
-//    upmostPoint = center.y() - height;
-
-//    get_painter().drawText(leftmostPoint, upmostPoint - VERTICAL_BUFFER, stringID);
-    return;
-}
-
-
 
 void ellipse::move(const int x,const int y)
 {

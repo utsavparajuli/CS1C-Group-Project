@@ -6,11 +6,14 @@ line::~line(){}
 
 void line::draw(QPaintDevice *device)
 {
-    //drawID();
     QPainter &painter = get_painter();
     painter.begin(device);
+
+    QString IdString = construct_ID_String(shapeName, getID());
+    get_painter().drawText(getIDLocation().x(), getIDLocation().y(), IdString);
+
     painter.setPen(get_pen());
-    //qDebug() << get_pen();
+
     painter.setBrush(get_brush());
     painter.drawLine(begin, end);
     painter.end();
@@ -42,6 +45,22 @@ double line::calcPerimeter()
 double line::calcArea()
 {
     return 0;
+}
+
+QPoint line::getIDLocation()
+{
+    int x, y;
+    if(begin.x() < end.x())
+        x = begin.x();
+    else
+        x = end.x();
+
+    if(begin.y() < end.y())
+        y = begin.y();
+    else
+        y = end.y();
+
+    return(QPoint(x,y));
 }
 
 //void Line::drawID()

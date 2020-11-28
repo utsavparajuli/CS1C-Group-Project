@@ -20,6 +20,10 @@ void rectangle::draw(QPaintDevice *device)
 {
     QPainter &painter = get_painter();
     painter.begin(device);
+
+    QString IdString = construct_ID_String(shapeName, getID());
+    get_painter().drawText(x, y - 10, IdString);
+
     get_painter().setPen(get_pen());
     get_painter().setBrush(get_brush());
 
