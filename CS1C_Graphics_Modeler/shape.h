@@ -41,6 +41,8 @@ public:
         void default_style();
         void draw_rect(int width, int height);
 
+        QString construct_ID_String(QString shapeName, int shapeID);
+
         //equality operator overloading
         bool operator==(const shape& otherShape) const;
 
@@ -52,6 +54,7 @@ public:
         virtual void move(const int x_cord, const int y_cord) = 0;
         virtual double calcPerimeter() = 0;
         virtual double calcArea() = 0;
+
 
         // TESTNIG
         int getID() {return shapeId;}

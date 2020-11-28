@@ -70,6 +70,11 @@ void shape::default_style()
     brush = Qt::NoBrush;
 }
 
+QString shape::construct_ID_String(QString shapeName, int shapeID)
+{
+    return shapeName + " ID: " + shapeID;
+}
+
 //void shape::set_text(string text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, string fontFamily, QFont::Style style, QFont::Weight weight)
 //{
 //    font.setStyle(style);
