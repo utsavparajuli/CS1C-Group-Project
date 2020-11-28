@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QFont>
 #include <QString>
+#include <QtMath>
 
 using namespace std;
 enum class ShapeType { NoShape, Line, Polyline, Polygon, Rectangle, Ellipse, Square, Circle, Text};
@@ -38,9 +39,12 @@ public:
         void set_pen(Qt::GlobalColor color, QString newPenColorName);
         void set_brush(Qt::GlobalColor color, Qt::BrushStyle brushStyle, QString newBrushColorName, QString newBrushStyleName);
 
+
         //default settings for brush and pen
         void default_style();
         void draw_rect(int width, int height);
+
+        QString construct_ID_String(QString shapeName, int shapeID);
 
         //equality operator overloading
         bool operator==(const shape& otherShape) const;

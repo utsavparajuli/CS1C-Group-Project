@@ -4,7 +4,7 @@ custom::vector<shape*>* parser(const QString fileName)
 {
     custom::vector<shape*> *shapeVector = new custom::vector<shape*>();
 
-    int ShapeID = 1;
+    int ShapeID;
 
     //Storing the path to the .txt file in filePath
     QString filePath = qApp->applicationDirPath();
@@ -28,7 +28,7 @@ custom::vector<shape*>* parser(const QString fileName)
     while(!input.atEnd())
     {
         input.readLine();  //Reading in the first blank line
-        input.readLine();  //Throwing away shapeID (shapes will be numbered in the order they are read in)
+        ShapeID = input.readLine().remove(0, 9).toInt();  //Reading in shapeId
         textLine = input.readLine().remove(0, 11); //Reading in shape type
 
         if(textLine == "Line")
@@ -67,8 +67,6 @@ custom::vector<shape*>* parser(const QString fileName)
         {
             qDebug() << "ERROR: Shape type " << textLine << " is not valid.";
         }
-
-        ShapeID++;
     }
 
     return shapeVector;

@@ -6,12 +6,17 @@ line::~line(){}
 
 void line::draw(QPaintDevice *device)
 {
-    //drawID();
     QPainter &painter = get_painter();
     painter.begin(device);
+
+    QString IdString = construct_ID_String(shapeName, getID());
+    get_painter().drawText(getIDLocation().x(), getIDLocation().y(), IdString);
+
     painter.setPen(get_pen());
-    //qDebug() << get_pen();
     painter.setBrush(get_brush());
+
+    qDebug() << get_pen();
+
     painter.drawLine(begin, end);
     painter.end();
 }
@@ -74,3 +79,31 @@ QString line::getShapeString()
 
     return outString;
 }
+QPoint line::getIDLocation()
+{
+    int x, y;
+    if(begin.x() < end.x())
+        x = begin.x();
+    else
+        x = end.x();
+
+    if(begin.y() < end.y())
+        y = begin.y();
+    else
+        y = end.y();
+
+    return(QPoint(x,y));
+}
+
+//void Line::drawID()
+//{
+//    //! Int variables that hold the coordinates for left most point of the object
+//    int leftmostPoint;  /*! < leftmostpoint holds the x- axis value*/
+//    int upmostPoint;    /*! < upmostPoint holds the y- axis value*/
+
+//    const int VERTICAL_BUFFER = 5; /*! <Vertical Buffer for Drawing ID*/
+
+//    one.rx() < two.rx()? leftmostPoint = one.rx() : leftmostPoint = two.rx();
+//    one.ry() < two.ry()? upmostPoint = one.ry() : upmostPoint = two.ry();
+//    getQPainter()->drawText(leftmostPoint, upmostPoint - VERTICAL_BUFFER, stringID);
+//}

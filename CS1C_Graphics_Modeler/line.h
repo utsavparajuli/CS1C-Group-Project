@@ -17,7 +17,10 @@ public:
     QPoint get_end(){return end;}
     QString getShapeString()override;
 
+    QPoint getIDLocation();
+
 private:
+    QString shapeName = "Line";
     QPoint begin;
     QPoint end;
 };

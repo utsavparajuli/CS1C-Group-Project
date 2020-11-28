@@ -15,7 +15,11 @@ public:
     double calcArea() override {return 0;} //need to write implementation
     virtual QString getShapeString()override{return QString("\ntest\n");};
 
+    QPoint getIDLocation();
+    QPoint getLeftMostPoint(QPoint, QPoint);
+
 private:
+    QString shapeName = "Polygon";
     QPoint *points;
     int pointCount;
 };

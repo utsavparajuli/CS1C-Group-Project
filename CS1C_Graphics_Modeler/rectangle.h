@@ -15,6 +15,7 @@ public:
     virtual QString getShapeString()override{return QString("\ntest\n");};
 
 private:
+    QString shapeName = "Rectangle";
     int x;
     int y;
     int length;
