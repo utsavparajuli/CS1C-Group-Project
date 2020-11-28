@@ -20,6 +20,7 @@ SOURCES += \
     polygon.cpp \
     polyline.cpp \
     rectangle.cpp \
+    saveFile.cpp \
     shape.cpp \
     square.cpp \
     text.cpp
@@ -34,6 +35,7 @@ HEADERS += \
     polygon.h \
     polyline.h \
     rectangle.h \
+    saveFile.h \
     shape.h \
     square.h \
     text.h \

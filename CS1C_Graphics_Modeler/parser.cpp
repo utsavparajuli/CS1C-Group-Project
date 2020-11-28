@@ -95,7 +95,9 @@ line* ParseLine(QTextStream &file, int ShapeID)
                         QPoint(dimensions[2].toInt(), dimensions[3].toInt()));
 
     tempLine->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                      stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle));
+                      stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                      penColor, penStyle, penCapStyle, penJoinStyle);
+
     return tempLine;
 }
 
@@ -126,7 +128,8 @@ polyline* ParsePolyline(QTextStream &file, int ShapeID)
     tempPolyline->setPoints(pointArray, dimensions.size() / 2);
 
     tempPolyline->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                      stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                      penColor, penStyle, penCapStyle, penJoinStyle);
 
     return tempPolyline;
 }
@@ -160,8 +163,9 @@ polygon* ParsePolygon(QTextStream &file, int ShapeID)
     tempPolygon->setPoints(pointArray, dimensions.size() / 2);
 
     tempPolygon->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
-    tempPolygon->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+                         stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                         penColor, penStyle, penCapStyle, penJoinStyle);
+    tempPolygon->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempPolygon;
 }
@@ -185,9 +189,10 @@ rectangle* ParseRectangle(QTextStream &file, int ShapeID)
     tempRectangle->set_ShapeId(ShapeID);
 
     tempRectangle->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                           stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                           penColor, penStyle, penCapStyle, penJoinStyle);
 
-    tempRectangle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+    tempRectangle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempRectangle;
 }
@@ -211,9 +216,10 @@ square* ParseSquare(QTextStream &file, int ShapeID)
     tempSquare->set_ShapeId(ShapeID);
 
     tempSquare->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                        stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                        penColor, penStyle, penCapStyle, penJoinStyle);
 
-    tempSquare->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+    tempSquare->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempSquare;
 }
@@ -236,9 +242,10 @@ ellipse* ParseEllipse(QTextStream &file, int ShapeID)
     tempEllipse->set_ShapeId(ShapeID);
 
     tempEllipse->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                         stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                         penColor, penStyle, penCapStyle, penJoinStyle);
 
-    tempEllipse->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+    tempEllipse->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempEllipse;
 }
@@ -263,9 +270,10 @@ circle* ParseCircle(QTextStream &file, int ShapeID)
     tempCircle->set_ShapeId(ShapeID);
 
     tempCircle->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                        stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                        penColor, penStyle, penCapStyle, penJoinStyle);
 
-    tempCircle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+    tempCircle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempCircle;
 }

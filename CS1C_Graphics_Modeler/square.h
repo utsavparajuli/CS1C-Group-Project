@@ -13,6 +13,7 @@ public:
     void draw(QPaintDevice *devive) override;
     double calcPerimeter() {return length * 4;}
     double calcArea() {return length * length;}
+    virtual QString getShapeString()override{return QString("\ntest\n");};
 
 private:
     int x;

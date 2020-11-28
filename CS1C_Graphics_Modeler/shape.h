@@ -33,9 +33,10 @@ public:
         //functions that will set the shape, pen and brush
         void set_ShapeId(int id);
         void set_Shape(ShapeType shape);
-        void set_pen(Qt::GlobalColor color, int width, Qt::PenStyle penStyle, Qt::PenCapStyle penCapStyle, Qt::PenJoinStyle penJoinStyle);
-        void set_pen(Qt::GlobalColor color);
-        void set_brush(Qt::GlobalColor color, Qt::BrushStyle brushStyle);
+        void set_pen(Qt::GlobalColor color, int width, Qt::PenStyle penStyle, Qt::PenCapStyle penCapStyle, Qt::PenJoinStyle penJoinStyle,
+                     QString newPenColorName,  QString newPenStyleName, QString newPenCapStyleName, QString newPenJoinStyleName);
+        void set_pen(Qt::GlobalColor color, QString newPenColorName);
+        void set_brush(Qt::GlobalColor color, Qt::BrushStyle brushStyle, QString newBrushColorName, QString newBrushStyleName);
 
         //default settings for brush and pen
         void default_style();
@@ -52,9 +53,18 @@ public:
         virtual void move(const int x_cord, const int y_cord) = 0;
         virtual double calcPerimeter() = 0;
         virtual double calcArea() = 0;
+        virtual QString getShapeString() = 0;
 
         // TESTNIG
         int getID() {return shapeId;}
+
+protected:
+        QString   penColorName;
+        QString   penStyleName;
+        QString   penCapStyleName;
+        QString   penJoinStyleName;
+        QString   brushColorName;
+        QString   brushStyleName;
 
 private:
         int       shapeId;

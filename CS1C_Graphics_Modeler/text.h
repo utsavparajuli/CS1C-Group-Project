@@ -21,6 +21,7 @@ public:
      void set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, QString fontFamily, QFont::Style style, QFont::Weight weight);
      void set_alignment(Qt::AlignmentFlag alignment);
      void set_text_color(Qt::GlobalColor color);
+     virtual QString getShapeString()override{return QString("\ntest\n");};
 
 private:
      int x;

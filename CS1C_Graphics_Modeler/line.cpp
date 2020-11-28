@@ -44,15 +44,33 @@ double line::calcArea()
     return 0;
 }
 
-//void Line::drawID()
-//{
-//    //! Int variables that hold the coordinates for left most point of the object
-//    int leftmostPoint;  /*! < leftmostpoint holds the x- axis value*/
-//    int upmostPoint;    /*! < upmostPoint holds the y- axis value*/
+QString line::getShapeString()
+{
+    //Shape ID
+    QString outString = "\nShapeId: " + QString::number(getID());
 
-//    const int VERTICAL_BUFFER = 5; /*! <Vertical Buffer for Drawing ID*/
+    //ShapeType
+    outString += "\nShapeType: Line";
 
-//    one.rx() < two.rx()? leftmostPoint = one.rx() : leftmostPoint = two.rx();
-//    one.ry() < two.ry()? upmostPoint = one.ry() : upmostPoint = two.ry();
-//    getQPainter()->drawText(leftmostPoint, upmostPoint - VERTICAL_BUFFER, stringID);
-//}
+    //ShapeDimensions
+    outString += "\nShapeDimensions: " + QString::number(begin.x()) + ", "
+                 +QString::number(begin.y()) + ", " + QString::number(end.x()) + ", "
+                 +QString::number(end.y());
+
+    //Pen Color
+    outString += "\nPenColor: " + penColorName;
+
+    //PenWidth
+    outString += "\nPenWidth: " + QString::number(get_pen().width());
+
+    //PenStyle
+    outString += "\nPenStyle: " + penStyleName;
+
+    //Pen Cap Style
+    outString += "\nPenCapStyle: " + penCapStyleName;
+
+    //PenJoinStyle
+    outString += "\nPenJoinStyle: " + penJoinStyleName + '\n';
+
+    return outString;
+}

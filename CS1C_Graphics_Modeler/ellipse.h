@@ -134,6 +134,7 @@ public:
     */
 
     void drawID();
+    virtual QString getShapeString()override{return QString("\ntest\n");};
 
 private:
     int x;

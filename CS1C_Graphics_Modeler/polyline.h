@@ -13,6 +13,7 @@ public:
     void draw(QPaintDevice *device)override;
     double calcPerimeter() override; //need to write implementation
     double calcArea() override; //need to write implementation
+    virtual QString getShapeString()override{return QString("\ntest\n");};
 
 private:
     QPoint *points;

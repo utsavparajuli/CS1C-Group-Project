@@ -8,6 +8,7 @@ debug/parser.o
 debug/polygon.o
 debug/polyline.o
 debug/rectangle.o
+debug/saveFile.o
 debug/shape.o
 debug/square.o
 debug/text.o
