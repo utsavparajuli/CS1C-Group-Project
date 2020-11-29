@@ -65,3 +65,45 @@ QPoint polygon::getLeftMostPoint(QPoint p1, QPoint p2)
 
     return(QPoint(x,y));
 }
+
+QString polygon::getShapeString()
+{
+    //Shape ID
+    QString outputString = "\nShapeId: " + QString::number(getID());
+
+    //ShapeType
+    outputString += "\nShapeType: Polygon";
+
+    //Shape Dimensions
+    outputString += "\nShapeDimensions: ";
+    for(int i = 0; i < pointCount; i++)
+    {
+        outputString += QString::number(points[i].x()) + ", ";
+        outputString += QString::number(points[i].y());
+        if(i != pointCount-1)
+            outputString += ", ";
+    }
+
+    //Pen Color
+    outputString += "\nPenColor: " + penColorName;
+
+    //Pen Width
+    outputString += "\nPenWidth: " + QString::number(get_pen().width());
+
+    //Pen Style
+    outputString += "\nPenStyle: " + penStyleName;
+
+    //Pen Cap Style
+    outputString += "\nPenCapStyle: " + penCapStyleName;
+
+    //Pen Join Style
+    outputString += "\nPenJoinStyle: " + penJoinStyleName;
+
+    //Brush Color
+    outputString += "\nBrushColor: " + brushColorName;
+
+    //Brush Style
+    outputString += "\nBrushStyle: " + brushStyleName + '\n';
+
+    return outputString;
+}
