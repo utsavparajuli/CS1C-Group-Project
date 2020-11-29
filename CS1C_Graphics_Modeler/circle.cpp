@@ -39,3 +39,22 @@ void circle::draw(QPaintDevice *device)
     get_painter().drawEllipse(x, y, radius, radius);
     painter.end();
 }
+
+QString circle::getShapeString()
+{
+    QString outString = "\nShapeId: " + QString::number(getID());
+    outString += "\nShapeType: Circle";
+
+    outString += "\nShapeDimensions: " + QString::number(x) + ", " + QString::number(y) + ", "
+                 + QString::number(radius);
+
+    outString += "\nPenColor: " + penColorName;
+    outString += "\nPenWidth: " + QString::number(get_pen().width());
+    outString += "\nPenStyle: " + penStyleName;
+    outString += "\nPenCapStyle: " + penCapStyleName;
+    outString += "\nPenJoinStyle: " + penJoinStyleName;
+    outString += "\nBrushColor: " + brushColorName;
+    outString += "\nBrushStyle: " + brushStyleName + "\n";
+
+    return outString;
+}

@@ -296,9 +296,11 @@ text* ParseText(QTextStream &file, int ShapeID)
 
     tempText->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
 
-    tempText->set_text(textString, stringToColor(textColor), stringToAlignment(textAlignment), pointSize,
-                       textFontFamily, stringToTextFontStyle(textFontStyle), stringToTextFontWeight(textFontWeight));
+    tempText->set_pen(stringToColor(textColor), textColor);
 
+    tempText->set_text(textString, stringToColor(textColor), stringToAlignment(textAlignment), pointSize,
+                       textFontFamily, stringToTextFontStyle(textFontStyle), stringToTextFontWeight(textFontWeight),
+                       textString, textColor, textAlignment, textFontFamily, textFontStyle, textFontWeight);
     return tempText;
 }
 

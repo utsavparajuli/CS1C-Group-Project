@@ -12,7 +12,7 @@ public:
     void draw(QPaintDevice *devive) override;
     double calcPerimeter() {return (length * 2) + (width * 2);}
     double calcArea() {return length * width;}
-    virtual QString getShapeString()override{return QString("\ntest\n");};
+    virtual QString getShapeString()override;
 
 private:
     QString shapeName = "Rectangle";

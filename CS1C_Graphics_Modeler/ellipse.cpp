@@ -116,3 +116,23 @@ double ellipse::calcArea()
 {
     return width * height;
 }
+
+
+QString ellipse::getShapeString()
+{
+    QString outString = "\nShapeId: " + QString::number(getID());
+    outString += "\nShapeType: Ellipse";
+
+    outString += "\nShapeDimensions: " + QString::number(x) + ", " + QString::number(y) + ", "
+                 + QString::number(width) + ", " + QString::number(height);
+
+    outString += "\nPenColor: " + penColorName;
+    outString += "\nPenWidth: " + QString::number(get_pen().width());
+    outString += "\nPenStyle: " + penStyleName;
+    outString += "\nPenCapStyle: " + penCapStyleName;
+    outString += "\nPenJoinStyle: " + penJoinStyleName;
+    outString += "\nBrushColor: " + brushColorName;
+    outString += "\nBrushStyle: " + brushStyleName + "\n";
+
+    return outString;
+}

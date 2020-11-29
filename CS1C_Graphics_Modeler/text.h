@@ -18,10 +18,13 @@ public:
      double calcArea() override;
 
      //functions for text
-     void set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, QString fontFamily, QFont::Style style, QFont::Weight weight);
+     void set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize,
+                   QString fontFamily, QFont::Style style, QFont::Weight weight,
+                   QString textStringName, QString textColorName, QString textAlignmentName, QString textFontFamilyNAme,
+                   QString textFontStyleName, QString textFontWeightName);
      void set_alignment(Qt::AlignmentFlag alignment);
      void set_text_color(Qt::GlobalColor color);
-     virtual QString getShapeString()override{return QString("\ntest\n");};
+     virtual QString getShapeString()override;
 
 private:
      int x;
@@ -36,6 +39,14 @@ private:
      QString           family;
      QFont::Style      fontStyle;
      QFont::Weight     weight;
+
+     QString textStringName;
+     QString textColorName;
+     QString textAlignmentName;
+     QString textFontFamilyName;
+     QString textFontStyleName;
+     QString textFontWeightName;
+
 };
 
 #endif // TEXT_H

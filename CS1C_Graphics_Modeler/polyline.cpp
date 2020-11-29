@@ -76,16 +76,52 @@ double polyline::calcArea()
 {
     return 0; //To edit!
 }
+//Shape ID
+//QString outString = "\nShapeId: " + QString::number(getID());
 
-//void Line::drawID()
-//{
-//    //! Int variables that hold the coordinates for left most point of the object
-//    int leftmostPoint;  /*! < leftmostpoint holds the x- axis value*/
-//    int upmostPoint;    /*! < upmostPoint holds the y- axis value*/
+////ShapeType
+//outString += "\nShapeType: Line";
 
-//    const int VERTICAL_BUFFER = 5; /*! <Vertical Buffer for Drawing ID*/
+////ShapeDimensions
+//outString += "\nShapeDimensions: " + QString::number(begin.x()) + ", "
+//             +QString::number(begin.y()) + ", " + QString::number(end.x()) + ", "
+//             +QString::number(end.y());
 
-//    one.rx() < two.rx()? leftmostPoint = one.rx() : leftmostPoint = two.rx();
-//    one.ry() < two.ry()? upmostPoint = one.ry() : upmostPoint = two.ry();
-//    getQPainter()->drawText(leftmostPoint, upmostPoint - VERTICAL_BUFFER, stringID);
-//}
+////Pen Color
+//outString += "\nPenColor: " + penColorName;
+
+////PenWidth
+//outString += "\nPenWidth: " + QString::number(get_pen().width());
+
+////PenStyle
+//outString += "\nPenStyle: " + penStyleName;
+
+////Pen Cap Style
+//outString += "\nPenCapStyle: " + penCapStyleName;
+
+////PenJoinStyle
+//outString += "\nPenJoinStyle: " + penJoinStyleName + '\n';
+
+//return outString;
+QString polyline::getShapeString()
+{
+    QString outString = "\nShapeId: " + QString::number(getID());
+    outString += "\nShapeType: Polyine";
+
+    outString += "\nShapeDimensions: ";
+    for(int i = 0; i < pointCount; i++)
+    {
+        outString += QString::number(points[i].x()) + ", " + QString::number(points[i].y());
+
+        if(i != pointCount - 1)
+            outString += ", ";
+    }
+
+    outString += "\nPenColor: " + penColorName;
+    outString += "\nPenWidth: " + QString::number(get_pen().width());
+    outString += "\nPenStyle: " + penStyleName;
+    outString += "\nPenCapStyle: " + penCapStyleName;
+    outString += "\nPenJoinStyle: " + penJoinStyleName + '\n';
+
+    return outString;
+}

@@ -33,3 +33,23 @@ void rectangle::draw(QPaintDevice *device)
     get_painter().drawRect(x, y, length, width);
     painter.end();
 }
+
+QString rectangle::getShapeString()
+{
+    QString outString = "\nShapeId: " + QString::number(getID());
+    outString += "\nShapeType: Rectangle";
+
+    outString += "\nShapeDimensions: " + QString::number(x) + ", " + QString::number(y) + ", "
+                 + QString::number(length) + ", " + QString::number(width);
+
+    outString += "\nPenColor: " + penColorName;
+    outString += "\nPenWidth: " + QString::number(get_pen().width());
+    outString += "\nPenStyle: " + penStyleName;
+    outString += "\nPenCapStyle: " + penCapStyleName;
+    outString += "\nPenJoinStyle: " + penJoinStyleName;
+    outString += "\nBrushColor: " + brushColorName;
+    outString += "\nBrushStyle: " + brushStyleName + "\n";
+
+    return outString;
+}
+

@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0); //Starting program on the login page
     colorCounter = 1;
-
 }
 
 MainWindow::~MainWindow()
