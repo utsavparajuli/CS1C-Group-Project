@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "addupdateshape.h"
+#include "ui_addupdateshape.h"
 #include "line.h"
 #include <QDebug>
 #include <QTimer>
@@ -111,4 +113,11 @@ void MainWindow::on_LoginButtonGuest_clicked()
     ui->AddShapeButton->setEnabled(false);
     ui->EditShapeButton->setEnabled(false);
     ui->DeleteShapeButton->setEnabled(false);
+}
+
+void MainWindow::on_AddShapeButton_clicked()
+{
+    addUpdateWindow = new AddUpdateShape;
+    addUpdateWindow->setTitle("Add Shape");
+    addUpdateWindow->show();
 }

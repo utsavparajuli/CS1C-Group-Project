@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "addupdateshape.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,9 +22,12 @@ private slots:
     void on_LoginButtonGuest_clicked();
     void colorChange();
 
+    void on_AddShapeButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     int colorCounter;
+    AddUpdateShape *addUpdateWindow;
 
 };
 #endif // MAINWINDOW_H

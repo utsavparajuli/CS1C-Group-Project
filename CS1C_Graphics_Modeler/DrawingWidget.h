@@ -12,6 +12,7 @@ class DrawingWidget : public QWidget
 {
 public:
     explicit DrawingWidget(QWidget *parent = nullptr);
+    ~DrawingWidget();
 
 protected:
     void paintEvent(QPaintEvent *event);

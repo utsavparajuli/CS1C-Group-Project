@@ -17,7 +17,16 @@ PenStyle: SolidLine
 PenCapStyle: FlatCap
 PenJoinStyle: MiterJoin
 
-test
+ShapeId: 3
+ShapeType: Polygon
+ShapeDimensions: 900, 90, 910, 20, 970, 40, 980, 80
+PenColor: cyan
+PenWidth: 6
+PenStyle: DashDotDotLine
+PenCapStyle: FlatCap
+PenJoinStyle: MiterJoin
+BrushColor: yellow
+BrushStyle: SolidPattern
 
 ShapeId: 4
 ShapeType: Rectangle
@@ -30,7 +39,16 @@ PenJoinStyle: RoundJoin
 BrushColor: red
 BrushStyle: VerPattern
 
-test
+ShapeId: 5
+ShapeType: Square
+ShapeDimensions: 250, 150, 200
+PenColor: red
+PenWidth: 0
+PenStyle: SolidLine
+PenCapStyle: RoundCap
+PenJoinStyle: RoundJoin
+BrushColor: blue
+BrushStyle: HorPattern
 
 ShapeId: 6
 ShapeType: Ellipse
