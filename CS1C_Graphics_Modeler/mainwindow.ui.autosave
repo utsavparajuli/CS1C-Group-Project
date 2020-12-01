@@ -28,7 +28,6 @@
     </property>
     <property name="currentIndex">
      <number>2</number>
-     <number>1</number>
     </property>
     <widget class="QWidget" name="LoginPage">
      <widget class="QWidget" name="layoutWidget">
@@ -132,7 +131,7 @@
         <x>490</x>
         <y>10</y>
         <width>241</width>
-        <height>37</height>
+        <height>38</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -171,7 +170,7 @@
         <x>410</x>
         <y>620</y>
         <width>426</width>
-        <height>23</height>
+        <height>24</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -212,19 +211,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="ContactButton">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>510</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Contact</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="ContactPage">
      <widget class="QLabel" name="ContactLabel">
@@ -244,29 +230,6 @@
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;CONTACT US - &lt;/span&gt;&lt;span style=&quot; font-size:18pt; font-style:italic;&quot;&gt;SCRUM AND COKE&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:super;&quot;&gt;________________________________________________________________________________________________________&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/jamesdowty/CS1C-Group-Project&quot;&gt;&lt;span style=&quot; font-size:18pt; text-decoration: underline; color:#0000ff;&quot;&gt;Github&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/jamesdowty/CS1C-Group-Project&quot;&gt;&lt;span style=&quot; font-size:18pt; text-decoration: underline; color:#000000;&quot;&gt;Phone: 949-333-333&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/jamesdowty/CS1C-Group-Project&quot;&gt;&lt;span style=&quot; font-size:18pt; text-decoration: underline; color:#000000;&quot;&gt;Support: help@shape.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:super;&quot;&gt;________________________________________________________________________________________________________&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; vertical-align:super;&quot;&gt;Members: Kate, Behrad, James, Joey, Tim, Brandon, Utsav, Nicholas&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="LogoLabel">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>100</y>
-        <width>651</width>
-        <height>481</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../../../Pictures/logo.png</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:white;
-border: 3px solid black;</string>
       </property>
      </widget>
     </widget>
@@ -290,23 +253,13 @@ border: 3px solid black;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1012</width>
-     <height>21</height>
      <width>1200</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>DrawingWidget</class>
-   <extends>QWidget</extends>
-   <header>DrawingWidget.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
