@@ -27,11 +27,8 @@
      </rect>
     </property>
     <property name="currentIndex">
-<<<<<<< HEAD
      <number>2</number>
-=======
      <number>1</number>
->>>>>>> main
     </property>
     <widget class="QWidget" name="LoginPage">
      <widget class="QWidget" name="layoutWidget">
@@ -215,7 +212,6 @@
        </item>
       </layout>
      </widget>
-<<<<<<< HEAD
      <widget class="QPushButton" name="ContactButton">
       <property name="geometry">
        <rect>
@@ -267,7 +263,6 @@
       </property>
       <property name="scaledContents">
        <bool>true</bool>
-=======
      <widget class="DrawingWidget" name="widget" native="true">
       <property name="geometry">
        <rect>
@@ -280,7 +275,6 @@
       <property name="styleSheet">
        <string notr="true">background-color:white;
 border: 3px solid black;</string>
->>>>>>> main
       </property>
      </widget>
     </widget>
@@ -304,13 +298,10 @@ border: 3px solid black;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-<<<<<<< HEAD
      <width>1012</width>
      <height>21</height>
-=======
      <width>1200</width>
      <height>20</height>
->>>>>>> main
     </rect>
    </property>
   </widget>

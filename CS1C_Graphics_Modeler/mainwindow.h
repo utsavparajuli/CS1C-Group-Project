@@ -22,12 +22,7 @@ private slots:
     void on_LoginButtonGuest_clicked();
     void on_ContactButton_clicked();
     void colorChange();
-
-<<<<<<< HEAD
-    void on_ContactButton_toggled(bool checked);
-=======
     void on_AddShapeButton_clicked();
->>>>>>> main
 
 private:
     Ui::MainWindow *ui;
