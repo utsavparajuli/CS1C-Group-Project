@@ -13,8 +13,13 @@ public:
     void draw(QPaintDevice *device) override;
     double calcPerimeter() override {return 0;} //need to write implementation
     double calcArea() override {return 0;} //need to write implementation
+    virtual QString getShapeString()override;
+
+    QPoint getIDLocation();
+    QPoint getLeftMostPoint(QPoint, QPoint);
 
 private:
+    QString shapeName = "Polygon";
     QPoint *points;
     int pointCount;
 };

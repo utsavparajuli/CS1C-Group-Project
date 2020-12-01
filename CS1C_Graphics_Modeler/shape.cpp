@@ -41,26 +41,36 @@ void shape::set_Shape(ShapeType shape)
 }
 
 //sets the brush
-void shape::set_brush(Qt::GlobalColor color, Qt::BrushStyle brushStyle)
+void shape::set_brush(Qt::GlobalColor color, Qt::BrushStyle brushStyle, QString newBrushColorName, QString newBrushStyleName)
 {
     brush.setColor(color);
     brush.setStyle(brushStyle);
+
+    brushColorName = newBrushColorName;
+    brushStyleName = newBrushStyleName;
 }
 
 //sets the pen
-void shape::set_pen(Qt::GlobalColor color, int width, Qt::PenStyle penStyle, Qt::PenCapStyle penCapStyle, Qt::PenJoinStyle penJoinStyle)
+void shape::set_pen(Qt::GlobalColor color, int width, Qt::PenStyle penStyle, Qt::PenCapStyle penCapStyle, Qt::PenJoinStyle penJoinStyle,
+                    QString newPenColorName,  QString newPenStyleName, QString newPenCapStyleName, QString newPenJoinStyleName)
 {
     pen.setColor(color);
     pen.setWidth(width);
     pen.setStyle(penStyle);
     pen.setCapStyle(penCapStyle);
     pen.setJoinStyle(penJoinStyle);
+
+    penColorName = newPenColorName;
+    penStyleName = newPenStyleName;
+    penCapStyleName = newPenCapStyleName;
+    penJoinStyleName = newPenJoinStyleName;
 }
 
 //sets the pens color
-void shape::set_pen(Qt::GlobalColor color)
+void shape::set_pen(Qt::GlobalColor color, QString newPenColorName)
 {
     pen.setColor(color);
+    penColorName = newPenColorName;
 }
 
 //default style for shape
@@ -68,6 +78,11 @@ void shape::default_style()
 {
     pen = Qt::SolidLine;
     brush = Qt::NoBrush;
+}
+
+QString shape::construct_ID_String(QString shapeName, int shapeID)
+{
+    return shapeName + " ID: " + QString::number(shapeID);
 }
 
 //void shape::set_text(string text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, string fontFamily, QFont::Style style, QFont::Weight weight)

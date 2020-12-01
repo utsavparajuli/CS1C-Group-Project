@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "addupdateshape.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,11 +23,16 @@ private slots:
     void on_ContactButton_clicked();
     void colorChange();
 
+<<<<<<< HEAD
     void on_ContactButton_toggled(bool checked);
+=======
+    void on_AddShapeButton_clicked();
+>>>>>>> main
 
 private:
     Ui::MainWindow *ui;
     int colorCounter;
+    AddUpdateShape *addUpdateWindow;
 
 };
 #endif // MAINWINDOW_H

@@ -11,16 +11,11 @@ void text::draw(QPaintDevice *device)
 {
     QPainter &painter = get_painter();
     painter.begin(device);
-    //get_painter().setPen(QPen(color));
 
     QFont font{family, pointSize};
 
-//    font.setStyle(fontStyle);
-//    font.setWeight(weight);
-
-//    get_painter().setFont(font);
-
-    //get_painter().translate(1,1);
+    font.setStyle(fontStyle);
+    font.setWeight(weight);
 
     get_painter().setFont(font);
     get_painter().setPen(get_pen());
@@ -30,7 +25,10 @@ void text::draw(QPaintDevice *device)
     painter.end();
 }
 
-void text::set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize, QString fontFamily, QFont::Style style, QFont::Weight weight)
+void text::set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize,
+                    QString fontFamily, QFont::Style style, QFont::Weight weight,
+                    QString textStringName, QString textColorName, QString textAlignmentName, QString textFontFamilyName,
+                    QString textFontStyleName, QString textFontWeightName)
 {
     textStr = text;
     this->color = color;
@@ -39,6 +37,13 @@ void text::set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag align
     this->family = fontFamily;
     this->fontStyle = style;
     this->weight = weight;
+
+    this->textStringName     = textStringName;
+    this->textColorName      = textColorName;
+    this->textAlignmentName  = textAlignmentName;
+    this->textFontFamilyName = textFontFamilyName;
+    this->textFontStyleName  = textFontStyleName;
+    this->textFontWeightName = textFontWeightName;
 }
 
 void text::setPoints(int x, int y, int l, int w)
@@ -72,4 +77,43 @@ double text::calcPerimeter()
 void text::move(const int x_cord, const int y_cord)
 {
     //test
+}
+
+
+//QString rectangle::getShapeString()
+//{
+//    QString outString = "\nShapeId: " + QString::number(getID());
+//    outString += "\nShapeType: Rectangle";
+
+//    outString += "\nShapeDimensions: " + QString::number(x) + ", " + QString::number(y) + ", "
+//                 + QString::number(length) + ", " + QString::number(width);
+
+//    outString += "\nPenColor: " + penColorName;
+//    outString += "\nPenWidth: " + QString::number(get_pen().width());
+//    outString += "\nPenStyle: " + penStyleName;
+//    outString += "\nPenCapStyle: " + penCapStyleName;
+//    outString += "\nPenJoinStyle: " + penJoinStyleName;
+//    outString += "\nBrushColor: " + brushColorName;
+//    outString += "\nBrushStyle: " + brushStyleName + "\n";
+
+//    return outString;
+//}
+
+QString text::getShapeString()
+{
+    QString outString = "\nShapeId: " + QString::number(getID());
+    outString += "\nShapeType: Text";
+
+    outString += "\nShapeDimensions: " + QString::number(x) + ", " + QString::number(y) + ", "
+                 + QString::number(l) + ", " + QString::number(w);
+
+    outString += "\nTextString: " + textStringName;
+    outString += "\nTextColor: " + textColorName;
+    outString += "\nTextAlignment: " + textAlignmentName;
+    outString += "\nTextPointSize: " + QString::number(pointSize);
+    outString += "\nTextFontFamily: " + textFontFamilyName;
+    outString += "\nTextFontStyle: " + textFontStyleName;
+    outString += "\nTextFontWeight: " + textFontWeightName + "\n";
+
+    return outString;
 }

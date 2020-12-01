@@ -13,8 +13,14 @@ public:
     void draw(QPaintDevice *device)override;
     double calcPerimeter() override; //need to write implementation
     double calcArea() override; //need to write implementation
+    QPoint get_begin(){return begin;}
+    QPoint get_end(){return end;}
+    QString getShapeString()override;
+
+    QPoint getIDLocation();
 
 private:
+    QString shapeName = "Line";
     QPoint begin;
     QPoint end;
 };

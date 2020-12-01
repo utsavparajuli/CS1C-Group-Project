@@ -6,12 +6,17 @@ line::~line(){}
 
 void line::draw(QPaintDevice *device)
 {
-    //drawID();
     QPainter &painter = get_painter();
     painter.begin(device);
+
+    QString IdString = construct_ID_String(shapeName, getID());
+    get_painter().drawText(getIDLocation().x(), getIDLocation().y(), IdString);
+
     painter.setPen(get_pen());
-    //qDebug() << get_pen();
     painter.setBrush(get_brush());
+
+    qDebug() << get_pen();
+
     painter.drawLine(begin, end);
     painter.end();
 }
@@ -42,6 +47,52 @@ double line::calcPerimeter()
 double line::calcArea()
 {
     return 0;
+}
+
+QString line::getShapeString()
+{
+    //Shape ID
+    QString outString = "\nShapeId: " + QString::number(getID());
+
+    //ShapeType
+    outString += "\nShapeType: Line";
+
+    //ShapeDimensions
+    outString += "\nShapeDimensions: " + QString::number(begin.x()) + ", "
+                 +QString::number(begin.y()) + ", " + QString::number(end.x()) + ", "
+                 +QString::number(end.y());
+
+    //Pen Color
+    outString += "\nPenColor: " + penColorName;
+
+    //PenWidth
+    outString += "\nPenWidth: " + QString::number(get_pen().width());
+
+    //PenStyle
+    outString += "\nPenStyle: " + penStyleName;
+
+    //Pen Cap Style
+    outString += "\nPenCapStyle: " + penCapStyleName;
+
+    //PenJoinStyle
+    outString += "\nPenJoinStyle: " + penJoinStyleName + '\n';
+
+    return outString;
+}
+QPoint line::getIDLocation()
+{
+    int x, y;
+    if(begin.x() < end.x())
+        x = begin.x();
+    else
+        x = end.x();
+
+    if(begin.y() < end.y())
+        y = begin.y();
+    else
+        y = end.y();
+
+    return(QPoint(x,y));
 }
 
 //void Line::drawID()

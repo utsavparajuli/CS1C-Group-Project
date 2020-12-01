@@ -13,11 +13,13 @@ public:
     void draw(QPaintDevice *devive) override;
     double calcPerimeter() override {return  2 * M_PI * radius;}
     double calcArea() override {return radius * radius * M_PI;}
+    virtual QString getShapeString()override;
 
 private:
     int x;
     int y;
     int radius;
+    QString shapeName = "Circle";
 };
 
 

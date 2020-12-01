@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -46,31 +47,36 @@ public:
     QWidget *MainPage;
     QPushButton *LogoutButton;
     QWidget *layoutWidget1;
-    QFormLayout *formLayout;
+    QVBoxLayout *verticalLayout_2;
     QLabel *WelcomeTitle;
-    QLabel *WhichUserTitle;
-    QLabel *UserLabel;
+    QLabel *WhichUserTitle_2;
+    QWidget *layoutWidget2;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *ContactUsButton;
+    QPushButton *AddShapeButton;
+    QPushButton *EditShapeButton;
+    QPushButton *DeleteShapeButton;
+    QPushButton *TestimonialsButton;
+    DrawingWidget *widget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
-    class DrawingWidget *drawArea;
-
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1012, 627);
+        MainWindow->resize(1200, 700);
         MainWindow->setAutoFillBackground(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(0, 0, 1011, 581));
+        stackedWidget->setGeometry(QRect(0, 0, 1200, 700));
         LoginPage = new QWidget();
         LoginPage->setObjectName(QString::fromUtf8("LoginPage"));
         layoutWidget = new QWidget(LoginPage);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(380, 200, 345, 204));
+        layoutWidget->setGeometry(QRect(450, 210, 345, 201));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -134,19 +140,12 @@ public:
         LogoutButton = new QPushButton(MainPage);
         LogoutButton->setObjectName(QString::fromUtf8("LogoutButton"));
         LogoutButton->setGeometry(QRect(30, 10, 80, 25));
-
-        drawArea = new class DrawingWidget(MainPage);
-        drawArea->setGeometry(QRect(50, 70, 900, 500));
-        drawArea->setStyleSheet("border: 3px solid black; background-color:white;");
-
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(290, 10, 421, 46));
-        formLayout = new QFormLayout(layoutWidget1);
-        formLayout->setObjectName(QString::fromUtf8("formLayout"));
-        formLayout->setLabelAlignment(Qt::AlignCenter);
-        formLayout->setHorizontalSpacing(7);
-        formLayout->setContentsMargins(0, 0, 0, 0);
+        layoutWidget1->setGeometry(QRect(490, 10, 241, 37));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         WelcomeTitle = new QLabel(layoutWidget1);
         WelcomeTitle->setObjectName(QString::fromUtf8("WelcomeTitle"));
         QFont font1;
@@ -156,28 +155,55 @@ public:
         font1.setWeight(75);
         WelcomeTitle->setFont(font1);
 
-        formLayout->setWidget(0, QFormLayout::LabelRole, WelcomeTitle);
+        verticalLayout_2->addWidget(WelcomeTitle);
 
-        WhichUserTitle = new QLabel(layoutWidget1);
-        WhichUserTitle->setObjectName(QString::fromUtf8("WhichUserTitle"));
-        WhichUserTitle->setFont(font);
-        WhichUserTitle->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        WhichUserTitle_2 = new QLabel(layoutWidget1);
+        WhichUserTitle_2->setObjectName(QString::fromUtf8("WhichUserTitle_2"));
+        WhichUserTitle_2->setFont(font);
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, WhichUserTitle);
+        verticalLayout_2->addWidget(WhichUserTitle_2);
 
-        UserLabel = new QLabel(layoutWidget1);
-        UserLabel->setObjectName(QString::fromUtf8("UserLabel"));
-        UserLabel->setEnabled(true);
-        UserLabel->setMinimumSize(QSize(100, 0));
-        UserLabel->setLayoutDirection(Qt::LeftToRight);
+        layoutWidget2 = new QWidget(MainPage);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(410, 620, 426, 23));
+        horizontalLayout = new QHBoxLayout(layoutWidget2);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        ContactUsButton = new QPushButton(layoutWidget2);
+        ContactUsButton->setObjectName(QString::fromUtf8("ContactUsButton"));
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, UserLabel);
+        horizontalLayout->addWidget(ContactUsButton);
 
+        AddShapeButton = new QPushButton(layoutWidget2);
+        AddShapeButton->setObjectName(QString::fromUtf8("AddShapeButton"));
+
+        horizontalLayout->addWidget(AddShapeButton);
+
+        EditShapeButton = new QPushButton(layoutWidget2);
+        EditShapeButton->setObjectName(QString::fromUtf8("EditShapeButton"));
+
+        horizontalLayout->addWidget(EditShapeButton);
+
+        DeleteShapeButton = new QPushButton(layoutWidget2);
+        DeleteShapeButton->setObjectName(QString::fromUtf8("DeleteShapeButton"));
+
+        horizontalLayout->addWidget(DeleteShapeButton);
+
+        TestimonialsButton = new QPushButton(layoutWidget2);
+        TestimonialsButton->setObjectName(QString::fromUtf8("TestimonialsButton"));
+
+        horizontalLayout->addWidget(TestimonialsButton);
+
+        widget = new DrawingWidget(MainPage);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(29, 59, 1141, 541));
+        widget->setStyleSheet(QString::fromUtf8("background-color:white;\n"
+"border: 3px solid black;"));
         stackedWidget->addWidget(MainPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1012, 25));
+        menubar->setGeometry(QRect(0, 0, 1200, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -203,8 +229,12 @@ public:
         LoginUserNoteTitle->setText(QCoreApplication::translate("MainWindow", "*To login as a Guest, no username or password is required", nullptr));
         LogoutButton->setText(QCoreApplication::translate("MainWindow", "Logout", nullptr));
         WelcomeTitle->setText(QCoreApplication::translate("MainWindow", "Welcome to the 2D Shapes Modeler!", nullptr));
-        WhichUserTitle->setText(QCoreApplication::translate("MainWindow", "You are currently logged in as: ", nullptr));
-        UserLabel->setText(QString());
+        WhichUserTitle_2->setText(QCoreApplication::translate("MainWindow", "You are currently logged in as: ", nullptr));
+        ContactUsButton->setText(QCoreApplication::translate("MainWindow", "Contact Us", nullptr));
+        AddShapeButton->setText(QCoreApplication::translate("MainWindow", "Add Shape", nullptr));
+        EditShapeButton->setText(QCoreApplication::translate("MainWindow", "Edit Shape", nullptr));
+        DeleteShapeButton->setText(QCoreApplication::translate("MainWindow", "Delete Shape", nullptr));
+        TestimonialsButton->setText(QCoreApplication::translate("MainWindow", "Testimonials", nullptr));
     } // retranslateUi
 
 };

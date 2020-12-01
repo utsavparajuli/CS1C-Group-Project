@@ -134,13 +134,14 @@ public:
     */
 
     void drawID();
+    virtual QString getShapeString()override;
 
 private:
     int x;
     int y;
     int width;
     int height;
-    QString stringID;
+    QString shapeName = "Ellipse";
 
 };
 

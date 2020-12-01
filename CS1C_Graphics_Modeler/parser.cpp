@@ -4,7 +4,7 @@ custom::vector<shape*>* parser(const QString fileName)
 {
     custom::vector<shape*> *shapeVector = new custom::vector<shape*>();
 
-    int ShapeID = 1;
+    int ShapeID;
 
     //Storing the path to the .txt file in filePath
     QString filePath = qApp->applicationDirPath();
@@ -28,7 +28,7 @@ custom::vector<shape*>* parser(const QString fileName)
     while(!input.atEnd())
     {
         input.readLine();  //Reading in the first blank line
-        input.readLine();  //Throwing away shapeID (shapes will be numbered in the order they are read in)
+        ShapeID = input.readLine().remove(0, 9).toInt();  //Reading in shapeId
         textLine = input.readLine().remove(0, 11); //Reading in shape type
 
         if(textLine == "Line")
@@ -67,8 +67,6 @@ custom::vector<shape*>* parser(const QString fileName)
         {
             qDebug() << "ERROR: Shape type " << textLine << " is not valid.";
         }
-
-        ShapeID++;
     }
 
     return shapeVector;
@@ -95,7 +93,9 @@ line* ParseLine(QTextStream &file, int ShapeID)
                         QPoint(dimensions[2].toInt(), dimensions[3].toInt()));
 
     tempLine->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                      stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle));
+                      stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                      penColor, penStyle, penCapStyle, penJoinStyle);
+
     return tempLine;
 }
 
@@ -126,7 +126,8 @@ polyline* ParsePolyline(QTextStream &file, int ShapeID)
     tempPolyline->setPoints(pointArray, dimensions.size() / 2);
 
     tempPolyline->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                      stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                      penColor, penStyle, penCapStyle, penJoinStyle);
 
     return tempPolyline;
 }
@@ -160,8 +161,9 @@ polygon* ParsePolygon(QTextStream &file, int ShapeID)
     tempPolygon->setPoints(pointArray, dimensions.size() / 2);
 
     tempPolygon->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
-    tempPolygon->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+                         stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                         penColor, penStyle, penCapStyle, penJoinStyle);
+    tempPolygon->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempPolygon;
 }
@@ -185,9 +187,10 @@ rectangle* ParseRectangle(QTextStream &file, int ShapeID)
     tempRectangle->set_ShapeId(ShapeID);
 
     tempRectangle->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                           stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                           penColor, penStyle, penCapStyle, penJoinStyle);
 
-    tempRectangle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+    tempRectangle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempRectangle;
 }
@@ -211,9 +214,10 @@ square* ParseSquare(QTextStream &file, int ShapeID)
     tempSquare->set_ShapeId(ShapeID);
 
     tempSquare->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                        stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                        penColor, penStyle, penCapStyle, penJoinStyle);
 
-    tempSquare->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+    tempSquare->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempSquare;
 }
@@ -236,9 +240,10 @@ ellipse* ParseEllipse(QTextStream &file, int ShapeID)
     tempEllipse->set_ShapeId(ShapeID);
 
     tempEllipse->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                         stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                         penColor, penStyle, penCapStyle, penJoinStyle);
 
-    tempEllipse->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+    tempEllipse->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempEllipse;
 }
@@ -263,9 +268,10 @@ circle* ParseCircle(QTextStream &file, int ShapeID)
     tempCircle->set_ShapeId(ShapeID);
 
     tempCircle->set_pen(stringToColor(penColor), penWidth, stringToPenStyle(penStyle),
-                          stringToPenCapStyle(penCapStyle),  stringToPenJoinStyle(penJoinStyle));
+                        stringToPenCapStyle(penCapStyle), stringToPenJoinStyle(penJoinStyle),
+                        penColor, penStyle, penCapStyle, penJoinStyle);
 
-    tempCircle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle));
+    tempCircle->set_brush(stringToColor(brushColor), stringToBrushStyle(brushStyle), brushColor, brushStyle);
 
     return tempCircle;
 }
@@ -290,9 +296,11 @@ text* ParseText(QTextStream &file, int ShapeID)
 
     tempText->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
 
-    tempText->set_text(textString, stringToColor(textColor), stringToAlignment(textAlignment), pointSize,
-                       textFontFamily, stringToTextFontStyle(textFontStyle), stringToTextFontWeight(textFontWeight));
+    tempText->set_pen(stringToColor(textColor), textColor);
 
+    tempText->set_text(textString, stringToColor(textColor), stringToAlignment(textAlignment), pointSize,
+                       textFontFamily, stringToTextFontStyle(textFontStyle), stringToTextFontWeight(textFontWeight),
+                       textString, textColor, textAlignment, textFontFamily, textFontStyle, textFontWeight);
     return tempText;
 }
 

@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "addupdateshape.h"
+#include "ui_addupdateshape.h"
 #include "line.h"
 #include <QDebug>
 #include <QTimer>
@@ -13,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0); //Starting program on the login page
     colorCounter = 1;
-
 }
 
 MainWindow::~MainWindow()
@@ -58,10 +59,13 @@ void MainWindow::on_LoginButton_clicked()
 {
     if(ui->UsernameEntry->text() == "Admin" && ui->PasswordEntry->text() == "Admin") //Checking if entries are correct
     {
-        ui->UserLabel->setText("Admin"); //Set user label on MainPage to "admin"
+        ui->WhichUserTitle_2->setText("You are currently logged in as: Admin"); //Set user label on MainPage to "admin"
         ui->stackedWidget->setCurrentIndex(1); //Changing to MainPage
         ui->UsernameEntry->setText("");
         ui->PasswordEntry->setText(""); //Setting username/password entries empty after login
+        ui->AddShapeButton->setEnabled(true);
+        ui->EditShapeButton->setEnabled(true);
+        ui->DeleteShapeButton->setEnabled(true);
     }
     else if(ui->UsernameEntry->text() == "RAVE" && ui->PasswordEntry->text() == "RAVE")
     {
@@ -102,10 +106,20 @@ void MainWindow::on_LogoutButton_clicked()
  * ***********************************************************************/
 void MainWindow::on_LoginButtonGuest_clicked()
 {
-    ui->UserLabel->setText("Guest"); //Set user label on MainPage to "guest"
+    ui->WhichUserTitle_2->setText("You are currently logged in as: Guest"); //Set user label on MainPage to "guest"
     ui->stackedWidget->setCurrentIndex(1); //Changing to MainPage
     ui->UsernameEntry->setText("");
     ui->PasswordEntry->setText(""); //Setting username/password entries empty after login
+    ui->AddShapeButton->setEnabled(false);
+    ui->EditShapeButton->setEnabled(false);
+    ui->DeleteShapeButton->setEnabled(false);
+}
+
+void MainWindow::on_AddShapeButton_clicked()
+{
+    addUpdateWindow = new AddUpdateShape;
+    addUpdateWindow->setTitle("Add Shape");
+    addUpdateWindow->show();
 }
 
 /*************************************************************************

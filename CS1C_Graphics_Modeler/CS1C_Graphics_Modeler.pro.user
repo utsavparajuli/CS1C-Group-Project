@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <!-- Written by QtCreator 4.13.2, 2020-12-01T15:28:18. -->
 =======
@@ -9,6 +10,13 @@
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{6cbe77c4-cf88-48d0-840d-e6b1a75ab59d}</value>
+=======
+<!-- Written by QtCreator 4.13.2, 2020-12-01T13:33:47. -->
+<qtcreator>
+ <data>
+  <variable>EnvironmentId</variable>
+  <value type="QByteArray">{a6f62c50-1ba8-4072-8812-32c797622fee}</value>
+>>>>>>> main
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -100,8 +108,13 @@
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">0</value>
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\Kate\Documents\GitHub\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_0_MinGW_64_bit-Debug</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/Kate/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_0_MinGW_64_bit-Debug</value>
+=======
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\james\Desktop\CS 1C\Group Project\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
+>>>>>>> main
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -152,8 +165,13 @@
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">2</value>
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\Kate\Documents\GitHub\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_0_MinGW_64_bit-Release</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/Kate/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_0_MinGW_64_bit-Release</value>
+=======
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\james\Desktop\CS 1C\Group Project\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Release</value>
+>>>>>>> main
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -204,8 +222,13 @@
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">0</value>
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\Kate\Documents\GitHub\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_0_MinGW_64_bit-Profile</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/Kate/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_0_MinGW_64_bit-Profile</value>
+=======
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\james\Desktop\CS 1C\Group Project\CS1C-Group-Project\build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Profile</value>
+>>>>>>> main
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -329,8 +352,13 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Kate/Documents/GitHub/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Kate/Documents/GitHub/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
+=======
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/CS1C_Graphics_Modeler/CS1C_Graphics_Modeler.pro</value>
+>>>>>>> main
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
@@ -341,7 +369,11 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
+<<<<<<< HEAD
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Kate/Documents/GitHub/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_0_MinGW_64_bit-Debug</value>
+=======
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug</value>
+>>>>>>> main
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

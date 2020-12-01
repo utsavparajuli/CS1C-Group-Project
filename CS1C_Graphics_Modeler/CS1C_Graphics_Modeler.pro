@@ -11,6 +11,7 @@ CONFIG += c++11
 
 SOURCES += \
     DrawingWidget.cpp \
+    addupdateshape.cpp \
     circle.cpp \
     ellipse.cpp \
     line.cpp \
@@ -20,12 +21,14 @@ SOURCES += \
     polygon.cpp \
     polyline.cpp \
     rectangle.cpp \
+    saveFile.cpp \
     shape.cpp \
     square.cpp \
     text.cpp
 
 HEADERS += \
     DrawingWidget.h \
+    addupdateshape.h \
     circle.h \
     ellipse.h \
     line.h \
@@ -34,12 +37,14 @@ HEADERS += \
     polygon.h \
     polyline.h \
     rectangle.h \
+    saveFile.h \
     shape.h \
     square.h \
     text.h \
     vector.h
 
 FORMS += \
+    addupdateshape.ui \
     mainwindow.ui
 
 # Default rules for deployment.

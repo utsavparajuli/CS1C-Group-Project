@@ -1,4 +1,5 @@
 release/DrawingWidget.o
+release/addupdateshape.o
 release/circle.o
 release/ellipse.o
 release/line.o
@@ -8,7 +9,9 @@ release/parser.o
 release/polygon.o
 release/polyline.o
 release/rectangle.o
+release/saveFile.o
 release/shape.o
 release/square.o
 release/text.o
+release/moc_addupdateshape.o
 release/moc_mainwindow.o
