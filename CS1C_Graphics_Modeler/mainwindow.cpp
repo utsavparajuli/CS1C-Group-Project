@@ -107,3 +107,15 @@ void MainWindow::on_LoginButtonGuest_clicked()
     ui->UsernameEntry->setText("");
     ui->PasswordEntry->setText(""); //Setting username/password entries empty after login
 }
+
+/*************************************************************************
+ * MainWindow::on_LoginButtonGuest_clicked()
+ * -----------------------------------------------------------------------
+ * This function switches to the MainPage without a username/password with
+ * "guest user" privileges.
+ * ***********************************************************************/
+void MainWindow::on_ContactButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
