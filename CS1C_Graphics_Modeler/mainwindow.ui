@@ -131,7 +131,7 @@
         <x>490</x>
         <y>10</y>
         <width>241</width>
-        <height>38</height>
+        <height>37</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -170,7 +170,7 @@
         <x>410</x>
         <y>620</y>
         <width>426</width>
-        <height>24</height>
+        <height>23</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -211,6 +211,7 @@
        </item>
       </layout>
      </widget>
+<<<<<<< HEAD
      <widget class="DrawingWidget" name="widget" native="true">
       <property name="geometry">
        <rect>
@@ -247,22 +248,20 @@ border: 3px solid black;</string>
       </property>
      </widget>
      <widget class="QLabel" name="Logo">
+=======
+     <widget class="DrawingWidget" name="drawArea" native="true">
+>>>>>>> origin/AddEditShape
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>160</y>
-        <width>151</width>
-        <height>101</height>
+        <x>29</x>
+        <y>59</y>
+        <width>1141</width>
+        <height>541</height>
        </rect>
       </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../../../Pictures/logo.png</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
+      <property name="styleSheet">
+       <string notr="true">background-color:white;
+border: 3px solid black;</string>
       </property>
      </widget>
     </widget>
@@ -284,7 +283,11 @@ border: 3px solid black;</string>
   <customwidget>
    <class>DrawingWidget</class>
    <extends>QWidget</extends>
+<<<<<<< HEAD
    <header>drawingwidget.h</header>
+=======
+   <header>DrawingWidget.h</header>
+>>>>>>> origin/AddEditShape
    <container>1</container>
   </customwidget>
  </customwidgets>

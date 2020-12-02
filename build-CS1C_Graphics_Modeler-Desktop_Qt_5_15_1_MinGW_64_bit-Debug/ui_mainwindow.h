@@ -57,10 +57,14 @@ public:
     QPushButton *EditShapeButton;
     QPushButton *DeleteShapeButton;
     QPushButton *TestimonialsButton;
+<<<<<<< HEAD
     DrawingWidget *widget;
     QWidget *ContactPage;
     QLabel *ContactLabel;
     QLabel *Logo;
+=======
+    DrawingWidget *drawArea;
+>>>>>>> origin/AddEditShape
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -197,10 +201,17 @@ public:
 
         horizontalLayout->addWidget(TestimonialsButton);
 
+<<<<<<< HEAD
         widget = new DrawingWidget(MainPage);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(20, 50, 1151, 551));
         widget->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+=======
+        drawArea = new DrawingWidget(MainPage);
+        drawArea->setObjectName(QString::fromUtf8("drawArea"));
+        drawArea->setGeometry(QRect(29, 59, 1141, 541));
+        drawArea->setStyleSheet(QString::fromUtf8("background-color:white;\n"
+>>>>>>> origin/AddEditShape
 "border: 3px solid black;"));
         stackedWidget->addWidget(MainPage);
         ContactPage = new QWidget();

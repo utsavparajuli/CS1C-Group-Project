@@ -26,6 +26,14 @@ public:
      void set_text_color(Qt::GlobalColor color);
      virtual QString getShapeString()override;
 
+     QString get_textString()override;
+     QString get_textColor()override;
+     QString get_textAllignment()override;
+     int get_textPointSize()override;
+     QString get_textFont()override;
+     QString get_textFontStyle()override;
+     QString get_textFontWeight()override;
+
 private:
      int x;
      int y;

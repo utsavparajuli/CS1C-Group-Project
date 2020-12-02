@@ -1,4 +1,5 @@
 #include "text.h"
+#include <QDebug>
 
 void text::set_rect(int x, int y, int l, int w)
 {
@@ -116,4 +117,38 @@ QString text::getShapeString()
     outString += "\nTextFontWeight: " + textFontWeightName + "\n";
 
     return outString;
+}
+
+QString text::get_textString()
+{
+    return textStr;
+}
+QString text::get_textColor()
+{
+    return textColorName;
+}
+
+QString text::get_textAllignment()
+{
+    return textAlignmentName;
+}
+
+int text::get_textPointSize()
+{
+    return pointSize;
+}
+
+QString text::get_textFont()
+{
+    return textFontFamilyName;
+}
+
+QString text::get_textFontStyle()
+{
+    return textFontStyleName;
+}
+
+QString text::get_textFontWeight()
+{
+    return textFontWeightName;
 }
