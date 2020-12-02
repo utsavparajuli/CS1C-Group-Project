@@ -128,13 +128,8 @@ void MainWindow::on_AddShapeButton_clicked()
  * This function switches to the MainPage without a username/password with
  * "guest user" privileges.
  * ***********************************************************************/
-void MainWindow::on_ContactButton_clicked()
+
+void MainWindow::on_ContactUsButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
-}
-
-
-void MainWindow::on_BackButton_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(1);
 }

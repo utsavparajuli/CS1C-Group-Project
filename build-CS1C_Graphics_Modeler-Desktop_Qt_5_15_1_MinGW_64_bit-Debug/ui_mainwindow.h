@@ -22,7 +22,6 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include "DrawingWidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -57,7 +56,9 @@ public:
     QPushButton *EditShapeButton;
     QPushButton *DeleteShapeButton;
     QPushButton *TestimonialsButton;
-    DrawingWidget *widget;
+    QWidget *ContactPage;
+    QLabel *ContactLabel;
+    QLabel *Logo;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -142,7 +143,7 @@ public:
         LogoutButton->setGeometry(QRect(30, 10, 80, 25));
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(490, 10, 241, 37));
+        layoutWidget1->setGeometry(QRect(490, 10, 241, 38));
         verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -165,7 +166,7 @@ public:
 
         layoutWidget2 = new QWidget(MainPage);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(410, 620, 426, 23));
+        layoutWidget2->setGeometry(QRect(410, 620, 426, 24));
         horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -194,12 +195,22 @@ public:
 
         horizontalLayout->addWidget(TestimonialsButton);
 
-        widget = new DrawingWidget(MainPage);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(29, 59, 1141, 541));
-        widget->setStyleSheet(QString::fromUtf8("background-color:white;\n"
-"border: 3px solid black;"));
         stackedWidget->addWidget(MainPage);
+        ContactPage = new QWidget();
+        ContactPage->setObjectName(QString::fromUtf8("ContactPage"));
+        ContactLabel = new QLabel(ContactPage);
+        ContactLabel->setObjectName(QString::fromUtf8("ContactLabel"));
+        ContactLabel->setGeometry(QRect(10, 70, 531, 321));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Comic Sans MS"));
+        font2.setPointSize(14);
+        ContactLabel->setFont(font2);
+        Logo = new QLabel(ContactPage);
+        Logo->setObjectName(QString::fromUtf8("Logo"));
+        Logo->setGeometry(QRect(350, 160, 151, 101));
+        Logo->setPixmap(QPixmap(QString::fromUtf8("../../../../Pictures/logo.png")));
+        Logo->setScaledContents(true);
+        stackedWidget->addWidget(ContactPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -235,6 +246,9 @@ public:
         EditShapeButton->setText(QCoreApplication::translate("MainWindow", "Edit Shape", nullptr));
         DeleteShapeButton->setText(QCoreApplication::translate("MainWindow", "Delete Shape", nullptr));
         TestimonialsButton->setText(QCoreApplication::translate("MainWindow", "Testimonials", nullptr));
+        ContactLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">CONTACT US - </span><span style=\" font-size:18pt; font-style:italic;\">SCRUM AND COKE</span></p><p><span style=\" font-size:18pt; vertical-align:super;\">________________________________________________________________________________________________________</span></p><p><a href=\"https://github.com/jamesdowty/CS1C-Group-Project\"><span style=\" font-size:18pt; text-decoration: underline; color:#0000ff;\">Github</span></a></p><p><a href=\"https://github.com/jamesdowty/CS1C-Group-Project\"><span style=\" font-size:18pt; text-decoration: underline; color:#000000;\">Phone: 949-333-333</span></a></p><p><a href=\"https://github.com/jamesdowty/CS1C-Group-Project\"><span style=\" font-size:18pt; text-decoration: underline; color:#000000;\">Support: help@shape.com</span></a></p><p><span style=\" font-size:18pt; vertical-align:super;\">________________________________________________________________________________________________________</span></p><p><span style="
+                        "\" font-size:18pt; vertical-align:super;\">Members: Kate, Behrad, James, Joey, Tim, Brandon, Utsav, Nicholas</span></p><p><br/></p><p><span style=\" font-size:18pt;\"><br/></span></p><p><span style=\" font-size:18pt;\"><br/></span></p><p><span style=\" font-size:18pt;\"><br/></span></p></body></html>", nullptr));
+        Logo->setText(QString());
     } // retranslateUi
 
 };
