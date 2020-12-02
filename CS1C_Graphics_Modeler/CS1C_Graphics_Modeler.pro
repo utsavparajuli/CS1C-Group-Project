@@ -22,6 +22,7 @@ SOURCES += \
     polyline.cpp \
     rectangle.cpp \
     saveFile.cpp \
+    savetestimonial.cpp \
     shape.cpp \
     square.cpp \
     text.cpp
@@ -38,6 +39,7 @@ HEADERS += \
     polyline.h \
     rectangle.h \
     saveFile.h \
+    savetestimonial.h \
     shape.h \
     square.h \
     text.h \
