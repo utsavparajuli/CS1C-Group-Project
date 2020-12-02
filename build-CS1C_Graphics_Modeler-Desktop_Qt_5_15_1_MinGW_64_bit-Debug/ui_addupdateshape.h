@@ -67,7 +67,7 @@ public:
     QTextEdit *TextStringEntry;
     QLabel *TextColorLabel;
     QComboBox *TextColorEntry;
-    QLabel *TextAllignmentLabel;
+    QLabel *TextAlignmentLabel;
     QComboBox *TextAlignmentEntry;
     QLabel *TextSizeLabel;
     QSpinBox *TextSizeEntry;
@@ -276,10 +276,10 @@ public:
 
         formLayout_3->setWidget(1, QFormLayout::FieldRole, TextColorEntry);
 
-        TextAllignmentLabel = new QLabel(layoutWidget3);
-        TextAllignmentLabel->setObjectName(QString::fromUtf8("TextAllignmentLabel"));
+        TextAlignmentLabel = new QLabel(layoutWidget3);
+        TextAlignmentLabel->setObjectName(QString::fromUtf8("TextAlignmentLabel"));
 
-        formLayout_3->setWidget(2, QFormLayout::LabelRole, TextAllignmentLabel);
+        formLayout_3->setWidget(2, QFormLayout::LabelRole, TextAlignmentLabel);
 
         TextAlignmentEntry = new QComboBox(layoutWidget3);
         TextAlignmentEntry->setObjectName(QString::fromUtf8("TextAlignmentEntry"));
@@ -401,7 +401,7 @@ public:
         BrushStyleLabel->setText(QCoreApplication::translate("AddUpdateShape", "Brush Style:", nullptr));
         TextStringLabel->setText(QCoreApplication::translate("AddUpdateShape", "Text String:", nullptr));
         TextColorLabel->setText(QCoreApplication::translate("AddUpdateShape", "Text Color:", nullptr));
-        TextAllignmentLabel->setText(QCoreApplication::translate("AddUpdateShape", "Text Alignment:", nullptr));
+        TextAlignmentLabel->setText(QCoreApplication::translate("AddUpdateShape", "Text Alignment:", nullptr));
         TextSizeLabel->setText(QCoreApplication::translate("AddUpdateShape", "Text Point Size:", nullptr));
         FontLabel->setText(QCoreApplication::translate("AddUpdateShape", "Font:", nullptr));
         FontStyleLabel->setText(QCoreApplication::translate("AddUpdateShape", "Font Style:", nullptr));

@@ -30,6 +30,12 @@ public:
         const QBrush& get_brush() const;
         const QLabel get_text() const;
         QPainter& get_painter(){return painter;}
+        QString get_penColorString(){return penColorName;}
+        QString get_penStyleString(){return penStyleName;}
+        QString get_penCapStyleString(){return penCapStyleName;}
+        QString get_penJoinStyleString(){return penJoinStyleName;}
+        QString get_brushColorString(){return brushColorName;}
+        QString get_brushStyleString(){return brushStyleName;}
 
 
         //functions that will set the shape, pen and brush
@@ -59,6 +65,14 @@ public:
         virtual double calcPerimeter() = 0;
         virtual double calcArea() = 0;
         virtual QString getShapeString() = 0;
+
+        virtual QString get_textString(){return "";}
+        virtual QString get_textColor(){return "";}
+        virtual QString get_textAllignment(){return "";}
+        virtual int get_textPointSize(){return 0;}
+        virtual QString get_textFont(){return "";}
+        virtual QString get_textFontStyle(){return "";}
+        virtual QString get_textFontWeight(){return "";}
 
         // TESTNIG
         int getID() {return shapeId;}

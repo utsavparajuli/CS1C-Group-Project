@@ -26,7 +26,6 @@ AddUpdateShape::AddUpdateShape(custom::vector<shape*> *vec, QWidget *parent) :
     ui->ShapeTypeEntry->addItem("Text");
 
     //Pen Color Combo Box
-<<<<<<< Updated upstream
 
     ui->PenColorEntry->addItem("white");
     ui->PenColorEntry->addItem("black");
@@ -97,11 +96,6 @@ AddUpdateShape::AddUpdateShape(custom::vector<shape*> *vec, QWidget *parent) :
     ui->FontWeightEntry->addItem("Light");
     ui->FontWeightEntry->addItem("Normal");
     ui->FontWeightEntry->addItem("Bold");
-
-    ui->ShapeEntry->addItem("hello");
-=======
-    ui->PenColorEntry->addItem("");
->>>>>>> Stashed changes
 }
 
 AddUpdateShape::~AddUpdateShape()
@@ -138,146 +132,266 @@ void AddUpdateShape::on_ShapeTypeEntry_currentIndexChanged(int index)
 
 void AddUpdateShape::setLineEnabled()
 {
-    ui->PenColorEntry->setEnabled(true);
-    ui->PenWidthEntry->setEnabled(true);
-    ui->PenStyleEntry->setEnabled(true);
-    ui->PenCapStyleEntry->setEnabled(true);
-    ui->PenJoinStyleEntry->setEnabled(true);
-    ui->BrushColorEntry->setEnabled(false);
-    ui->BrushStyleEntry->setEnabled(false);
-    ui->TextStringEntry->setEnabled(false);
-    ui->TextColorEntry->setEnabled(false);
-    ui->TextAlignmentEntry->setEnabled(false);
-    ui->TextSizeEntry->setEnabled(false);
-    ui->FontEntry->setEnabled(false);
-    ui->FontStyleEntry->setEnabled(false);
-    ui->FontWeightEntry->setEnabled(false);
+    ui->PenColorEntry->setVisible(true);
+    ui->PenWidthEntry->setVisible(true);
+    ui->PenStyleEntry->setVisible(true);
+    ui->PenCapStyleEntry->setVisible(true);
+    ui->PenJoinStyleEntry->setVisible(true);
+    ui->BrushColorEntry->setVisible(false);
+    ui->BrushStyleEntry->setVisible(false);
+    ui->TextStringEntry->setVisible(false);
+    ui->TextColorEntry->setVisible(false);
+    ui->TextAlignmentEntry->setVisible(false);
+    ui->TextSizeEntry->setVisible(false);
+    ui->FontEntry->setVisible(false);
+    ui->FontStyleEntry->setVisible(false);
+    ui->FontWeightEntry->setVisible(false);
+
+    ui->PenColorLabel->setVisible(true);
+    ui->PenWidthLabel->setVisible(true);
+    ui->PenStyleLabel->setVisible(true);
+    ui->PenCapStyleLabel->setVisible(true);
+    ui->PenJoinStyleLabel->setVisible(true);
+    ui->BrushColorLabel->setVisible(false);
+    ui->BrushStyleLabel->setVisible(false);
+    ui->TextStringLabel->setVisible(false);
+    ui->TextColorLabel->setVisible(false);
+    ui->TextAlignmentLabel->setVisible(false);
+    ui->TextSizeLabel->setVisible(false);
+    ui->FontLabel->setVisible(false);
+    ui->FontStyleLabel->setVisible(false);
+    ui->FontWeightLabel->setVisible(false);
 }
 
 void AddUpdateShape::setPolylineEnabled()
 {
-    ui->PenColorEntry->setEnabled(true);
-    ui->PenWidthEntry->setEnabled(true);
-    ui->PenStyleEntry->setEnabled(true);
-    ui->PenCapStyleEntry->setEnabled(true);
-    ui->PenJoinStyleEntry->setEnabled(true);
-    ui->BrushColorEntry->setEnabled(false);
-    ui->BrushStyleEntry->setEnabled(false);
-    ui->TextStringEntry->setEnabled(false);
-    ui->TextColorEntry->setEnabled(false);
-    ui->TextAlignmentEntry->setEnabled(false);
-    ui->TextSizeEntry->setEnabled(false);
-    ui->FontEntry->setEnabled(false);
-    ui->FontStyleEntry->setEnabled(false);
-    ui->FontWeightEntry->setEnabled(false);
+    ui->PenColorEntry->setVisible(true);
+    ui->PenWidthEntry->setVisible(true);
+    ui->PenStyleEntry->setVisible(true);
+    ui->PenCapStyleEntry->setVisible(true);
+    ui->PenJoinStyleEntry->setVisible(true);
+    ui->BrushColorEntry->setVisible(false);
+    ui->BrushStyleEntry->setVisible(false);
+    ui->TextStringEntry->setVisible(false);
+    ui->TextColorEntry->setVisible(false);
+    ui->TextAlignmentEntry->setVisible(false);
+    ui->TextSizeEntry->setVisible(false);
+    ui->FontEntry->setVisible(false);
+    ui->FontStyleEntry->setVisible(false);
+    ui->FontWeightEntry->setVisible(false);
+
+    ui->PenColorLabel->setVisible(true);
+    ui->PenWidthLabel->setVisible(true);
+    ui->PenStyleLabel->setVisible(true);
+    ui->PenCapStyleLabel->setVisible(true);
+    ui->PenJoinStyleLabel->setVisible(true);
+    ui->BrushColorLabel->setVisible(false);
+    ui->BrushStyleLabel->setVisible(false);
+    ui->TextStringLabel->setVisible(false);
+    ui->TextColorLabel->setVisible(false);
+    ui->TextAlignmentLabel->setVisible(false);
+    ui->TextSizeLabel->setVisible(false);
+    ui->FontLabel->setVisible(false);
+    ui->FontStyleLabel->setVisible(false);
+    ui->FontWeightLabel->setVisible(false);
 }
 
 void AddUpdateShape::setPolygonEnabled()
 {
-    ui->PenColorEntry->setEnabled(true);
-    ui->PenWidthEntry->setEnabled(true);
-    ui->PenStyleEntry->setEnabled(true);
-    ui->PenCapStyleEntry->setEnabled(true);
-    ui->PenJoinStyleEntry->setEnabled(true);
-    ui->BrushColorEntry->setEnabled(true);
-    ui->BrushStyleEntry->setEnabled(true);
-    ui->TextStringEntry->setEnabled(false);
-    ui->TextColorEntry->setEnabled(false);
-    ui->TextAlignmentEntry->setEnabled(false);
-    ui->TextSizeEntry->setEnabled(false);
-    ui->FontEntry->setEnabled(false);
-    ui->FontStyleEntry->setEnabled(false);
-    ui->FontWeightEntry->setEnabled(false);
+    ui->PenColorEntry->setVisible(true);
+    ui->PenWidthEntry->setVisible(true);
+    ui->PenStyleEntry->setVisible(true);
+    ui->PenCapStyleEntry->setVisible(true);
+    ui->PenJoinStyleEntry->setVisible(true);
+    ui->BrushColorEntry->setVisible(true);
+    ui->BrushStyleEntry->setVisible(true);
+    ui->TextStringEntry->setVisible(false);
+    ui->TextColorEntry->setVisible(false);
+    ui->TextAlignmentEntry->setVisible(false);
+    ui->TextSizeEntry->setVisible(false);
+    ui->FontEntry->setVisible(false);
+    ui->FontStyleEntry->setVisible(false);
+    ui->FontWeightEntry->setVisible(false);
+
+    ui->PenColorLabel->setVisible(true);
+    ui->PenWidthLabel->setVisible(true);
+    ui->PenStyleLabel->setVisible(true);
+    ui->PenCapStyleLabel->setVisible(true);
+    ui->PenJoinStyleLabel->setVisible(true);
+    ui->BrushColorLabel->setVisible(true);
+    ui->BrushStyleLabel->setVisible(true);
+    ui->TextStringLabel->setVisible(false);
+    ui->TextColorLabel->setVisible(false);
+    ui->TextAlignmentLabel->setVisible(false);
+    ui->TextSizeLabel->setVisible(false);
+    ui->FontLabel->setVisible(false);
+    ui->FontStyleLabel->setVisible(false);
+    ui->FontWeightLabel->setVisible(false);
 }
 
 void AddUpdateShape::setRectangleEnabled()
 {
-    ui->PenColorEntry->setEnabled(true);
-    ui->PenWidthEntry->setEnabled(true);
-    ui->PenStyleEntry->setEnabled(true);
-    ui->PenCapStyleEntry->setEnabled(true);
-    ui->PenJoinStyleEntry->setEnabled(true);
-    ui->BrushColorEntry->setEnabled(true);
-    ui->BrushStyleEntry->setEnabled(true);
-    ui->TextStringEntry->setEnabled(false);
-    ui->TextColorEntry->setEnabled(false);
-    ui->TextAlignmentEntry->setEnabled(false);
-    ui->TextSizeEntry->setEnabled(false);
-    ui->FontEntry->setEnabled(false);
-    ui->FontStyleEntry->setEnabled(false);
-    ui->FontWeightEntry->setEnabled(false);
+    ui->PenColorEntry->setVisible(true);
+    ui->PenWidthEntry->setVisible(true);
+    ui->PenStyleEntry->setVisible(true);
+    ui->PenCapStyleEntry->setVisible(true);
+    ui->PenJoinStyleEntry->setVisible(true);
+    ui->BrushColorEntry->setVisible(true);
+    ui->BrushStyleEntry->setVisible(true);
+    ui->TextStringEntry->setVisible(false);
+    ui->TextColorEntry->setVisible(false);
+    ui->TextAlignmentEntry->setVisible(false);
+    ui->TextSizeEntry->setVisible(false);
+    ui->FontEntry->setVisible(false);
+    ui->FontStyleEntry->setVisible(false);
+    ui->FontWeightEntry->setVisible(false);
+
+    ui->PenColorLabel->setVisible(true);
+    ui->PenWidthLabel->setVisible(true);
+    ui->PenStyleLabel->setVisible(true);
+    ui->PenCapStyleLabel->setVisible(true);
+    ui->PenJoinStyleLabel->setVisible(true);
+    ui->BrushColorLabel->setVisible(true);
+    ui->BrushStyleLabel->setVisible(true);
+    ui->TextStringLabel->setVisible(false);
+    ui->TextColorLabel->setVisible(false);
+    ui->TextAlignmentLabel->setVisible(false);
+    ui->TextSizeLabel->setVisible(false);
+    ui->FontLabel->setVisible(false);
+    ui->FontStyleLabel->setVisible(false);
+    ui->FontWeightLabel->setVisible(false);
 }
 
 void AddUpdateShape::setSquareEnabled()
 {
-    ui->PenColorEntry->setEnabled(true);
-    ui->PenWidthEntry->setEnabled(true);
-    ui->PenStyleEntry->setEnabled(true);
-    ui->PenCapStyleEntry->setEnabled(true);
-    ui->PenJoinStyleEntry->setEnabled(true);
-    ui->BrushColorEntry->setEnabled(true);
-    ui->BrushStyleEntry->setEnabled(true);
-    ui->TextStringEntry->setEnabled(false);
-    ui->TextColorEntry->setEnabled(false);
-    ui->TextAlignmentEntry->setEnabled(false);
-    ui->TextSizeEntry->setEnabled(false);
-    ui->FontEntry->setEnabled(false);
-    ui->FontStyleEntry->setEnabled(false);
-    ui->FontWeightEntry->setEnabled(false);
+    ui->PenColorEntry->setVisible(true);
+    ui->PenWidthEntry->setVisible(true);
+    ui->PenStyleEntry->setVisible(true);
+    ui->PenCapStyleEntry->setVisible(true);
+    ui->PenJoinStyleEntry->setVisible(true);
+    ui->BrushColorEntry->setVisible(true);
+    ui->BrushStyleEntry->setVisible(true);
+    ui->TextStringEntry->setVisible(false);
+    ui->TextColorEntry->setVisible(false);
+    ui->TextAlignmentEntry->setVisible(false);
+    ui->TextSizeEntry->setVisible(false);
+    ui->FontEntry->setVisible(false);
+    ui->FontStyleEntry->setVisible(false);
+    ui->FontWeightEntry->setVisible(false);
+
+    ui->PenColorLabel->setVisible(true);
+    ui->PenWidthLabel->setVisible(true);
+    ui->PenStyleLabel->setVisible(true);
+    ui->PenCapStyleLabel->setVisible(true);
+    ui->PenJoinStyleLabel->setVisible(true);
+    ui->BrushColorLabel->setVisible(true);
+    ui->BrushStyleLabel->setVisible(true);
+    ui->TextStringLabel->setVisible(false);
+    ui->TextColorLabel->setVisible(false);
+    ui->TextAlignmentLabel->setVisible(false);
+    ui->TextSizeLabel->setVisible(false);
+    ui->FontLabel->setVisible(false);
+    ui->FontStyleLabel->setVisible(false);
+    ui->FontWeightLabel->setVisible(false);
 }
 
 void AddUpdateShape::setEllipseEnabled()
 {
-    ui->PenColorEntry->setEnabled(true);
-    ui->PenWidthEntry->setEnabled(true);
-    ui->PenStyleEntry->setEnabled(true);
-    ui->PenCapStyleEntry->setEnabled(true);
-    ui->PenJoinStyleEntry->setEnabled(true);
-    ui->BrushColorEntry->setEnabled(true);
-    ui->BrushStyleEntry->setEnabled(true);
-    ui->TextStringEntry->setEnabled(false);
-    ui->TextColorEntry->setEnabled(false);
-    ui->TextAlignmentEntry->setEnabled(false);
-    ui->TextSizeEntry->setEnabled(false);
-    ui->FontEntry->setEnabled(false);
-    ui->FontStyleEntry->setEnabled(false);
-    ui->FontWeightEntry->setEnabled(false);
+    ui->PenColorEntry->setVisible(true);
+    ui->PenWidthEntry->setVisible(true);
+    ui->PenStyleEntry->setVisible(true);
+    ui->PenCapStyleEntry->setVisible(true);
+    ui->PenJoinStyleEntry->setVisible(true);
+    ui->BrushColorEntry->setVisible(true);
+    ui->BrushStyleEntry->setVisible(true);
+    ui->TextStringEntry->setVisible(false);
+    ui->TextColorEntry->setVisible(false);
+    ui->TextAlignmentEntry->setVisible(false);
+    ui->TextSizeEntry->setVisible(false);
+    ui->FontEntry->setVisible(false);
+    ui->FontStyleEntry->setVisible(false);
+    ui->FontWeightEntry->setVisible(false);
+
+    ui->PenColorLabel->setVisible(true);
+    ui->PenWidthLabel->setVisible(true);
+    ui->PenStyleLabel->setVisible(true);
+    ui->PenCapStyleLabel->setVisible(true);
+    ui->PenJoinStyleLabel->setVisible(true);
+    ui->BrushColorLabel->setVisible(true);
+    ui->BrushStyleLabel->setVisible(true);
+    ui->TextStringLabel->setVisible(false);
+    ui->TextColorLabel->setVisible(false);
+    ui->TextAlignmentLabel->setVisible(false);
+    ui->TextSizeLabel->setVisible(false);
+    ui->FontLabel->setVisible(false);
+    ui->FontStyleLabel->setVisible(false);
+    ui->FontWeightLabel->setVisible(false);
 }
 
 void AddUpdateShape::setCircleEnabled()
 {
-    ui->PenColorEntry->setEnabled(true);
-    ui->PenWidthEntry->setEnabled(true);
-    ui->PenStyleEntry->setEnabled(true);
-    ui->PenCapStyleEntry->setEnabled(true);
-    ui->PenJoinStyleEntry->setEnabled(true);
-    ui->BrushColorEntry->setEnabled(true);
-    ui->BrushStyleEntry->setEnabled(true);
-    ui->TextStringEntry->setEnabled(false);
-    ui->TextColorEntry->setEnabled(false);
-    ui->TextAlignmentEntry->setEnabled(false);
-    ui->TextSizeEntry->setEnabled(false);
-    ui->FontEntry->setEnabled(false);
-    ui->FontStyleEntry->setEnabled(false);
-    ui->FontWeightEntry->setEnabled(false);
+    ui->PenColorEntry->setVisible(true);
+    ui->PenWidthEntry->setVisible(true);
+    ui->PenStyleEntry->setVisible(true);
+    ui->PenCapStyleEntry->setVisible(true);
+    ui->PenJoinStyleEntry->setVisible(true);
+    ui->BrushColorEntry->setVisible(true);
+    ui->BrushStyleEntry->setVisible(true);
+    ui->TextStringEntry->setVisible(false);
+    ui->TextColorEntry->setVisible(false);
+    ui->TextAlignmentEntry->setVisible(false);
+    ui->TextSizeEntry->setVisible(false);
+    ui->FontEntry->setVisible(false);
+    ui->FontStyleEntry->setVisible(false);
+    ui->FontWeightEntry->setVisible(false);
+
+    ui->PenColorLabel->setVisible(true);
+    ui->PenWidthLabel->setVisible(true);
+    ui->PenStyleLabel->setVisible(true);
+    ui->PenCapStyleLabel->setVisible(true);
+    ui->PenJoinStyleLabel->setVisible(true);
+    ui->BrushColorLabel->setVisible(true);
+    ui->BrushStyleLabel->setVisible(true);
+    ui->TextStringLabel->setVisible(false);
+    ui->TextColorLabel->setVisible(false);
+    ui->TextAlignmentLabel->setVisible(false);
+    ui->TextSizeLabel->setVisible(false);
+    ui->FontLabel->setVisible(false);
+    ui->FontStyleLabel->setVisible(false);
+    ui->FontWeightLabel->setVisible(false);
 }
 
 void AddUpdateShape::setTextEnabled()
 {
-    ui->PenColorEntry->setEnabled(false);
-    ui->PenWidthEntry->setEnabled(false);
-    ui->PenStyleEntry->setEnabled(false);
-    ui->PenCapStyleEntry->setEnabled(false);
-    ui->PenJoinStyleEntry->setEnabled(false);
-    ui->BrushColorEntry->setEnabled(false);
-    ui->BrushStyleEntry->setEnabled(false);
-    ui->TextStringEntry->setEnabled(true);
-    ui->TextColorEntry->setEnabled(true);
-    ui->TextAlignmentEntry->setEnabled(true);
-    ui->TextSizeEntry->setEnabled(true);
-    ui->FontEntry->setEnabled(true);
-    ui->FontStyleEntry->setEnabled(true);
-    ui->FontWeightEntry->setEnabled(true);
+    ui->PenColorEntry->setVisible(false);
+    ui->PenWidthEntry->setVisible(false);
+    ui->PenStyleEntry->setVisible(false);
+    ui->PenCapStyleEntry->setVisible(false);
+    ui->PenJoinStyleEntry->setVisible(false);
+    ui->BrushColorEntry->setVisible(false);
+    ui->BrushStyleEntry->setVisible(false);
+    ui->TextStringEntry->setVisible(true);
+    ui->TextColorEntry->setVisible(true);
+    ui->TextAlignmentEntry->setVisible(true);
+    ui->TextSizeEntry->setVisible(true);
+    ui->FontEntry->setVisible(true);
+    ui->FontStyleEntry->setVisible(true);
+    ui->FontWeightEntry->setVisible(true);
+
+    ui->PenColorLabel->setVisible(false);
+    ui->PenWidthLabel->setVisible(false);
+    ui->PenStyleLabel->setVisible(false);
+    ui->PenCapStyleLabel->setVisible(false);
+    ui->PenJoinStyleLabel->setVisible(false);
+    ui->BrushColorLabel->setVisible(false);
+    ui->BrushStyleLabel->setVisible(false);
+    ui->TextStringLabel->setVisible(true);
+    ui->TextColorLabel->setVisible(true);
+    ui->TextAlignmentLabel->setVisible(true);
+    ui->TextSizeLabel->setVisible(true);
+    ui->FontLabel->setVisible(true);
+    ui->FontStyleLabel->setVisible(true);
+    ui->FontWeightLabel->setVisible(true);
 }
 
 
@@ -315,4 +429,147 @@ void AddUpdateShape::updateShapeSetup()
     ui->ShapeDimensionsEntry->setEnabled(false);
     ui->XCordEntry->setEnabled(true);
     ui->YCordEntry->setEnabled(true);
+}
+
+void AddUpdateShape::on_ShapesEntry_currentIndexChanged(int index)
+{
+    switch((*shapeVector)[index]->get_shape())
+    {
+    case ShapeType::Line      :
+    case ShapeType::Polyline  :fillLineEntry(index);
+                               break;
+    case ShapeType::Polygon   :
+    case ShapeType::Rectangle :
+    case ShapeType::Square    :
+    case ShapeType::Ellipse   :
+    case ShapeType::Circle    :fillShapeEntry(index);
+                               break;
+    default :                  fillTextEntry(index);
+    };
+}
+
+void AddUpdateShape::fillLineEntry(int i)
+{
+    ui->ShapeIdEntry->setValue((*shapeVector)[i]->getID());
+    ui->ShapeTypeEntry->setCurrentIndex(shapeToInt((*shapeVector)[i]->get_shape()));
+
+    fillPenValues(i);
+    fillBrushValues(i);
+
+    ui->PenWidthEntry->setValue((*shapeVector)[i]->get_pen().width());
+}
+
+void AddUpdateShape::fillShapeEntry(int i)
+{
+    ui->ShapeIdEntry->setValue((*shapeVector)[i]->getID());
+    ui->ShapeTypeEntry->setCurrentIndex(shapeToInt((*shapeVector)[i]->get_shape()));
+
+    fillPenValues(i);
+    fillBrushValues(i);
+
+    ui->PenWidthEntry->setValue((*shapeVector)[i]->get_pen().width());
+}
+
+void AddUpdateShape::fillTextEntry(int i)
+{
+    ui->ShapeIdEntry->setValue((*shapeVector)[i]->getID());
+    ui->ShapeTypeEntry->setCurrentIndex(shapeToInt((*shapeVector)[i]->get_shape()));
+
+    fillTextValues(i);
+}
+
+void AddUpdateShape::fillPenValues(int i)
+{
+    //Setting pen color entry
+    int index = 0;
+    while(index < ui->PenColorEntry->count() && ui->PenColorEntry->itemText(index) != (*shapeVector)[i]->get_penColorString())
+        index++;
+    ui->PenColorEntry->setCurrentIndex(index);
+
+    //Setting pen style entry
+    index = 0;
+    while(index < ui->PenStyleEntry->count() && ui->PenStyleEntry->itemText(index) != (*shapeVector)[i]->get_penStyleString())
+        index++;
+    ui->PenStyleEntry->setCurrentIndex(index);
+
+    //Setting cap style entry
+    index = 0;
+    while(index < ui->PenCapStyleEntry->count() && ui->PenCapStyleEntry->itemText(index) != (*shapeVector)[i]->get_penCapStyleString())
+        index++;
+    ui->PenCapStyleEntry->setCurrentIndex(index);
+
+    //Setting join style entry
+    index = 0;
+    while(index < ui->PenJoinStyleEntry->count() && ui->PenJoinStyleEntry->itemText(index) != (*shapeVector)[i]->get_penJoinStyleString())
+        index++;
+    ui->PenJoinStyleEntry->setCurrentIndex(index);
+}
+
+void AddUpdateShape::fillBrushValues(int i)
+{
+    //Setting brush color entry
+    int index = 0;
+    while(index < ui->BrushColorEntry->count() && ui->BrushColorEntry->itemText(index) != (*shapeVector)[i]->get_brushColorString())
+        index++;
+    ui->BrushColorEntry->setCurrentIndex(index);
+
+    //Setting brush style entry
+    index = 0;
+    while(index < ui->BrushStyleEntry->count() && ui->BrushStyleEntry->itemText(index) != (*shapeVector)[i]->get_brushStyleString())
+        index++;
+    ui->BrushStyleEntry->setCurrentIndex(index);
+}
+
+void AddUpdateShape::fillTextValues(int i)
+{
+    //Setting text string entry
+    ui->TextStringEntry->setText((*shapeVector)[i]->get_textString());
+
+    //Setting text color entry
+    int index = 0;
+    while(index < ui->TextColorEntry->count() && ui->TextColorEntry->itemText(index) != (*shapeVector)[i]->get_textColor())
+        index++;
+    ui->TextColorEntry->setCurrentIndex(index);
+
+    //Setting text allignment entry
+    index = 0;
+    while(index < ui->TextAlignmentEntry->count() && ui->TextAlignmentEntry->itemText(index) != (*shapeVector)[i]->get_textAllignment())
+        index++;
+    ui->TextColorEntry->setCurrentIndex(index);
+
+    //Setting text point size
+    ui->TextSizeEntry->setValue((*shapeVector)[i]->get_textPointSize());
+
+    //Setting text font entry
+    index = 0;
+    while(index < ui->FontEntry->count() && ui->FontEntry->itemText(index) != (*shapeVector)[i]->get_textFont())
+        index++;
+    ui->FontEntry->setCurrentIndex(index);
+
+    //Setting text font style entry
+    index = 0;
+    while(index < ui->FontStyleEntry->count() && ui->FontStyleEntry->itemText(index) != (*shapeVector)[i]->get_textFontStyle())
+        index++;
+    ui->FontStyleEntry->setCurrentIndex(index);
+
+    //Setting text font weight entry
+    index = 0;
+    while(index < ui->FontWeightEntry->count() && ui->FontWeightEntry->itemText(index) != (*shapeVector)[i]->get_textFontWeight())
+        index++;
+    ui->FontWeightEntry->setCurrentIndex(index);
+}
+
+int AddUpdateShape::shapeToInt(ShapeType shape)
+{
+    switch (shape)
+    {
+    case ShapeType::Line      : return 0;
+    case ShapeType::Polyline  : return 1;
+    case ShapeType::Polygon   : return 2;
+    case ShapeType::Rectangle : return 3;
+    case ShapeType::Square    : return 4;
+    case ShapeType::Ellipse   : return 5;
+    case ShapeType::Circle    : return 6;
+    default                   : return 7;
+    }
 }

@@ -26,6 +26,8 @@ private slots:
 
     void on_HelpButton_clicked();
 
+    void on_ShapesEntry_currentIndexChanged(int index);
+
 private:
     Ui::AddUpdateShape *ui;
     void setLineEnabled();
@@ -36,6 +38,16 @@ private:
     void setEllipseEnabled();
     void setCircleEnabled();
     void setTextEnabled();
+
+    void fillPenValues(int);
+    void fillBrushValues(int);
+    void fillTextValues(int);
+
+    void fillLineEntry(int);
+    void fillShapeEntry(int);
+    void fillTextEntry(int);
+
+    int shapeToInt(ShapeType);
     custom::vector<shape*> *shapeVector;
 
 };
