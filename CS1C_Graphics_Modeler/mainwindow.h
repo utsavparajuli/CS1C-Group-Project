@@ -23,7 +23,6 @@ private slots:
     void colorChange();
 
     void on_AddShapeButton_clicked();
-    void on_ContactUsButton_clicked();
 
     void on_EditShapeButton_clicked();
 
