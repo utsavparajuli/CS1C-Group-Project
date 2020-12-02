@@ -98,10 +98,10 @@ AddUpdateShape::AddUpdateShape(custom::vector<shape*> *vec, QWidget *parent) :
     ui->FontWeightEntry->addItem("Bold");
 }
 
-//AddUpdateShape::~AddUpdateShape()
-//{
-//    delete ui;
-//}
+AddUpdateShape::~AddUpdateShape()
+{
+    delete ui;
+}
 
 void AddUpdateShape::setTitle(QString newTitle)
 {

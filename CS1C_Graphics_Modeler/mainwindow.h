@@ -20,8 +20,8 @@ private slots:
     void on_LoginButton_clicked();
     void on_LogoutButton_clicked();
     void on_LoginButtonGuest_clicked();
-    void on_ContactButton_clicked();
     void colorChange();
+
     void on_AddShapeButton_clicked();
 
     void on_EditShapeButton_clicked();
