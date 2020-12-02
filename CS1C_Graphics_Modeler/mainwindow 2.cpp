@@ -7,7 +7,6 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QMediaPlayer>
-#include "savetestimonial.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -118,15 +117,8 @@ void MainWindow::on_LoginButtonGuest_clicked()
 
 void MainWindow::on_AddShapeButton_clicked()
 {
-    addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
-    addUpdateWindow->addShapeSetup();
-    addUpdateWindow->show();
-}
-
-void MainWindow::on_EditShapeButton_clicked()
-{
-    addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
-    addUpdateWindow->updateShapeSetup();
+    addUpdateWindow = new AddUpdateShape;
+    addUpdateWindow->setTitle("Add Shape");
     addUpdateWindow->show();
 }
 
@@ -135,52 +127,32 @@ void MainWindow::on_TestimonialsButton_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
-void MainWindow::on_BackToCanvas_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(1);
-}
-
-void MainWindow::on_AddTestimonial_clicked()
-{
-    QString review = ui->plainTextEdit->toPlainText();
-    saveTestimonial(review);
-
-    ui->plainTextEdit->clear();
-}
-
-void MainWindow::on_PastTestimonials_clicked()
-{
-
-    ui->stackedWidget->setCurrentIndex(3);
-   // outputTestimonial();
-
-    QString filePath = qApp->applicationDirPath();
-    QString fileName = "testimonial.txt";
-    filePath.append('/' + fileName);
-
-    QFile inputFile(filePath);
-
-    if(!inputFile.open(QIODevice::ReadOnly | QIODevice::Text))
-    {
-        QMessageBox fileNotOpenedError;
-        fileNotOpenedError.setText("ERROR: Input file (\"" + fileName + "\") could not be opened!");
-        fileNotOpenedError.exec();
-        exit(-1);
-    }
-
-    QTextStream input(&inputFile);
-
-    ui->output->setText(input.readAll());
-
-}
-
 void MainWindow::on_pushButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
 
-void MainWindow::on_backButton_clicked()
+void MainWindow::on_DoneButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_AddTestimonialButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::on_BackTTestimonialButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_ViewTestimonialsButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+void MainWindow::on_BackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
 }
-

@@ -25,6 +25,17 @@ private slots:
     void on_AddShapeButton_clicked();
 
     void on_EditShapeButton_clicked();
+    void on_TestimonialsButton_clicked();
+
+    void on_BackToCanvas_clicked();
+
+    void on_AddTestimonial_clicked();
+
+    void on_PastTestimonials_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_backButton_clicked();
 
 private:
     Ui::MainWindow *ui;
