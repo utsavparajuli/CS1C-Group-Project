@@ -18,7 +18,6 @@ public:
     vector() :size_v{ 0 }, elem{ nullptr }, space{ 0 }
     {}
 
-  
     explicit vector(int s) : size_v{ 0 }, space{ s }
     {
         elem = new T[s];

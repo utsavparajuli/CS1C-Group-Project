@@ -19,7 +19,78 @@ AddUpdateShape::AddUpdateShape(QWidget *parent) :
     ui->ShapeTypeEntry->addItem("Text");
 
     //Pen Color Combo Box
-    ui->PenColorEntry->addItem("")
+
+    ui->PenColorEntry->addItem("white");
+    ui->PenColorEntry->addItem("black");
+    ui->PenColorEntry->addItem("red");
+    ui->PenColorEntry->addItem("green");
+    ui->PenColorEntry->addItem("blue");
+    ui->PenColorEntry->addItem("cyan");
+    ui->PenColorEntry->addItem("magenta");
+    ui->PenColorEntry->addItem("yellow");
+    ui->PenColorEntry->addItem("gray");
+
+    ui->PenStyleEntry->addItem("NoPen");
+    ui->PenStyleEntry->addItem("SolidLine");
+    ui->PenStyleEntry->addItem("DashLine");
+    ui->PenStyleEntry->addItem("DotLine");
+    ui->PenStyleEntry->addItem("DashDotLine");
+    ui->PenStyleEntry->addItem("DashDotDotLine");
+
+    ui->PenCapStyleEntry->addItem("FlatCap");
+    ui->PenCapStyleEntry->addItem("SquareCap");
+    ui->PenCapStyleEntry->addItem("RoundCap");
+
+    ui->PenJoinStyleEntry->addItem("MiterJoin");
+    ui->PenJoinStyleEntry->addItem("BevelJoin");
+    ui->PenJoinStyleEntry->addItem("RoundJoin");
+
+    ui->BrushColorEntry->addItem("white");
+    ui->BrushColorEntry->addItem("black");
+    ui->BrushColorEntry->addItem("red");
+    ui->BrushColorEntry->addItem("green");
+    ui->BrushColorEntry->addItem("blue");
+    ui->BrushColorEntry->addItem("cyan");
+    ui->BrushColorEntry->addItem("magenta");
+    ui->BrushColorEntry->addItem("yellow");
+    ui->BrushColorEntry->addItem("gray");
+
+    ui->BrushStyleEntry->addItem("SolidPattern");
+    ui->BrushStyleEntry->addItem("HorPattern");
+    ui->BrushStyleEntry->addItem("VerPattern");
+    ui->BrushStyleEntry->addItem("NoBrush");
+
+    ui->TextColorEntry->addItem("white");
+    ui->TextColorEntry->addItem("black");
+    ui->TextColorEntry->addItem("red");
+    ui->TextColorEntry->addItem("green");
+    ui->TextColorEntry->addItem("blue");
+    ui->TextColorEntry->addItem("cyan");
+    ui->TextColorEntry->addItem("magenta");
+    ui->TextColorEntry->addItem("yellow");
+    ui->TextColorEntry->addItem("gray");
+
+    ui->TextAlignmentEntry->addItem("AlignLeft");
+    ui->TextAlignmentEntry->addItem("AlignRight");
+    ui->TextAlignmentEntry->addItem("AlignTop");
+    ui->TextAlignmentEntry->addItem("AlignBottom");
+    ui->TextAlignmentEntry->addItem("AlignCenter");
+
+    ui->FontEntry->addItem("Comic Sans MS");
+    ui->FontEntry->addItem("Courier");
+    ui->FontEntry->addItem("Helvetica");
+    ui->FontEntry->addItem("Times");
+
+    ui->FontStyleEntry->addItem("StyleNormal");
+    ui->FontStyleEntry->addItem("StyleItalic");
+    ui->FontStyleEntry->addItem("StyleOblique");
+
+    ui->FontWeightEntry->addItem("Thin");
+    ui->FontWeightEntry->addItem("Light");
+    ui->FontWeightEntry->addItem("Normal");
+    ui->FontWeightEntry->addItem("Bold");
+
+    ui->ShapeEntry->addItem("hello");
 }
 
 AddUpdateShape::~AddUpdateShape()
