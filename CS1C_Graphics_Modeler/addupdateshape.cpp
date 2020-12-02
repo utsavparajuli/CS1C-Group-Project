@@ -1,12 +1,19 @@
 #include "addupdateshape.h"
 #include "ui_addupdateshape.h"
 #include <QMessageBox>
-
-AddUpdateShape::AddUpdateShape(QWidget *parent) :
+//custom::vector<shape*>&, QWidget *parent = nullptr
+AddUpdateShape::AddUpdateShape(custom::vector<shape*> *vec, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::AddUpdateShape)
+    ui(new Ui::AddUpdateShape),
+    shapeVector{vec}
 {
     ui->setupUi(this);
+
+    //Shapes combo box
+    for(int i = 0; i < shapeVector->size(); i++)
+    {
+        ui->ShapesEntry->addItem((*shapeVector)[i]->construct_ID_String("Shape", (*shapeVector)[i]->getID()));
+    }
 
     //Shape Type Combo Box
     ui->ShapeTypeEntry->addItem("Line");
@@ -19,6 +26,7 @@ AddUpdateShape::AddUpdateShape(QWidget *parent) :
     ui->ShapeTypeEntry->addItem("Text");
 
     //Pen Color Combo Box
+<<<<<<< Updated upstream
 
     ui->PenColorEntry->addItem("white");
     ui->PenColorEntry->addItem("black");
@@ -91,6 +99,9 @@ AddUpdateShape::AddUpdateShape(QWidget *parent) :
     ui->FontWeightEntry->addItem("Bold");
 
     ui->ShapeEntry->addItem("hello");
+=======
+    ui->PenColorEntry->addItem("");
+>>>>>>> Stashed changes
 }
 
 AddUpdateShape::~AddUpdateShape()
@@ -284,4 +295,24 @@ void AddUpdateShape::on_HelpButton_clicked()
                     "Text - x1, y1, l, w [x1, y1: top left, l: length, w: width "
                     "... defines a bounding rectangle]");
     helpBox.exec();
+}
+
+void AddUpdateShape::addShapeSetup()
+{
+    ui->AddUpdateTitle->setText("Add Shape");
+    ui->ShapesEntry->setEnabled(false);
+    ui->ShapeTypeEntry->setEnabled(true);
+    ui->ShapeDimensionsEntry->setEnabled(true);
+    ui->XCordEntry->setEnabled(false);
+    ui->YCordEntry->setEnabled(false);
+}
+
+void AddUpdateShape::updateShapeSetup()
+{
+    ui->AddUpdateTitle->setText("Update Shape");
+    ui->ShapesEntry->setEnabled(true);
+    ui->ShapeTypeEntry->setEnabled(false);
+    ui->ShapeDimensionsEntry->setEnabled(false);
+    ui->XCordEntry->setEnabled(true);
+    ui->YCordEntry->setEnabled(true);
 }

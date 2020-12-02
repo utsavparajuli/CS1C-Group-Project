@@ -24,6 +24,8 @@ private slots:
 
     void on_AddShapeButton_clicked();
 
+    void on_EditShapeButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     int colorCounter;

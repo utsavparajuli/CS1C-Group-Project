@@ -31,6 +31,7 @@ public:
         const QLabel get_text() const;
         QPainter& get_painter(){return painter;}
 
+
         //functions that will set the shape, pen and brush
         void set_ShapeId(int id);
         void set_Shape(ShapeType shape);

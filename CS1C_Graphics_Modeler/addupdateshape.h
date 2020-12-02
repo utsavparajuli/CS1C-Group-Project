@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <QDebug>
+#include "vector.h"
+#include "shape.h"
 
 namespace Ui {
 class AddUpdateShape;
@@ -13,8 +15,10 @@ class AddUpdateShape : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddUpdateShape(QWidget *parent = nullptr);
+    explicit AddUpdateShape(custom::vector<shape*>*, QWidget *parent = nullptr);
     void setTitle(QString);
+    void addShapeSetup();
+    void updateShapeSetup();
     ~AddUpdateShape();
 
 private slots:
@@ -32,6 +36,7 @@ private:
     void setEllipseEnabled();
     void setCircleEnabled();
     void setTextEnabled();
+    custom::vector<shape*> *shapeVector;
 
 };
 

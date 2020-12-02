@@ -21,3 +21,8 @@ DrawingWidget::~DrawingWidget()
 {
     saveFile(*shapeVector, "output.txt");
 }
+
+custom::vector<shape*>* DrawingWidget::getVec()
+{
+    return shapeVector;
+}

@@ -57,7 +57,7 @@ public:
     QPushButton *EditShapeButton;
     QPushButton *DeleteShapeButton;
     QPushButton *TestimonialsButton;
-    DrawingWidget *widget;
+    DrawingWidget *drawArea;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -194,10 +194,10 @@ public:
 
         horizontalLayout->addWidget(TestimonialsButton);
 
-        widget = new DrawingWidget(MainPage);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(29, 59, 1141, 541));
-        widget->setStyleSheet(QString::fromUtf8("background-color:white;\n"
+        drawArea = new DrawingWidget(MainPage);
+        drawArea->setObjectName(QString::fromUtf8("drawArea"));
+        drawArea->setGeometry(QRect(29, 59, 1141, 541));
+        drawArea->setStyleSheet(QString::fromUtf8("background-color:white;\n"
 "border: 3px solid black;"));
         stackedWidget->addWidget(MainPage);
         MainWindow->setCentralWidget(centralwidget);

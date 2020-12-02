@@ -117,7 +117,14 @@ void MainWindow::on_LoginButtonGuest_clicked()
 
 void MainWindow::on_AddShapeButton_clicked()
 {
-    addUpdateWindow = new AddUpdateShape;
-    addUpdateWindow->setTitle("Add Shape");
+    addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
+    addUpdateWindow->addShapeSetup();
+    addUpdateWindow->show();
+}
+
+void MainWindow::on_EditShapeButton_clicked()
+{
+    addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
+    addUpdateWindow->updateShapeSetup();
     addUpdateWindow->show();
 }

@@ -211,7 +211,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="DrawingWidget" name="widget" native="true">
+     <widget class="DrawingWidget" name="drawArea" native="true">
       <property name="geometry">
        <rect>
         <x>29</x>
