@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "addupdateshape.h"
-//#include "ui_addupdateshape.h"
+#include "ui_addupdateshape.h"
 #include "line.h"
 #include <QDebug>
 #include <QTimer>
@@ -128,13 +128,12 @@ void MainWindow::on_AddShapeButton_clicked()
  * This function switches to the MainPage without a username/password with
  * "guest user" privileges.
  * ***********************************************************************/
-void MainWindow::on_ContactButton_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
-}
-
-
 void MainWindow::on_BackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_ContactUsButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
 }

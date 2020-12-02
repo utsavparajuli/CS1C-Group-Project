@@ -23,6 +23,9 @@ private slots:
     void on_ContactButton_clicked();
     void colorChange();
     void on_AddShapeButton_clicked();
+    void on_BackButton_clicked();
+    
+    void on_ContactUsButton_clicked();
 
 private:
     Ui::MainWindow *ui;
