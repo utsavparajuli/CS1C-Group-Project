@@ -17,8 +17,22 @@ public:
     void setTitle(QString);
     ~AddUpdateShape();
 
+private slots:
+    void on_ShapeTypeEntry_currentIndexChanged(int index);
+
+    void on_HelpButton_clicked();
+
 private:
     Ui::AddUpdateShape *ui;
+    void setLineEnabled();
+    void setPolylineEnabled();
+    void setPolygonEnabled();
+    void setRectangleEnabled();
+    void setSquareEnabled();
+    void setEllipseEnabled();
+    void setCircleEnabled();
+    void setTextEnabled();
+
 };
 
 #endif // ADDUPDATESHAPE_H
