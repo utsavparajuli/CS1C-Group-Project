@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "addupdateshape.h"
-#include "ui_addupdateshape.h"
+//#include "ui_addupdateshape.h"
 #include "line.h"
 #include <QDebug>
 #include <QTimer>
@@ -127,4 +127,21 @@ void MainWindow::on_EditShapeButton_clicked()
     addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
     addUpdateWindow->updateShapeSetup();
     addUpdateWindow->show();
+}
+
+/*************************************************************************
+ * MainWindow::on_LoginButtonGuest_clicked()
+ * -----------------------------------------------------------------------
+ * This function switches to the MainPage without a username/password with
+ * "guest user" privileges.
+ * ***********************************************************************/
+void MainWindow::on_ContactButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+
+void MainWindow::on_BackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
 }
