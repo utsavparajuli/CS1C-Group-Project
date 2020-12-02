@@ -21,8 +21,11 @@ private slots:
     void on_LogoutButton_clicked();
     void on_LoginButtonGuest_clicked();
     void on_ContactButton_clicked();
+    void on_
     void colorChange();
     void on_AddShapeButton_clicked();
+
+    void on_BackButton_clicked();
 
 private:
     Ui::MainWindow *ui;
