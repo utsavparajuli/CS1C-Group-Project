@@ -11,15 +11,18 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "DrawingWidget.h"
@@ -58,6 +61,17 @@ public:
     QPushButton *DeleteShapeButton;
     QPushButton *TestimonialsButton;
     DrawingWidget *drawArea;
+    QWidget *TestimonialsPage;
+    QLabel *Title;
+    QLabel *AddReviewLabel;
+    QCommandLinkButton *PastTestimonials;
+    QPushButton *BackToCanvas;
+    QPushButton *AddTestimonial;
+    QPlainTextEdit *plainTextEdit;
+    QWidget *ViewTestimonials;
+    QLabel *ReviewTitle;
+    QTextBrowser *output;
+    QPushButton *backButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -71,12 +85,12 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(0, 0, 1200, 700));
+        stackedWidget->setGeometry(QRect(20, -10, 1200, 700));
         LoginPage = new QWidget();
         LoginPage->setObjectName(QString::fromUtf8("LoginPage"));
         layoutWidget = new QWidget(LoginPage);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(450, 210, 345, 201));
+        layoutWidget->setGeometry(QRect(450, 210, 362, 204));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -142,7 +156,7 @@ public:
         LogoutButton->setGeometry(QRect(30, 10, 80, 25));
         layoutWidget1 = new QWidget(MainPage);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(490, 10, 241, 37));
+        layoutWidget1->setGeometry(QRect(430, 10, 314, 46));
         verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -165,7 +179,7 @@ public:
 
         layoutWidget2 = new QWidget(MainPage);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(410, 620, 426, 23));
+        layoutWidget2->setGeometry(QRect(340, 620, 572, 32));
         horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -196,14 +210,67 @@ public:
 
         drawArea = new DrawingWidget(MainPage);
         drawArea->setObjectName(QString::fromUtf8("drawArea"));
-        drawArea->setGeometry(QRect(29, 59, 1141, 541));
+        drawArea->setGeometry(QRect(30, 70, 1091, 531));
         drawArea->setStyleSheet(QString::fromUtf8("background-color:white;\n"
 "border: 3px solid black;"));
         stackedWidget->addWidget(MainPage);
+        TestimonialsPage = new QWidget();
+        TestimonialsPage->setObjectName(QString::fromUtf8("TestimonialsPage"));
+        Title = new QLabel(TestimonialsPage);
+        Title->setObjectName(QString::fromUtf8("Title"));
+        Title->setGeometry(QRect(210, 70, 741, 61));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Futura"));
+        font2.setPointSize(24);
+        Title->setFont(font2);
+        Title->setAlignment(Qt::AlignCenter);
+        AddReviewLabel = new QLabel(TestimonialsPage);
+        AddReviewLabel->setObjectName(QString::fromUtf8("AddReviewLabel"));
+        AddReviewLabel->setGeometry(QRect(490, 170, 271, 20));
+        QFont font3;
+        font3.setBold(true);
+        font3.setItalic(true);
+        font3.setWeight(75);
+        AddReviewLabel->setFont(font3);
+        PastTestimonials = new QCommandLinkButton(TestimonialsPage);
+        PastTestimonials->setObjectName(QString::fromUtf8("PastTestimonials"));
+        PastTestimonials->setGeometry(QRect(780, 10, 351, 61));
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("Futura"));
+        font4.setPointSize(18);
+        PastTestimonials->setFont(font4);
+        PastTestimonials->setIconSize(QSize(100, 100));
+        BackToCanvas = new QPushButton(TestimonialsPage);
+        BackToCanvas->setObjectName(QString::fromUtf8("BackToCanvas"));
+        BackToCanvas->setGeometry(QRect(400, 380, 112, 32));
+        AddTestimonial = new QPushButton(TestimonialsPage);
+        AddTestimonial->setObjectName(QString::fromUtf8("AddTestimonial"));
+        AddTestimonial->setGeometry(QRect(650, 380, 112, 32));
+        plainTextEdit = new QPlainTextEdit(TestimonialsPage);
+        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
+        plainTextEdit->setGeometry(QRect(440, 210, 281, 161));
+        stackedWidget->addWidget(TestimonialsPage);
+        ViewTestimonials = new QWidget();
+        ViewTestimonials->setObjectName(QString::fromUtf8("ViewTestimonials"));
+        ReviewTitle = new QLabel(ViewTestimonials);
+        ReviewTitle->setObjectName(QString::fromUtf8("ReviewTitle"));
+        ReviewTitle->setGeometry(QRect(340, 20, 421, 51));
+        ReviewTitle->setFont(font2);
+        output = new QTextBrowser(ViewTestimonials);
+        output->setObjectName(QString::fromUtf8("output"));
+        output->setGeometry(QRect(20, 92, 1051, 521));
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("Futura"));
+        font5.setPointSize(14);
+        output->setFont(font5);
+        backButton = new QPushButton(ViewTestimonials);
+        backButton->setObjectName(QString::fromUtf8("backButton"));
+        backButton->setGeometry(QRect(0, 10, 112, 32));
+        stackedWidget->addWidget(ViewTestimonials);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1200, 20));
+        menubar->setGeometry(QRect(0, 0, 1200, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -211,7 +278,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -235,6 +302,13 @@ public:
         EditShapeButton->setText(QCoreApplication::translate("MainWindow", "Edit Shape", nullptr));
         DeleteShapeButton->setText(QCoreApplication::translate("MainWindow", "Delete Shape", nullptr));
         TestimonialsButton->setText(QCoreApplication::translate("MainWindow", "Testimonials", nullptr));
+        Title->setText(QCoreApplication::translate("MainWindow", "WELCOME TO TESTIMONIALS PAGE", nullptr));
+        AddReviewLabel->setText(QCoreApplication::translate("MainWindow", "Please add your review below", nullptr));
+        PastTestimonials->setText(QCoreApplication::translate("MainWindow", "Previous Testimonials", nullptr));
+        BackToCanvas->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        AddTestimonial->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        ReviewTitle->setText(QCoreApplication::translate("MainWindow", "PRODUCT REVIEWS", nullptr));
+        backButton->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
     } // retranslateUi
 
 };

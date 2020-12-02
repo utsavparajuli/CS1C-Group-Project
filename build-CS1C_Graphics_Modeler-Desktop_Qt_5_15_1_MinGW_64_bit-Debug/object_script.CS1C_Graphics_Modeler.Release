@@ -10,6 +10,7 @@ release/polygon.o
 release/polyline.o
 release/rectangle.o
 release/saveFile.o
+release/savetestimonial.o
 release/shape.o
 release/square.o
 release/text.o
