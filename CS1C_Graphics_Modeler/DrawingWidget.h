@@ -12,7 +12,6 @@ class DrawingWidget : public QWidget
 {
 public:
     explicit DrawingWidget(QWidget *parent = nullptr);
-    custom::vector<shape*>* getVec();
     ~DrawingWidget();
 
 protected:

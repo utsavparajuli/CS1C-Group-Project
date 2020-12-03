@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< HEAD
 <!-- Written by QtCreator 4.13.2, 2020-12-02T11:33:28. -->
-=======
-<!-- Written by QtCreator 4.13.2, 2020-12-02T10:14:00. -->
->>>>>>> origin/AddEditShape
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>

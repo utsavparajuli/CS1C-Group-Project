@@ -23,7 +23,7 @@ custom::vector<shape*>* parser(const QString fileName)
     }
 
     QTextStream input(&inputFile);
-    QString textLine;    
+    QString textLine;
 
     while(!input.atEnd())
     {

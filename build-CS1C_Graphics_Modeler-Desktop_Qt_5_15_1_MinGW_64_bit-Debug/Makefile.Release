@@ -268,21 +268,6 @@ release/moc_addupdateshape.cpp: ../CS1C_Graphics_Modeler/addupdateshape.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
-		../CS1C_Graphics_Modeler/vector.h \
-		../CS1C_Graphics_Modeler/shape.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPen \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPainter \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpainter.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		release/moc_predefs.h \
 		C:/Qt/5.15.1/mingw81_64/bin/moc.exe
 	C:\Qt\5.15.1\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.15.1/mingw81_64/mkspecs/win32-g++ -I"C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/CS1C_Graphics_Modeler" -IC:/Qt/5.15.1/mingw81_64/include -IC:/Qt/5.15.1/mingw81_64/include/QtMultimedia -IC:/Qt/5.15.1/mingw81_64/include/QtWidgets -IC:/Qt/5.15.1/mingw81_64/include/QtGui -IC:/Qt/5.15.1/mingw81_64/include/QtANGLE -IC:/Qt/5.15.1/mingw81_64/include/QtNetwork -IC:/Qt/5.15.1/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\CS1C_Graphics_Modeler\addupdateshape.h -o release\moc_addupdateshape.cpp
@@ -394,24 +379,6 @@ release/moc_mainwindow.cpp: ../CS1C_Graphics_Modeler/mainwindow.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qicon.h \
-		../CS1C_Graphics_Modeler/addupdateshape.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialog \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
-		../CS1C_Graphics_Modeler/vector.h \
-		../CS1C_Graphics_Modeler/shape.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPen \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPainter \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpainter.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		release/moc_predefs.h \
 		C:/Qt/5.15.1/mingw81_64/bin/moc.exe
 	C:\Qt\5.15.1\mingw81_64\bin\moc.exe $(DEFINES) --include "C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/build-CS1C_Graphics_Modeler-Desktop_Qt_5_15_1_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.15.1/mingw81_64/mkspecs/win32-g++ -I"C:/Users/james/Desktop/CS 1C/Group Project/CS1C-Group-Project/CS1C_Graphics_Modeler" -IC:/Qt/5.15.1/mingw81_64/include -IC:/Qt/5.15.1/mingw81_64/include/QtMultimedia -IC:/Qt/5.15.1/mingw81_64/include/QtWidgets -IC:/Qt/5.15.1/mingw81_64/include/QtGui -IC:/Qt/5.15.1/mingw81_64/include/QtANGLE -IC:/Qt/5.15.1/mingw81_64/include/QtNetwork -IC:/Qt/5.15.1/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\CS1C_Graphics_Modeler\mainwindow.h -o release\moc_mainwindow.cpp
@@ -825,24 +792,7 @@ release/addupdateshape.o: ../CS1C_Graphics_Modeler/addupdateshape.cpp ../CS1C_Gr
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
-		../CS1C_Graphics_Modeler/vector.h \
-		../CS1C_Graphics_Modeler/shape.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPen \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPainter \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpainter.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
-		ui_addupdateshape.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h
+		ui_addupdateshape.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\addupdateshape.o ..\CS1C_Graphics_Modeler\addupdateshape.cpp
 
 release/circle.o: ../CS1C_Graphics_Modeler/circle.cpp ../CS1C_Graphics_Modeler/circle.h \
@@ -1307,10 +1257,14 @@ release/main.o: ../CS1C_Graphics_Modeler/main.cpp ../CS1C_Graphics_Modeler/mainw
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qicon.h \
-		../CS1C_Graphics_Modeler/addupdateshape.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialog \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QApplication \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qinputmethod.h \
+		../CS1C_Graphics_Modeler/parser.h \
 		../CS1C_Graphics_Modeler/vector.h \
 		../CS1C_Graphics_Modeler/shape.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPen \
@@ -1325,14 +1279,6 @@ release/main.o: ../CS1C_Graphics_Modeler/main.cpp ../CS1C_Graphics_Modeler/mainw
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qinputmethod.h \
-		../CS1C_Graphics_Modeler/parser.h \
 		../CS1C_Graphics_Modeler/line.h \
 		../CS1C_Graphics_Modeler/polyline.h \
 		../CS1C_Graphics_Modeler/ellipse.h \
@@ -1344,8 +1290,10 @@ release/main.o: ../CS1C_Graphics_Modeler/main.cpp ../CS1C_Graphics_Modeler/mainw
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QCoreApplication \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPaintDevice
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\CS1C_Graphics_Modeler\main.cpp
 
@@ -1456,32 +1404,79 @@ release/mainwindow.o: ../CS1C_Graphics_Modeler/mainwindow.cpp ../CS1C_Graphics_M
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qicon.h \
-		../CS1C_Graphics_Modeler/addupdateshape.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialog \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
-		../CS1C_Graphics_Modeler/vector.h \
-		../CS1C_Graphics_Modeler/shape.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPen \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPainter \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpainter.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
+		ui_mainwindow.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QVariant \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QApplication \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QFormLayout \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLayout \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QHBoxLayout \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlabel.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLineEdit \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextcursor.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextformat.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMenuBar \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmenubar.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmenu.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qaction.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QPushButton \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QStackedWidget \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qstackedwidget.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QStatusBar \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QVBoxLayout \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QWidget \
+		../CS1C_Graphics_Modeler/DrawingWidget.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPainter \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpainter.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QDebug \
+		../CS1C_Graphics_Modeler/line.h \
+		../CS1C_Graphics_Modeler/shape.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPen \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/QFont \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QString \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QtMath \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
-		ui_mainwindow.h \
+		../CS1C_Graphics_Modeler/vector.h \
+		../CS1C_Graphics_Modeler/parser.h \
+		../CS1C_Graphics_Modeler/polyline.h \
+		../CS1C_Graphics_Modeler/ellipse.h \
+		../CS1C_Graphics_Modeler/square.h \
+		../CS1C_Graphics_Modeler/rectangle.h \
+		../CS1C_Graphics_Modeler/circle.h \
+		../CS1C_Graphics_Modeler/polygon.h \
+		../CS1C_Graphics_Modeler/text.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QCoreApplication \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPaintDevice \
+		../CS1C_Graphics_Modeler/addupdateshape.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QDialog \
 		ui_addupdateshape.h \
-		../CS1C_Graphics_Modeler/line.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTimer \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qtimer.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qbasictimer.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtMultimedia/QMediaPlayer \
 		C:/Qt/5.15.1/mingw81_64/include/QtMultimedia/qmediaplayer.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtMultimedia/qtmultimediaglobal.h \
@@ -1495,7 +1490,6 @@ release/mainwindow.o: ../CS1C_Graphics_Modeler/mainwindow.cpp ../CS1C_Graphics_M
 		C:/Qt/5.15.1/mingw81_64/include/QtNetwork/qtnetwork-config.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QSharedDataPointer \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/QUrl \
-		C:/Qt/5.15.1/mingw81_64/include/QtCore/QVariant \
 		C:/Qt/5.15.1/mingw81_64/include/QtMultimedia/qmediaenumdebug.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmetaobject.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtMultimedia/qaudio.h \

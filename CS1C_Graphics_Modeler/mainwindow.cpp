@@ -117,12 +117,11 @@ void MainWindow::on_LoginButtonGuest_clicked()
 
 void MainWindow::on_AddShapeButton_clicked()
 {
-    addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
-    addUpdateWindow->addShapeSetup();
+    addUpdateWindow = new AddUpdateShape;
+    addUpdateWindow->setTitle("Add Shape");
     addUpdateWindow->show();
 }
 
-<<<<<<< HEAD
 /*************************************************************************
  * MainWindow::on_LoginButtonGuest_clicked()
  * -----------------------------------------------------------------------
@@ -137,11 +136,4 @@ void MainWindow::on_BackButton_clicked()
 void MainWindow::on_ContactUsButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
-=======
-void MainWindow::on_EditShapeButton_clicked()
-{
-    addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
-    addUpdateWindow->updateShapeSetup();
-    addUpdateWindow->show();
->>>>>>> origin/AddEditShape
 }
