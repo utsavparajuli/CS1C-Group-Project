@@ -56,6 +56,12 @@ private:
 
     void saveUpdateShape();
     void updateLine();
+    void updatePolyline();
+    void updatePolygon();
+    void updateRectangle();
+    void updateSquare();
+    void updateEllipse();
+    void updateCircle();
 
     int shapeToInt(ShapeType);
     custom::vector<shape*> *shapeVector;

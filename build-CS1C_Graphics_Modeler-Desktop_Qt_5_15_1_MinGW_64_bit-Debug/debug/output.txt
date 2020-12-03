@@ -3,9 +3,9 @@ ShapeId: 1
 ShapeType: Line
 ShapeDimensions: 20, 90, 100, 20
 PenColor: blue
-PenWidth: 3
-PenStyle: DashLine
-PenCapStyle: SquareCap
+PenWidth: 2
+PenStyle: DashDotLine
+PenCapStyle: FlatCap
 PenJoinStyle: MiterJoin
 
 ShapeId: 2
@@ -64,12 +64,12 @@ BrushStyle: NoBrush
 ShapeId: 7
 ShapeType: Circle
 ShapeDimensions: 750, 150, 200
-PenColor: black
+PenColor: red
 PenWidth: 12
-PenStyle: SolidLine
+PenStyle: DashLine
 PenCapStyle: FlatCap
 PenJoinStyle: MiterJoin
-BrushColor: magenta
+BrushColor: green
 BrushStyle: SolidPattern
 
 ShapeId: 8
