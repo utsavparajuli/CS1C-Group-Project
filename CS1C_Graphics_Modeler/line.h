@@ -16,6 +16,7 @@ public:
     QPoint get_begin(){return begin;}
     QPoint get_end(){return end;}
     QString getShapeString()override;
+    QPoint get_cords()override{return begin;}
 
     QPoint getIDLocation();
 

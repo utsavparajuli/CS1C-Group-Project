@@ -73,6 +73,7 @@ public:
         virtual QString get_textFont(){return "";}
         virtual QString get_textFontStyle(){return "";}
         virtual QString get_textFontWeight(){return "";}
+        virtual QPoint get_cords(){return QPoint(0,0);}
 
         // TESTNIG
         int getID() {return shapeId;}

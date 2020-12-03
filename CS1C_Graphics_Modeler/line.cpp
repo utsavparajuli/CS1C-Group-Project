@@ -26,7 +26,7 @@ void line::move(int x, int y)
     QPoint offset (end-begin);
     QPoint tempOne(QPoint(x,y));
     QPoint tempTwo(QPoint(x,y)+offset);
-    if(tempOne.x()<1000 &&tempOne.y()<500 && tempTwo.x()<1000 && tempTwo.y()<500)
+    if(tempOne.x()<=1500 &&tempOne.y()<=1500 && tempTwo.x()<=1500 && tempTwo.y()<=1500)
     {
         begin = tempOne;
         end = tempOne+offset;

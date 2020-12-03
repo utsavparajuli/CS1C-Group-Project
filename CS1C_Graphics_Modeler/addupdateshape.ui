@@ -114,7 +114,11 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QSpinBox" name="ShapeIdEntry"/>
+     <widget class="QSpinBox" name="ShapeIdEntry">
+      <property name="maximum">
+       <number>1000</number>
+      </property>
+     </widget>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="ShapeTypeLabel">
@@ -323,7 +327,7 @@
     <rect>
      <x>140</x>
      <y>200</y>
-     <width>114</width>
+     <width>126</width>
      <height>25</height>
     </rect>
    </property>
@@ -336,7 +340,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QSpinBox" name="XCordEntry"/>
+     <widget class="QSpinBox" name="XCordEntry">
+      <property name="maximum">
+       <number>1500</number>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -345,7 +353,7 @@
     <rect>
      <x>290</x>
      <y>200</y>
-     <width>114</width>
+     <width>126</width>
      <height>25</height>
     </rect>
    </property>
@@ -358,7 +366,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QSpinBox" name="YCordEntry"/>
+     <widget class="QSpinBox" name="YCordEntry">
+      <property name="maximum">
+       <number>1500</number>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

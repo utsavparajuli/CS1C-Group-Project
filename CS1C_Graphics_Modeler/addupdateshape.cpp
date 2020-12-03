@@ -1,6 +1,7 @@
 #include "addupdateshape.h"
 #include "ui_addupdateshape.h"
 #include <QMessageBox>
+#include "parser.h"
 //custom::vector<shape*>&, QWidget *parent = nullptr
 AddUpdateShape::AddUpdateShape(custom::vector<shape*> *vec, QWidget *parent) :
     QDialog(parent),
@@ -96,6 +97,9 @@ AddUpdateShape::AddUpdateShape(custom::vector<shape*> *vec, QWidget *parent) :
     ui->FontWeightEntry->addItem("Light");
     ui->FontWeightEntry->addItem("Normal");
     ui->FontWeightEntry->addItem("Bold");
+
+    on_ShapesEntry_currentIndexChanged(0);
+
 }
 
 AddUpdateShape::~AddUpdateShape()
@@ -453,6 +457,9 @@ void AddUpdateShape::fillLineEntry(int i)
     ui->ShapeIdEntry->setValue((*shapeVector)[i]->getID());
     ui->ShapeTypeEntry->setCurrentIndex(shapeToInt((*shapeVector)[i]->get_shape()));
 
+    ui->XCordEntry->setValue((*shapeVector)[i]->get_cords().x());
+    ui->YCordEntry->setValue((*shapeVector)[i]->get_cords().y());
+
     fillPenValues(i);
     fillBrushValues(i);
 
@@ -572,4 +579,71 @@ int AddUpdateShape::shapeToInt(ShapeType shape)
     case ShapeType::Circle    : return 6;
     default                   : return 7;
     }
+}
+
+bool AddUpdateShape::uniqueShapeID(int id)
+{
+    int index = 0;
+    while(index != shapeVector->size())
+    {
+        if(id == (*shapeVector)[index]->getID())
+            return false;
+        index++;
+    }
+    return true;
+}
+
+int AddUpdateShape::getNextID()
+{
+    int newId = 1;
+    while(!uniqueShapeID(newId))
+        newId++;
+    return newId;
+}
+
+void AddUpdateShape::saveUpdateShape()
+{
+    if(ui->ShapeIdEntry->value() == (*shapeVector)[ui->ShapesEntry->currentIndex()]->getID()
+            ||(ui->ShapeIdEntry->value() != (*shapeVector)[ui->ShapesEntry->currentIndex()]->getID()
+            && uniqueShapeID(ui->ShapeIdEntry->value())))
+        //If the ID has not been changed OR the Id is unique (i.e. the ID is valid)
+    {
+        if(ui->ShapeTypeEntry->currentText() == "Line")
+            updateLine();
+        this->close();
+    }
+    else
+    {
+        ui->ShapeIdLabel->setStyleSheet("color:red;");
+        ui->ShapeIdEntry->setStyleSheet("color:red;");
+        QMessageBox error;
+        error.setText("ERROR - Shape ID must be unique!");
+        error.exec();
+    }
+
+}
+
+void AddUpdateShape::on_pushButton_clicked()
+{
+    if(ui->AddUpdateTitle->text() == "Update Shape")
+    {
+        saveUpdateShape();
+    }
+}
+
+void AddUpdateShape::on_pushButton_2_clicked()
+{
+    this->close();
+}
+//void set_pen(Qt::GlobalColor color, int width, Qt::PenStyle penStyle, Qt::PenCapStyle penCapStyle, Qt::PenJoinStyle penJoinStyle,
+//             QString newPenColorName,  QString newPenStyleName, QString newPenCapStyleName, QString newPenJoinStyleName);
+void AddUpdateShape::updateLine()
+{
+    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
+    currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
+    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
+    currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
+                          stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
+                          stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),
+                          ui->PenStyleEntry->currentText(), ui->PenCapStyleEntry->currentText(), ui->PenJoinStyleEntry->currentText());
 }
