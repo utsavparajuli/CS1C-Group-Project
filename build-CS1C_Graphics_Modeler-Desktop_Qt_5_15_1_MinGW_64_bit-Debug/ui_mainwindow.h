@@ -72,6 +72,10 @@ public:
     QLabel *ReviewTitle;
     QTextBrowser *output;
     QPushButton *backButton;
+    QWidget *ContactPage;
+    QLabel *ContactLabel;
+    QPushButton *ContactUsBackButton;
+    QLabel *Logo;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -85,7 +89,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(20, -10, 1200, 700));
+        stackedWidget->setGeometry(QRect(0, 0, 1200, 700));
         LoginPage = new QWidget();
         LoginPage->setObjectName(QString::fromUtf8("LoginPage"));
         layoutWidget = new QWidget(LoginPage);
@@ -267,10 +271,25 @@ public:
         backButton->setObjectName(QString::fromUtf8("backButton"));
         backButton->setGeometry(QRect(0, 10, 112, 32));
         stackedWidget->addWidget(ViewTestimonials);
+        ContactPage = new QWidget();
+        ContactPage->setObjectName(QString::fromUtf8("ContactPage"));
+        ContactLabel = new QLabel(ContactPage);
+        ContactLabel->setObjectName(QString::fromUtf8("ContactLabel"));
+        ContactLabel->setGeometry(QRect(20, 60, 521, 291));
+        QFont font6;
+        font6.setFamily(QString::fromUtf8("Comic Sans MS"));
+        ContactLabel->setFont(font6);
+        ContactUsBackButton = new QPushButton(ContactPage);
+        ContactUsBackButton->setObjectName(QString::fromUtf8("ContactUsBackButton"));
+        ContactUsBackButton->setGeometry(QRect(20, 10, 80, 21));
+        Logo = new QLabel(ContactPage);
+        Logo->setObjectName(QString::fromUtf8("Logo"));
+        Logo->setGeometry(QRect(330, 140, 191, 151));
+        stackedWidget->addWidget(ContactPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1200, 25));
+        menubar->setGeometry(QRect(0, 0, 1200, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -278,7 +297,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -309,6 +328,10 @@ public:
         AddTestimonial->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
         ReviewTitle->setText(QCoreApplication::translate("MainWindow", "PRODUCT REVIEWS", nullptr));
         backButton->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        ContactLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">CONTACT US - </span><span style=\" font-size:18pt; font-style:italic;\">SCRUM AND COKE</span></p><p><span style=\" font-size:18pt; vertical-align:super;\">________________________________________________________________________________________________________</span></p><p><a href=\"https://github.com/jamesdowty/CS1C-Group-Project\"><span style=\" font-size:18pt; text-decoration: underline; color:#0000ff;\">Github</span></a></p><p><a href=\"https://github.com/jamesdowty/CS1C-Group-Project\"><span style=\" font-size:18pt; text-decoration: underline; color:#000000;\">Phone: 949-333-333</span></a></p><p><a href=\"https://github.com/jamesdowty/CS1C-Group-Project\"><span style=\" font-size:18pt; text-decoration: underline; color:#000000;\">Support: help@shape.com</span></a></p><p><span style=\" font-size:18pt; vertical-align:super;\">________________________________________________________________________________________________________</span></p><p><span style="
+                        "\" font-size:18pt; vertical-align:super;\">Members: Kate, Behrad, James, Joey, Tim, Brandon, Utsav, Nicholas</span></p><p><br/></p><p><span style=\" font-size:18pt;\"><br/></span></p><p><span style=\" font-size:18pt;\"><br/></span></p><p><span style=\" font-size:18pt;\"><br/></span></p></body></html>", nullptr));
+        ContactUsBackButton->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        Logo->setText(QString());
     } // retranslateUi
 
 };

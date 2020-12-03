@@ -37,6 +37,10 @@ private slots:
 
     void on_backButton_clicked();
 
+    void on_ContactUsBackButton_clicked();
+
+    void on_ContactUsButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     int colorCounter;

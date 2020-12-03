@@ -16,6 +16,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0); //Starting program on the login page
     colorCounter = 1;
+
+    //Setting logo
+    QString logoFilePath = qApp->applicationDirPath();
+    logoFilePath.append("/logo.png");
+    ui->Logo->setAlignment(Qt::AlignCenter);
+
+    QPixmap image;
+    if(image.load(logoFilePath))
+    {
+        image = image.scaled(ui->Logo->size(), Qt::KeepAspectRatio);
+        ui->Logo->setPixmap(image);
+    }
 }
 
 MainWindow::~MainWindow()
@@ -184,3 +196,13 @@ void MainWindow::on_backButton_clicked()
     ui->stackedWidget->setCurrentIndex(1);
 }
 
+
+void MainWindow::on_ContactUsBackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_ContactUsButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
