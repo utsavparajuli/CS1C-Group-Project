@@ -70,38 +70,45 @@ void MainWindow::colorChange()
  * ***********************************************************************/
 void MainWindow::on_LoginButton_clicked()
 {
-    if(ui->UsernameEntry->text() == "Admin" && ui->PasswordEntry->text() == "Admin") //Checking if entries are correct
+    try
     {
-        ui->WhichUserTitle_2->setText("You are currently logged in as: Admin"); //Set user label on MainPage to "admin"
-        ui->stackedWidget->setCurrentIndex(1); //Changing to MainPage
-        ui->UsernameEntry->setText("");
-        ui->PasswordEntry->setText(""); //Setting username/password entries empty after login
-        ui->AddShapeButton->setEnabled(true);
-        ui->EditShapeButton->setEnabled(true);
-        ui->DeleteShapeButton->setEnabled(true);
-    }
-    else if(ui->UsernameEntry->text() == "RAVE" && ui->PasswordEntry->text() == "RAVE")
-    {
-        QMediaPlayer *player;
-        player = new QMediaPlayer;
-        QString musicFilePath = qApp->applicationDirPath();
-        musicFilePath.append('/' + QString("RaveMusic.mp3"));
-        player->setMedia(QUrl::fromLocalFile(musicFilePath));
-        player->setVolume(50);
-        player->play();
+        if(ui->UsernameEntry->text() == "Admin" && ui->PasswordEntry->text() == "Admin") //Checking if entries are correct
+        {
+            ui->WhichUserTitle_2->setText("You are currently logged in as: Admin"); //Set user label on MainPage to "admin"
+            ui->stackedWidget->setCurrentIndex(1); //Changing to MainPage
+            ui->UsernameEntry->setText("");
+            ui->PasswordEntry->setText(""); //Setting username/password entries empty after login
+            ui->AddShapeButton->setEnabled(true);
+            ui->EditShapeButton->setEnabled(true);
+            ui->DeleteShapeButton->setEnabled(true);
+        }
+        else if(ui->UsernameEntry->text() == "RAVE" && ui->PasswordEntry->text() == "RAVE")
+        {
+            QMediaPlayer *player;
+            player = new QMediaPlayer;
+            QString musicFilePath = qApp->applicationDirPath();
+            musicFilePath.append('/' + QString("RaveMusic.mp3"));
+            player->setMedia(QUrl::fromLocalFile(musicFilePath));
+            player->setVolume(50);
+            player->play();
 
-        QTimer *timer = new QTimer(this);
-        connect(timer, SIGNAL(timeout()), this, SLOT(colorChange()));
-        timer->start(416);
+            QTimer *timer = new QTimer(this);
+            connect(timer, SIGNAL(timeout()), this, SLOT(colorChange()));
+            timer->start(416);
 
-        QMessageBox raveMessageBox;
-        raveMessageBox.setText("RAVE MODE ACTIVATED!!!  >:D");
-        raveMessageBox.exec();
+            QMessageBox raveMessageBox;
+            raveMessageBox.setText("RAVE MODE ACTIVATED!!!  >:D");
+            raveMessageBox.exec();
+        }
+        else
+        {
+            throw(QString("ERROR - Incorrect password!"));
+        }
     }
-    else
+    catch(QString errorString)
     {
         QMessageBox passwordBox;
-        passwordBox.setText("ERROR - Incorrect password!");
+        passwordBox.setText(errorString);
         passwordBox.exec();
     }
 }

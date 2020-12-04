@@ -64,12 +64,12 @@ BrushStyle: NoBrush
 ShapeId: 7
 ShapeType: Circle
 ShapeDimensions: 750, 150, 200
-PenColor: red
+PenColor: black
 PenWidth: 12
-PenStyle: DashLine
+PenStyle: SolidLine
 PenCapStyle: FlatCap
 PenJoinStyle: MiterJoin
-BrushColor: green
+BrushColor: magenta
 BrushStyle: SolidPattern
 
 ShapeId: 8

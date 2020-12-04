@@ -15,8 +15,6 @@ void line::draw(QPaintDevice *device)
     painter.setPen(get_pen());
     painter.setBrush(get_brush());
 
-    qDebug() << get_pen();
-
     painter.drawLine(begin, end);
     painter.end();
 }
