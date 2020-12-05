@@ -14,7 +14,7 @@ public:
     double calcPerimeter() override; //need to write implementation
     double calcArea() override; //need to write implementation
     virtual QString getShapeString()override;
-
+    QPoint get_cords()override{return getIDLocation();}
     QPoint getIDLocation();
     QPoint getLeftMostPoint(QPoint, QPoint);
 

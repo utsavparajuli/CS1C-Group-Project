@@ -143,6 +143,7 @@ public:
 
         ShapeIdEntry = new QSpinBox(layoutWidget);
         ShapeIdEntry->setObjectName(QString::fromUtf8("ShapeIdEntry"));
+        ShapeIdEntry->setMaximum(1000);
 
         AddEditGeneralLayout->setWidget(1, QFormLayout::FieldRole, ShapeIdEntry);
 
@@ -331,7 +332,7 @@ public:
 
         layoutWidget4 = new QWidget(AddUpdateShape);
         layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
-        layoutWidget4->setGeometry(QRect(140, 200, 114, 25));
+        layoutWidget4->setGeometry(QRect(140, 200, 126, 25));
         horizontalLayout = new QHBoxLayout(layoutWidget4);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -342,12 +343,13 @@ public:
 
         XCordEntry = new QSpinBox(layoutWidget4);
         XCordEntry->setObjectName(QString::fromUtf8("XCordEntry"));
+        XCordEntry->setMaximum(1500);
 
         horizontalLayout->addWidget(XCordEntry);
 
         layoutWidget5 = new QWidget(AddUpdateShape);
         layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
-        layoutWidget5->setGeometry(QRect(290, 200, 114, 25));
+        layoutWidget5->setGeometry(QRect(290, 200, 126, 25));
         horizontalLayout_2 = new QHBoxLayout(layoutWidget5);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -358,6 +360,7 @@ public:
 
         YCordEntry = new QSpinBox(layoutWidget5);
         YCordEntry->setObjectName(QString::fromUtf8("YCordEntry"));
+        YCordEntry->setMaximum(1500);
 
         horizontalLayout_2->addWidget(YCordEntry);
 

@@ -28,6 +28,10 @@ private slots:
 
     void on_ShapesEntry_currentIndexChanged(int index);
 
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
 private:
     Ui::AddUpdateShape *ui;
     void setLineEnabled();
@@ -46,6 +50,18 @@ private:
     void fillLineEntry(int);
     void fillShapeEntry(int);
     void fillTextEntry(int);
+
+    bool uniqueShapeID(int);
+    int getNextID();
+
+    void saveUpdateShape();
+    void updateLine();
+    void updatePolyline();
+    void updatePolygon();
+    void updateRectangle();
+    void updateSquare();
+    void updateEllipse();
+    void updateCircle();
 
     int shapeToInt(ShapeType);
     custom::vector<shape*> *shapeVector;
