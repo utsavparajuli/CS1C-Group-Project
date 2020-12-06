@@ -91,30 +91,11 @@ void ellipse::draw(QPaintDevice *device)
     painter.end();
 }
 
-void ellipse::move(const int x,const int y)
+void ellipse::move(const int x, const int y)
 {
-//    QPoint newCenter(QPoint(x, y));
-
-//    // check to make sure the new location does not go off the right edge of the canvas
-//    if (newCenter.x() < 1000 && newCenter.y() < 500)
-//    {
-//        center = newCenter;
-//    }
+    this->x = x;
+    this->y = y;
     return;
-}
-
-
-
-double ellipse::calcPerimeter()
-{
-    return (width * 2) + (height * 2);
-}
-
-
-
-double ellipse::calcArea()
-{
-    return width * height;
 }
 
 

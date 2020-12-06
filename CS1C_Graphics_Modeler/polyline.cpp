@@ -50,15 +50,15 @@ QPoint polyline::getLeftMostPoint(QPoint p1, QPoint p2)
 // NEED HELP WITH MOVE
 void polyline::move(int x, int y)
 {
-//    QPoint offset (p4 - p1);
-//    QPoint tempOne(QPoint(x,y));
-//    QPoint tempTwo(QPoint(x,y)+offset);
-//    if(tempOne.x()<1000 &&tempOne.y()<500 && tempTwo.x()<1000 && tempTwo.y()<500)
-//    {
-//        p1 = tempOne;
-//        p4 = tempOne+offset;
-//    }
-    return;
+     QPoint currentTopLeft = getIDLocation();
+     float distanceX = x - currentTopLeft.x();
+     float distanceY = y - currentTopLeft.y();
+
+     for(int i = 0; i < pointCount; i++)
+     {
+        points[i].setX(points[i].x() + distanceX);
+        points[i].setY(points[i].y() + distanceY);
+     }
 }
 
 void polyline::setPoints(QPoint* newPoints, int count)
@@ -69,40 +69,26 @@ void polyline::setPoints(QPoint* newPoints, int count)
 
 double polyline::calcPerimeter()
 {
-    return 0; //To edit!
+    double perimeter = 0;
+    for(int i = 0; i < pointCount; i += 2)
+    {
+        // Gets the perimeter of the poly's unique points
+        perimeter += sqrt(pow(points[i+1].x() - points[i].x(), 2) - pow(points[i+1].y() - points[i].y(), 2));
+    }
+    return perimeter;
 }
 
 double polyline::calcArea()
 {
-    return 0; //To edit!
+    double perimeter = 0;
+    for(int i = 0; i < pointCount; i += 2)
+    {
+        // Gets the perimeter of the poly's unique points
+        perimeter += sqrt(pow(points[i+1].x() - points[i].x(), 2) + pow(points[i+1].y() - points[i].y(), 2));
+    }
+    return perimeter;
 }
-//Shape ID
-//QString outString = "\nShapeId: " + QString::number(getID());
 
-////ShapeType
-//outString += "\nShapeType: Line";
-
-////ShapeDimensions
-//outString += "\nShapeDimensions: " + QString::number(begin.x()) + ", "
-//             +QString::number(begin.y()) + ", " + QString::number(end.x()) + ", "
-//             +QString::number(end.y());
-
-////Pen Color
-//outString += "\nPenColor: " + penColorName;
-
-////PenWidth
-//outString += "\nPenWidth: " + QString::number(get_pen().width());
-
-////PenStyle
-//outString += "\nPenStyle: " + penStyleName;
-
-////Pen Cap Style
-//outString += "\nPenCapStyle: " + penCapStyleName;
-
-////PenJoinStyle
-//outString += "\nPenJoinStyle: " + penJoinStyleName + '\n';
-
-//return outString;
 QString polyline::getShapeString()
 {
     QString outString = "\nShapeId: " + QString::number(getID());

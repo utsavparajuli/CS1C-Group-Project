@@ -12,10 +12,10 @@ public:
      void setPoints(int x, int y, int l, int w);
      void draw(QPaintDevice *device)override;
 
-     void move(const int x_cord = 0, const int y_cord = 0) override;
+     void move(const int x, const int y) override;
 
-     double calcPerimeter() override; //need to write implementation
-     double calcArea() override;
+     double calcPerimeter() override {return (l * 2) + (w * 2);}
+     double calcArea() override {return l * w;}
 
      //functions for text
      void set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize,
@@ -29,7 +29,7 @@ public:
      QString get_textString()override;
      QString get_textColor()override;
      QString get_textAllignment()override;
-     int get_textPointSize()override;
+     int     get_textPointSize()override;
      QString get_textFont()override;
      QString get_textFontStyle()override;
      QString get_textFontWeight()override;

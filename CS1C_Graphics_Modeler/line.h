@@ -9,10 +9,10 @@ public:
     line(int id = -1) : shape{id, ShapeType::Line}{};
     virtual ~line()override;
     void setPoints(const QPoint &begin, const QPoint &end);
-    void move(const int x_cord, const int y_cord)override;
+    void move(const int x, const int y) override;
     void draw(QPaintDevice *device)override;
-    double calcPerimeter() override; //need to write implementation
-    double calcArea() override; //need to write implementation
+    double calcPerimeter() override;
+    double calcArea() override;
     QPoint get_begin(){return begin;}
     QPoint get_end(){return end;}
     QString getShapeString()override;

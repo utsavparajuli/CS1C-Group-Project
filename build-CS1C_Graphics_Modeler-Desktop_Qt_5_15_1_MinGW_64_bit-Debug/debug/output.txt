@@ -19,7 +19,7 @@ PenJoinStyle: MiterJoin
 
 ShapeId: 3
 ShapeType: Polygon
-ShapeDimensions: 900, 90, 910, 20, 970, 40, 980, 80
+ShapeDimensions: 4, 10, 1, 7, 11, 2, 2, 2
 PenColor: cyan
 PenWidth: 6
 PenStyle: DashDotDotLine

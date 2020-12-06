@@ -10,8 +10,8 @@ public:
     void setPoints(int x, int y, int length, int width);
     void move(const int x, const int y) override;
     void draw(QPaintDevice *devive) override;
-    double calcPerimeter() {return (length * 2) + (width * 2);}
-    double calcArea() {return length * width;}
+    double calcPerimeter() override {return (length * 2) + (width * 2);}
+    double calcArea() override {return length * width;}
     virtual QString getShapeString()override;
 
 private:

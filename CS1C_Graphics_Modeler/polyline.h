@@ -9,7 +9,7 @@ public:
     polyline(int id = -1) : shape{id, ShapeType::Polyline}{};
     virtual ~polyline() override;
     void setPoints(QPoint*, int);
-    void move(const int x_cord, const int y_cord)override;
+    void move(const int x, const int y)override;
     void draw(QPaintDevice *device)override;
     double calcPerimeter() override; //need to write implementation
     double calcArea() override; //need to write implementation

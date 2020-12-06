@@ -119,14 +119,14 @@ public:
      * Returns a double value with the perimeter of the ellipse.
     */
 
-    double calcPerimeter()override;
+    double calcPerimeter() override {return 2 * M_PI * sqrt(((height * height) + (width * width)) / 2);}
 
     // function calculates and returns the area of the ellipse
     /* Overrides base class virtual function.
      * Returns a double value with the area of the ellipse.
     */
 
-    double calcArea()override;
+    double calcArea()override{return M_PI * height * width;}
 
     // function draws a label for the ellipse shape id at its top left corner
     /* Finds the top - left corner of an object, and assigns
