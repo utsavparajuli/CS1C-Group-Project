@@ -627,6 +627,8 @@ void AddUpdateShape::saveUpdateShape()
             updateEllipse();
         else if(ui->ShapeTypeEntry->currentText() == "Circle")
             updateCircle();
+        else
+            updateText();
         this->close();
     }
     else

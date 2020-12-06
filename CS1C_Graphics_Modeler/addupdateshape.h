@@ -62,6 +62,7 @@ private:
     void updateSquare();
     void updateEllipse();
     void updateCircle();
+    void updateText();
 
     int shapeToInt(ShapeType);
     custom::vector<shape*> *shapeVector;
