@@ -11,10 +11,10 @@ public:
     void setPoints(QPoint*, int pointCount);
     void move(const int x, const int y) override;
     void draw(QPaintDevice *device) override;
-    double calcPerimeter() override {return 0;} //need to write implementation
-    double calcArea() override {return 0;} //need to write implementation
+    double calcPerimeter() override; //need to write implementation
+    double calcArea() override; //need to write implementation
     virtual QString getShapeString()override;
-
+    QPoint get_cords() override {return getIDLocation();}
     QPoint getIDLocation();
     QPoint getLeftMostPoint(QPoint, QPoint);
 

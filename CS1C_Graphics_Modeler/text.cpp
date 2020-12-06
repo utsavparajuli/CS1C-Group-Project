@@ -65,19 +65,11 @@ void text::set_alignment(Qt::AlignmentFlag alignment)
     this->alignment = alignment;
 }
 
-double text::calcArea()
-{
-    //test
-}
 
-double text::calcPerimeter()
+void text::move(const int x, const int y)
 {
-    //test
-}
-
-void text::move(const int x_cord, const int y_cord)
-{
-    //test
+    this->x = x;
+    this->y = y;
 }
 
 

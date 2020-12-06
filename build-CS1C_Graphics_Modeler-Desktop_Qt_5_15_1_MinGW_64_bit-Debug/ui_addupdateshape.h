@@ -122,7 +122,7 @@ public:
         HelpButton->setGeometry(QRect(460, 150, 21, 21));
         layoutWidget = new QWidget(AddUpdateShape);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(100, 40, 354, 157));
+        layoutWidget->setGeometry(QRect(100, 40, 354, 181));
         AddEditGeneralLayout = new QFormLayout(layoutWidget);
         AddEditGeneralLayout->setObjectName(QString::fromUtf8("AddEditGeneralLayout"));
         AddEditGeneralLayout->setContentsMargins(0, 0, 0, 0);
@@ -168,7 +168,7 @@ public:
 
         layoutWidget1 = new QWidget(AddUpdateShape);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(40, 250, 211, 137));
+        layoutWidget1->setGeometry(QRect(40, 250, 211, 151));
         formLayout = new QFormLayout(layoutWidget1);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -224,7 +224,7 @@ public:
 
         layoutWidget2 = new QWidget(AddUpdateShape);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(290, 290, 191, 52));
+        layoutWidget2->setGeometry(QRect(290, 290, 191, 57));
         formLayout_2 = new QFormLayout(layoutWidget2);
         formLayout_2->setObjectName(QString::fromUtf8("formLayout_2"));
         formLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -250,7 +250,7 @@ public:
 
         layoutWidget3 = new QWidget(AddUpdateShape);
         layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(90, 420, 342, 243));
+        layoutWidget3->setGeometry(QRect(90, 420, 342, 276));
         formLayout_4 = new QFormLayout(layoutWidget3);
         formLayout_4->setObjectName(QString::fromUtf8("formLayout_4"));
         formLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -331,7 +331,7 @@ public:
 
         layoutWidget4 = new QWidget(AddUpdateShape);
         layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
-        layoutWidget4->setGeometry(QRect(140, 200, 114, 25));
+        layoutWidget4->setGeometry(QRect(140, 200, 149, 27));
         horizontalLayout = new QHBoxLayout(layoutWidget4);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -342,12 +342,13 @@ public:
 
         XCordEntry = new QSpinBox(layoutWidget4);
         XCordEntry->setObjectName(QString::fromUtf8("XCordEntry"));
+        XCordEntry->setMaximum(1500);
 
         horizontalLayout->addWidget(XCordEntry);
 
         layoutWidget5 = new QWidget(AddUpdateShape);
         layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
-        layoutWidget5->setGeometry(QRect(290, 200, 114, 25));
+        layoutWidget5->setGeometry(QRect(290, 200, 148, 27));
         horizontalLayout_2 = new QHBoxLayout(layoutWidget5);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -358,12 +359,13 @@ public:
 
         YCordEntry = new QSpinBox(layoutWidget5);
         YCordEntry->setObjectName(QString::fromUtf8("YCordEntry"));
+        YCordEntry->setMaximum(1500);
 
         horizontalLayout_2->addWidget(YCordEntry);
 
         layoutWidget6 = new QWidget(AddUpdateShape);
         layoutWidget6->setObjectName(QString::fromUtf8("layoutWidget6"));
-        layoutWidget6->setGeometry(QRect(170, 680, 168, 23));
+        layoutWidget6->setGeometry(QRect(170, 680, 169, 27));
         horizontalLayout_3 = new QHBoxLayout(layoutWidget6);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);

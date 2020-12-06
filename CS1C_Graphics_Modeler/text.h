@@ -12,16 +12,16 @@ public:
      void setPoints(int x, int y, int l, int w);
      void draw(QPaintDevice *device)override;
 
-     void move(const int x_cord = 0, const int y_cord = 0) override;
+     void move(const int x, const int y) override;
 
-     double calcPerimeter() override; //need to write implementation
-     double calcArea() override;
+     double calcPerimeter() override {return (l * 2) + (w * 2);}
+     double calcArea() override {return l * w;}
 
      //functions for text
      void set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize,
                    QString fontFamily, QFont::Style style, QFont::Weight weight,
                    QString textStringName, QString textColorName, QString textAlignmentName, QString textFontFamilyNAme,
-                   QString textFontStyleName, QString textFontWeightName);
+                   QString textFontStyleName, QString textFontWeightName) override;
      void set_alignment(Qt::AlignmentFlag alignment);
      void set_text_color(Qt::GlobalColor color);
      virtual QString getShapeString()override;
@@ -29,10 +29,11 @@ public:
      QString get_textString()override;
      QString get_textColor()override;
      QString get_textAllignment()override;
-     int get_textPointSize()override;
+     int     get_textPointSize()override;
      QString get_textFont()override;
      QString get_textFontStyle()override;
      QString get_textFontWeight()override;
+     QPoint get_cords() override {return QPoint(this->x, this->y);}
 
 private:
      int x;

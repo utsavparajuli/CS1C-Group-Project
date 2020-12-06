@@ -104,20 +104,6 @@ void ellipse::move(const int x,const int y)
 }
 
 
-
-double ellipse::calcPerimeter()
-{
-    return (width * 2) + (height * 2);
-}
-
-
-
-double ellipse::calcArea()
-{
-    return width * height;
-}
-
-
 QString ellipse::getShapeString()
 {
     QString outString = "\nShapeId: " + QString::number(getID());

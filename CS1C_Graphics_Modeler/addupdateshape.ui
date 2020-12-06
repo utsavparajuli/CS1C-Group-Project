@@ -92,7 +92,7 @@
      <x>100</x>
      <y>40</y>
      <width>354</width>
-     <height>157</height>
+     <height>181</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="AddEditGeneralLayout">
@@ -144,7 +144,7 @@
      <x>40</x>
      <y>250</y>
      <width>211</width>
-     <height>137</height>
+     <height>151</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -206,7 +206,7 @@
      <x>290</x>
      <y>290</y>
      <width>191</width>
-     <height>52</height>
+     <height>57</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout_2">
@@ -238,7 +238,7 @@
      <x>90</x>
      <y>420</y>
      <width>342</width>
-     <height>243</height>
+     <height>276</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout_4">
@@ -323,8 +323,8 @@
     <rect>
      <x>140</x>
      <y>200</y>
-     <width>114</width>
-     <height>25</height>
+     <width>149</width>
+     <height>27</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -336,7 +336,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QSpinBox" name="XCordEntry"/>
+     <widget class="QSpinBox" name="XCordEntry">
+      <property name="maximum">
+       <number>1500</number>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -345,8 +349,8 @@
     <rect>
      <x>290</x>
      <y>200</y>
-     <width>114</width>
-     <height>25</height>
+     <width>148</width>
+     <height>27</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -358,7 +362,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QSpinBox" name="YCordEntry"/>
+     <widget class="QSpinBox" name="YCordEntry">
+      <property name="maximum">
+       <number>1500</number>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -367,8 +375,8 @@
     <rect>
      <x>170</x>
      <y>680</y>
-     <width>168</width>
-     <height>23</height>
+     <width>169</width>
+     <height>27</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">

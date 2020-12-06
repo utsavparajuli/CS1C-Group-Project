@@ -11,9 +11,10 @@ public:
     void setPoints(int x, int y, int length);
     void move(const int x, const int y) override;
     void draw(QPaintDevice *devive) override;
-    double calcPerimeter() {return length * 4;}
-    double calcArea() {return length * length;}
+    double calcPerimeter() override {return length * 4;}
+    double calcArea() override {return length * length;}
     virtual QString getShapeString()override;
+    QPoint get_cords() override {return QPoint(this->x, this->y);}
 
 private:
     QString shapeName = "Square";

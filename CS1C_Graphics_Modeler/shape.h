@@ -73,6 +73,12 @@ public:
         virtual QString get_textFont(){return "";}
         virtual QString get_textFontStyle(){return "";}
         virtual QString get_textFontWeight(){return "";}
+        virtual QPoint get_cords(){return QPoint(0,0);}
+
+        virtual void set_text(QString text, Qt::GlobalColor color, Qt::AlignmentFlag alignment, int pointSize,
+                      QString fontFamily, QFont::Style style, QFont::Weight weight,
+                      QString textStringName, QString textColorName, QString textAlignmentName, QString textFontFamilyNAme,
+                              QString textFontStyleName, QString textFontWeightName){return;}
 
         // TESTNIG
         int getID() {return shapeId;}

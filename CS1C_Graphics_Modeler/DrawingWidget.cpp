@@ -1,7 +1,6 @@
 #include "DrawingWidget.h"
 #include "saveFile.h"
 
-
 // DRAWS ALL SHAPES
 void DrawingWidget::paintEvent(QPaintEvent*)
 {
