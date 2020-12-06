@@ -122,7 +122,7 @@ public:
         HelpButton->setGeometry(QRect(460, 150, 21, 21));
         layoutWidget = new QWidget(AddUpdateShape);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(100, 40, 354, 181));
+        layoutWidget->setGeometry(QRect(100, 40, 354, 151));
         AddEditGeneralLayout = new QFormLayout(layoutWidget);
         AddEditGeneralLayout->setObjectName(QString::fromUtf8("AddEditGeneralLayout"));
         AddEditGeneralLayout->setContentsMargins(0, 0, 0, 0);
@@ -250,7 +250,7 @@ public:
 
         layoutWidget3 = new QWidget(AddUpdateShape);
         layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(90, 420, 342, 276));
+        layoutWidget3->setGeometry(QRect(90, 420, 342, 251));
         formLayout_4 = new QFormLayout(layoutWidget3);
         formLayout_4->setObjectName(QString::fromUtf8("formLayout_4"));
         formLayout_4->setContentsMargins(0, 0, 0, 0);

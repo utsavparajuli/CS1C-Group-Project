@@ -92,7 +92,7 @@
      <x>100</x>
      <y>40</y>
      <width>354</width>
-     <height>181</height>
+     <height>151</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="AddEditGeneralLayout">
@@ -238,7 +238,7 @@
      <x>90</x>
      <y>420</y>
      <width>342</width>
-     <height>276</height>
+     <height>251</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout_4">

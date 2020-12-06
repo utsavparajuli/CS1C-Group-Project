@@ -106,7 +106,7 @@ double polyline::calcArea()
 QString polyline::getShapeString()
 {
     QString outString = "\nShapeId: " + QString::number(getID());
-    outString += "\nShapeType: Polyine";
+    outString += "\nShapeType: Polyline";
 
     outString += "\nShapeDimensions: ";
     for(int i = 0; i < pointCount; i++)

@@ -18,7 +18,7 @@ DrawingWidget::DrawingWidget(QWidget *parent)
 
 DrawingWidget::~DrawingWidget()
 {
-    saveFile(*shapeVector, "output.txt");
+    saveFile(*shapeVector, "shapes.txt");
 }
 
 custom::vector<shape*>* DrawingWidget::getVec()

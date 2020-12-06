@@ -846,7 +846,22 @@ release/addupdateshape.o: ../CS1C_Graphics_Modeler/addupdateshape.cpp ../CS1C_Gr
 		C:/Qt/5.15.1/mingw81_64/include/QtCore/qmath.h \
 		ui_addupdateshape.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
+		../CS1C_Graphics_Modeler/parser.h \
+		../CS1C_Graphics_Modeler/line.h \
+		../CS1C_Graphics_Modeler/polyline.h \
+		../CS1C_Graphics_Modeler/ellipse.h \
+		../CS1C_Graphics_Modeler/square.h \
+		../CS1C_Graphics_Modeler/rectangle.h \
+		../CS1C_Graphics_Modeler/circle.h \
+		../CS1C_Graphics_Modeler/polygon.h \
+		../CS1C_Graphics_Modeler/text.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QFile \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QCoreApplication \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QPaintDevice
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\addupdateshape.o ..\CS1C_Graphics_Modeler\addupdateshape.cpp
 
 release/circle.o: ../CS1C_Graphics_Modeler/circle.cpp ../CS1C_Graphics_Modeler/circle.h \
