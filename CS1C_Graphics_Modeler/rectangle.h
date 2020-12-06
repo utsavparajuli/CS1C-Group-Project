@@ -13,6 +13,7 @@ public:
     double calcPerimeter() override {return (length * 2) + (width * 2);}
     double calcArea() override {return length * width;}
     virtual QString getShapeString()override;
+    QPoint get_cords() override {return QPoint(this->x, this->y);}
 
 private:
     QString shapeName = "Rectangle";

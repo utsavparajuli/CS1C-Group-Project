@@ -30,7 +30,7 @@ BrushStyle: SolidPattern
 
 ShapeId: 4
 ShapeType: Rectangle
-ShapeDimensions: 20, 200, 170, 100
+ShapeDimensions: 30, 200, 170, 100
 PenColor: blue
 PenWidth: 0
 PenStyle: DashLine
