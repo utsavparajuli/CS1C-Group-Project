@@ -43,10 +43,13 @@ private slots:
 
     void on_ReportsBackButton_clicked();
 
+    void on_ReportsSortByEntry_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     int colorCounter;
     AddUpdateShape *addUpdateWindow;
+    void populateReportsTable();
 
 };
 #endif // MAINWINDOW_H

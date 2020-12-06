@@ -98,3 +98,18 @@ QString shape::construct_ID_String(QString shapeName, int shapeID)
 //    //text.setStyleSheet
 //}
 
+QString shape::get_shapeTypeString()
+{
+    switch(shapeType)
+    {
+    case ShapeType::Line : return "Line";
+    case ShapeType::Polyline : return "Polyline";
+    case ShapeType::Polygon : return "Polygon";
+    case ShapeType::Rectangle : return "Rectangle";
+    case ShapeType::Square : return "Square";
+    case ShapeType::Ellipse : return "Ellipse";
+    case ShapeType::Circle : return "Circle";
+    case ShapeType::Text : return "Text";
+    case ShapeType::NoShape : return "NoShape";
+    }
+}

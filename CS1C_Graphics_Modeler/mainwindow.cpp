@@ -192,6 +192,7 @@ void MainWindow::on_pushButton_clicked()//Reports page
 {
     ui->stackedWidget->setCurrentIndex(5);
     ui->ReportsTable->setRowCount(ui->drawArea->getVec()->size());
+    populateReportsTable();
 }
 
 void MainWindow::on_backButton_clicked()
@@ -213,4 +214,45 @@ void MainWindow::on_ContactUsButton_clicked()
 void MainWindow::on_ReportsBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_ReportsSortByEntry_currentIndexChanged(int index)
+{
+
+    switch(index)
+    {
+    case 0 : ui->ReportsTable->sortItems(0);
+             break;
+    case 1 : //sortByPerimeter();
+             break;
+    case 2 : //sortByArea();
+             break;
+    };
+}
+
+void MainWindow::populateReportsTable()
+{
+    custom::vector<shape*> *currentVec = ui->drawArea->getVec();
+
+    for(int i = 0; i < currentVec->size(); i++)
+    {
+
+        ui->ReportsTable->setItem(i, 0, new QTableWidgetItem(QString::number((*currentVec)[i]->getID()))); //Adding shape id to table
+        ui->ReportsTable->setItem(i, 1, new QTableWidgetItem((*currentVec)[i]->get_shapeTypeString()));  //Adding shape type to the table
+
+        if((*currentVec)[i]->get_shape() == ShapeType::Line || (*currentVec)[i]->get_shape() == ShapeType::Polyline)
+        {
+            //Line and Polyline stuff goes here
+        }
+        else if((*currentVec)[i]->get_shape() == ShapeType::Polygon || (*currentVec)[i]->get_shape() == ShapeType::Rectangle ||
+                (*currentVec)[i]->get_shape() == ShapeType::Square || (*currentVec)[i]->get_shape() == ShapeType::Ellipse ||
+                (*currentVec)[i]->get_shape() == ShapeType::Circle)
+        {
+            //Shapes stuff goes here
+        }
+        else
+        {
+            //Text Stuff goes here
+        }
+    }
 }

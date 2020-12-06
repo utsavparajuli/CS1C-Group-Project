@@ -37,6 +37,8 @@ public:
         QString get_brushColorString(){return brushColorName;}
         QString get_brushStyleString(){return brushStyleName;}
 
+        QString get_shapeTypeString();
+
 
         //functions that will set the shape, pen and brush
         void set_ShapeId(int id);
@@ -54,10 +56,10 @@ public:
         QString construct_ID_String(QString shapeName, int shapeID);
 
         //equality operator overloading
-        bool operator==(const shape& otherShape) const;
+        bool operator==(const shape& otherShape) const {return shapeId == otherShape.shapeId;}
 
         //less than operator oveloading
-        bool operator<(const shape& otherShape) const;
+        bool operator<(const shape& otherShape) const {return shapeId < otherShape.shapeId;}
 
         //virtual methods
         virtual void draw(QPaintDevice *device) = 0;
