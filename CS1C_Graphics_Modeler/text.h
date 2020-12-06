@@ -33,6 +33,7 @@ public:
      QString get_textFont()override;
      QString get_textFontStyle()override;
      QString get_textFontWeight()override;
+     QPoint get_cords() override {return QPoint(this->x, this->y);}
 
 private:
      int x;

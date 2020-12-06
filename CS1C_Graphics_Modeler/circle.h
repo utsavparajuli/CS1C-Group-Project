@@ -14,6 +14,7 @@ public:
     double calcPerimeter() override {return  2 * M_PI * radius;}
     double calcArea() override {return radius * radius * M_PI;}
     virtual QString getShapeString()override;
+    QPoint get_cords() override {return QPoint(this->x, this->y);}
 
 private:
     int x;
