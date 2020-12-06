@@ -41,6 +41,8 @@ private slots:
 
     void on_ContactUsButton_clicked();
 
+    void on_ReportsBackButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     int colorCounter;

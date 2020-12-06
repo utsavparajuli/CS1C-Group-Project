@@ -10,7 +10,7 @@ PenJoinStyle: MiterJoin
 
 ShapeId: 2
 ShapeType: Polyline
-ShapeDimensions: 460, 90, 470, 20, 530, 40, 540, 80
+ShapeDimensions: 300, 90, 310, 20, 370, 40, 380, 80
 PenColor: blue
 PenWidth: 6
 PenStyle: SolidLine
@@ -19,7 +19,7 @@ PenJoinStyle: MiterJoin
 
 ShapeId: 3
 ShapeType: Polygon
-ShapeDimensions: 900, 90, 910, 20, 970, 40, 980, 80
+ShapeDimensions: 500, 90, 510, 20, 570, 40, 580, 80
 PenColor: cyan
 PenWidth: 6
 PenStyle: DashDotDotLine
@@ -30,7 +30,7 @@ BrushStyle: SolidPattern
 
 ShapeId: 4
 ShapeType: Rectangle
-ShapeDimensions: 20, 200, 170, 100
+ShapeDimensions: 100, 200, 170, 100
 PenColor: blue
 PenWidth: 0
 PenStyle: DashLine
@@ -63,7 +63,7 @@ BrushStyle: NoBrush
 
 ShapeId: 7
 ShapeType: Circle
-ShapeDimensions: 750, 150, 200
+ShapeDimensions: 750, 400, 200
 PenColor: black
 PenWidth: 12
 PenStyle: SolidLine

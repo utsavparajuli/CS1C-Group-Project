@@ -28,6 +28,8 @@ MainWindow::MainWindow(QWidget *parent)
         image = image.scaled(ui->Logo->size(), Qt::KeepAspectRatio);
         ui->Logo->setPixmap(image);
     }
+
+    ui->ReportsTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 MainWindow::~MainWindow()
@@ -186,9 +188,10 @@ void MainWindow::on_PastTestimonials_clicked()
 
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_clicked()//Reports page
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(5);
+    ui->ReportsTable->setRowCount(ui->drawArea->getVec()->size());
 }
 
 void MainWindow::on_backButton_clicked()
@@ -205,4 +208,9 @@ void MainWindow::on_ContactUsBackButton_clicked()
 void MainWindow::on_ContactUsButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::on_ReportsBackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
 }

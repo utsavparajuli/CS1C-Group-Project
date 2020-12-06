@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="LoginPage">
      <widget class="QWidget" name="layoutWidget">
@@ -223,6 +223,19 @@
       <property name="styleSheet">
        <string notr="true">background-color:white;
 border: 3px solid black;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>1080</x>
+        <y>10</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reports</string>
       </property>
      </widget>
     </widget>
@@ -425,6 +438,178 @@ border: 3px solid black;</string>
       <property name="text">
        <string/>
       </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ReportsPage">
+     <widget class="QPushButton" name="ReportsBackButton">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ReportsTitle">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>10</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Reports</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ReportsSortByEntry">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>70</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Shape ID</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Perimeter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Area</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="ReportsSortLabel">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sort By:</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="ReportsTable">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>1151</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>0</number>
+      </property>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Shape ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Dimensions</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Pen Color</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Pen Style</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Pen Cap Style</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Pen Join Style</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Brush Color</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Brush Style</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Text String</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Text Color</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Text Alignment</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Text Point Size</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Text Font Family</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Text Font Style</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Text Font Weight</string>
+       </property>
+      </column>
      </widget>
     </widget>
    </widget>

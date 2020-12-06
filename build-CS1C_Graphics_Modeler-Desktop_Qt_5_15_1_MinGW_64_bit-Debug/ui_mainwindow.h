@@ -11,9 +11,11 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -22,6 +24,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -61,6 +64,7 @@ public:
     QPushButton *DeleteShapeButton;
     QPushButton *TestimonialsButton;
     DrawingWidget *drawArea;
+    QPushButton *pushButton;
     QWidget *TestimonialsPage;
     QLabel *Title;
     QLabel *AddReviewLabel;
@@ -76,6 +80,12 @@ public:
     QLabel *ContactLabel;
     QPushButton *ContactUsBackButton;
     QLabel *Logo;
+    QWidget *ReportsPage;
+    QPushButton *ReportsBackButton;
+    QLabel *ReportsTitle;
+    QComboBox *ReportsSortByEntry;
+    QLabel *ReportsSortLabel;
+    QTableWidget *ReportsTable;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -217,6 +227,9 @@ public:
         drawArea->setGeometry(QRect(30, 70, 1091, 531));
         drawArea->setStyleSheet(QString::fromUtf8("background-color:white;\n"
 "border: 3px solid black;"));
+        pushButton = new QPushButton(MainPage);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(1080, 10, 80, 21));
         stackedWidget->addWidget(MainPage);
         TestimonialsPage = new QWidget();
         TestimonialsPage->setObjectName(QString::fromUtf8("TestimonialsPage"));
@@ -286,6 +299,68 @@ public:
         Logo->setObjectName(QString::fromUtf8("Logo"));
         Logo->setGeometry(QRect(330, 140, 191, 151));
         stackedWidget->addWidget(ContactPage);
+        ReportsPage = new QWidget();
+        ReportsPage->setObjectName(QString::fromUtf8("ReportsPage"));
+        ReportsBackButton = new QPushButton(ReportsPage);
+        ReportsBackButton->setObjectName(QString::fromUtf8("ReportsBackButton"));
+        ReportsBackButton->setGeometry(QRect(20, 20, 80, 21));
+        ReportsTitle = new QLabel(ReportsPage);
+        ReportsTitle->setObjectName(QString::fromUtf8("ReportsTitle"));
+        ReportsTitle->setGeometry(QRect(560, 10, 101, 41));
+        QFont font7;
+        font7.setPointSize(20);
+        ReportsTitle->setFont(font7);
+        ReportsSortByEntry = new QComboBox(ReportsPage);
+        ReportsSortByEntry->addItem(QString());
+        ReportsSortByEntry->addItem(QString());
+        ReportsSortByEntry->addItem(QString());
+        ReportsSortByEntry->setObjectName(QString::fromUtf8("ReportsSortByEntry"));
+        ReportsSortByEntry->setGeometry(QRect(540, 70, 161, 22));
+        ReportsSortLabel = new QLabel(ReportsPage);
+        ReportsSortLabel->setObjectName(QString::fromUtf8("ReportsSortLabel"));
+        ReportsSortLabel->setGeometry(QRect(540, 50, 47, 13));
+        ReportsTable = new QTableWidget(ReportsPage);
+        if (ReportsTable->columnCount() < 17)
+            ReportsTable->setColumnCount(17);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(4, __qtablewidgetitem4);
+        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(5, __qtablewidgetitem5);
+        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(6, __qtablewidgetitem6);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(7, __qtablewidgetitem7);
+        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(8, __qtablewidgetitem8);
+        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(9, __qtablewidgetitem9);
+        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(10, __qtablewidgetitem10);
+        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(11, __qtablewidgetitem11);
+        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(12, __qtablewidgetitem12);
+        QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(13, __qtablewidgetitem13);
+        QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(14, __qtablewidgetitem14);
+        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(15, __qtablewidgetitem15);
+        QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
+        ReportsTable->setHorizontalHeaderItem(16, __qtablewidgetitem16);
+        ReportsTable->setObjectName(QString::fromUtf8("ReportsTable"));
+        ReportsTable->setGeometry(QRect(30, 110, 1151, 531));
+        ReportsTable->setRowCount(0);
+        ReportsTable->verticalHeader()->setVisible(false);
+        stackedWidget->addWidget(ReportsPage);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -297,7 +372,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -321,6 +396,7 @@ public:
         EditShapeButton->setText(QCoreApplication::translate("MainWindow", "Edit Shape", nullptr));
         DeleteShapeButton->setText(QCoreApplication::translate("MainWindow", "Delete Shape", nullptr));
         TestimonialsButton->setText(QCoreApplication::translate("MainWindow", "Testimonials", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Reports", nullptr));
         Title->setText(QCoreApplication::translate("MainWindow", "WELCOME TO TESTIMONIALS PAGE", nullptr));
         AddReviewLabel->setText(QCoreApplication::translate("MainWindow", "Please add your review below", nullptr));
         PastTestimonials->setText(QCoreApplication::translate("MainWindow", "Previous Testimonials", nullptr));
@@ -332,6 +408,47 @@ public:
                         "\" font-size:18pt; vertical-align:super;\">Members: Kate, Behrad, James, Joey, Tim, Brandon, Utsav, Nicholas</span></p><p><br/></p><p><span style=\" font-size:18pt;\"><br/></span></p><p><span style=\" font-size:18pt;\"><br/></span></p><p><span style=\" font-size:18pt;\"><br/></span></p></body></html>", nullptr));
         ContactUsBackButton->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         Logo->setText(QString());
+        ReportsBackButton->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        ReportsTitle->setText(QCoreApplication::translate("MainWindow", "Reports", nullptr));
+        ReportsSortByEntry->setItemText(0, QCoreApplication::translate("MainWindow", "Shape ID", nullptr));
+        ReportsSortByEntry->setItemText(1, QCoreApplication::translate("MainWindow", "Perimeter", nullptr));
+        ReportsSortByEntry->setItemText(2, QCoreApplication::translate("MainWindow", "Area", nullptr));
+
+        ReportsSortLabel->setText(QCoreApplication::translate("MainWindow", "Sort By:", nullptr));
+        QTableWidgetItem *___qtablewidgetitem = ReportsTable->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QCoreApplication::translate("MainWindow", "Shape ID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem1 = ReportsTable->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QCoreApplication::translate("MainWindow", "Type", nullptr));
+        QTableWidgetItem *___qtablewidgetitem2 = ReportsTable->horizontalHeaderItem(2);
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "Dimensions", nullptr));
+        QTableWidgetItem *___qtablewidgetitem3 = ReportsTable->horizontalHeaderItem(3);
+        ___qtablewidgetitem3->setText(QCoreApplication::translate("MainWindow", "Pen Color", nullptr));
+        QTableWidgetItem *___qtablewidgetitem4 = ReportsTable->horizontalHeaderItem(4);
+        ___qtablewidgetitem4->setText(QCoreApplication::translate("MainWindow", "New Column", nullptr));
+        QTableWidgetItem *___qtablewidgetitem5 = ReportsTable->horizontalHeaderItem(5);
+        ___qtablewidgetitem5->setText(QCoreApplication::translate("MainWindow", "Pen Style", nullptr));
+        QTableWidgetItem *___qtablewidgetitem6 = ReportsTable->horizontalHeaderItem(6);
+        ___qtablewidgetitem6->setText(QCoreApplication::translate("MainWindow", "Pen Cap Style", nullptr));
+        QTableWidgetItem *___qtablewidgetitem7 = ReportsTable->horizontalHeaderItem(7);
+        ___qtablewidgetitem7->setText(QCoreApplication::translate("MainWindow", "Pen Join Style", nullptr));
+        QTableWidgetItem *___qtablewidgetitem8 = ReportsTable->horizontalHeaderItem(8);
+        ___qtablewidgetitem8->setText(QCoreApplication::translate("MainWindow", "Brush Color", nullptr));
+        QTableWidgetItem *___qtablewidgetitem9 = ReportsTable->horizontalHeaderItem(9);
+        ___qtablewidgetitem9->setText(QCoreApplication::translate("MainWindow", "Brush Style", nullptr));
+        QTableWidgetItem *___qtablewidgetitem10 = ReportsTable->horizontalHeaderItem(10);
+        ___qtablewidgetitem10->setText(QCoreApplication::translate("MainWindow", "Text String", nullptr));
+        QTableWidgetItem *___qtablewidgetitem11 = ReportsTable->horizontalHeaderItem(11);
+        ___qtablewidgetitem11->setText(QCoreApplication::translate("MainWindow", "Text Color", nullptr));
+        QTableWidgetItem *___qtablewidgetitem12 = ReportsTable->horizontalHeaderItem(12);
+        ___qtablewidgetitem12->setText(QCoreApplication::translate("MainWindow", "Text Alignment", nullptr));
+        QTableWidgetItem *___qtablewidgetitem13 = ReportsTable->horizontalHeaderItem(13);
+        ___qtablewidgetitem13->setText(QCoreApplication::translate("MainWindow", "Text Point Size", nullptr));
+        QTableWidgetItem *___qtablewidgetitem14 = ReportsTable->horizontalHeaderItem(14);
+        ___qtablewidgetitem14->setText(QCoreApplication::translate("MainWindow", "Text Font Family", nullptr));
+        QTableWidgetItem *___qtablewidgetitem15 = ReportsTable->horizontalHeaderItem(15);
+        ___qtablewidgetitem15->setText(QCoreApplication::translate("MainWindow", "Text Font Style", nullptr));
+        QTableWidgetItem *___qtablewidgetitem16 = ReportsTable->horizontalHeaderItem(16);
+        ___qtablewidgetitem16->setText(QCoreApplication::translate("MainWindow", "Text Font Weight", nullptr));
     } // retranslateUi
 
 };
