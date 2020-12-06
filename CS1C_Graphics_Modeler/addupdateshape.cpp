@@ -461,7 +461,6 @@ void AddUpdateShape::fillLineEntry(int i)
     ui->YCordEntry->setValue((*shapeVector)[i]->get_cords().y());
 
     fillPenValues(i);
-    fillBrushValues(i);
 
     ui->PenWidthEntry->setValue((*shapeVector)[i]->get_pen().width());
 }
@@ -470,6 +469,9 @@ void AddUpdateShape::fillShapeEntry(int i)
 {
     ui->ShapeIdEntry->setValue((*shapeVector)[i]->getID());
     ui->ShapeTypeEntry->setCurrentIndex(shapeToInt((*shapeVector)[i]->get_shape()));
+
+    ui->XCordEntry->setValue((*shapeVector)[i]->get_cords().x());
+    ui->YCordEntry->setValue((*shapeVector)[i]->get_cords().y());
 
     fillPenValues(i);
     fillBrushValues(i);
@@ -481,6 +483,9 @@ void AddUpdateShape::fillTextEntry(int i)
 {
     ui->ShapeIdEntry->setValue((*shapeVector)[i]->getID());
     ui->ShapeTypeEntry->setCurrentIndex(shapeToInt((*shapeVector)[i]->get_shape()));
+
+    ui->XCordEntry->setValue((*shapeVector)[i]->get_cords().x());
+    ui->YCordEntry->setValue((*shapeVector)[i]->get_cords().y());
 
     fillTextValues(i);
 }
@@ -664,7 +669,7 @@ void AddUpdateShape::updatePolyline()
 {
     shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
-    //currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
+    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
                           stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
                           stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),
@@ -675,7 +680,7 @@ void AddUpdateShape::updatePolygon()
 {
     shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
-    //currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
+    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
                           stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
                           stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),
@@ -688,7 +693,7 @@ void AddUpdateShape::updateRectangle()
 {
     shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
-    //currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
+    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
                           stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
                           stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),
@@ -701,7 +706,7 @@ void AddUpdateShape::updateSquare()
 {
     shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
-    //currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
+    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
                           stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
                           stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),
@@ -714,20 +719,21 @@ void AddUpdateShape::updateEllipse()
 {
     shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
-    //currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
+    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
                           stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
                           stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),
                           ui->PenStyleEntry->currentText(), ui->PenCapStyleEntry->currentText(), ui->PenJoinStyleEntry->currentText());
     currentShape->set_brush(stringToColor(ui->BrushColorEntry->currentText()),stringToBrushStyle(ui->BrushStyleEntry->currentText()),
                             ui->BrushColorEntry->currentText(), ui->BrushStyleEntry->currentText());
+
 }
 
 void AddUpdateShape::updateCircle()
 {
     shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
-    //currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
+    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
                           stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
                           stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),

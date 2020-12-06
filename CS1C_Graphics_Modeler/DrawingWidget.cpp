@@ -8,12 +8,6 @@ void DrawingWidget::paintEvent(QPaintEvent*)
     QPaintDevice *device = this;
     for(int i = 0; i < shapeVector->size(); i++)
         (*shapeVector)[i]->draw(device);
-
-    qDebug() << (*shapeVector)[2]->calcArea();
-
-//    for(int i = 0; i < shapeVector->size(); i++)
-//        (*shapeVector)[i]->move(0, 0);
-//    update();
 }
 
 DrawingWidget::DrawingWidget(QWidget *parent)
