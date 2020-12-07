@@ -38,12 +38,12 @@ void line::setPoints(const QPoint &begin, const QPoint &end)
 
 double line::calcPerimeter()
 {
-    return 0;
+    return sqrt(pow(end.x() - begin.x(), 2) + pow(end.y() - begin.y(), 2));
 }
 
 double line::calcArea()
 {
-    return 0;
+    return sqrt(pow(end.x() - begin.x(), 2) + pow(end.y() - begin.y(), 2));
 }
 
 QString line::getShapeString()

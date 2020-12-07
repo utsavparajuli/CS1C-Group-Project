@@ -765,4 +765,6 @@ void AddUpdateShape::updateText()
                            ui->FontEntry->currentText(),
                            ui->FontStyleEntry->currentText(),
                            ui->FontWeightEntry->currentText());
+
+    qDebug() << "Font style from add shape: " << ui->FontStyleEntry->currentText();
 }

@@ -239,20 +239,43 @@ void MainWindow::populateReportsTable()
 
         ui->ReportsTable->setItem(i, 0, new QTableWidgetItem(QString::number((*currentVec)[i]->getID()))); //Adding shape id to table
         ui->ReportsTable->setItem(i, 1, new QTableWidgetItem((*currentVec)[i]->get_shapeTypeString()));  //Adding shape type to the table
-
+        ui->ReportsTable->setItem(i, 2, new QTableWidgetItem(QString::number((*currentVec)[i]->calcPerimeter())));
+        ui->ReportsTable->setItem(i, 3, new QTableWidgetItem(QString::number((*currentVec)[i]->calcArea())));
         if((*currentVec)[i]->get_shape() == ShapeType::Line || (*currentVec)[i]->get_shape() == ShapeType::Polyline)
         {
             //Line and Polyline stuff goes here
+            ui->ReportsTable->setItem(i, 5, new QTableWidgetItem((*currentVec)[i]->get_penColorString()));
+            ui->ReportsTable->setItem(i, 6, new QTableWidgetItem(QString::number((*currentVec)[i]->get_pen().width())));
+            ui->ReportsTable->setItem(i, 7, new QTableWidgetItem((*currentVec)[i]->get_penStyleString()));
+            ui->ReportsTable->setItem(i, 8, new QTableWidgetItem((*currentVec)[i]->get_penCapStyleString()));
+            ui->ReportsTable->setItem(i, 9, new QTableWidgetItem((*currentVec)[i]->get_penJoinStyleString()));
         }
         else if((*currentVec)[i]->get_shape() == ShapeType::Polygon || (*currentVec)[i]->get_shape() == ShapeType::Rectangle ||
                 (*currentVec)[i]->get_shape() == ShapeType::Square || (*currentVec)[i]->get_shape() == ShapeType::Ellipse ||
                 (*currentVec)[i]->get_shape() == ShapeType::Circle)
         {
             //Shapes stuff goes here
+            ui->ReportsTable->setItem(i, 5, new QTableWidgetItem((*currentVec)[i]->get_penColorString()));
+            ui->ReportsTable->setItem(i, 6, new QTableWidgetItem(QString::number((*currentVec)[i]->get_pen().width())));
+            ui->ReportsTable->setItem(i, 7, new QTableWidgetItem((*currentVec)[i]->get_penStyleString()));
+            ui->ReportsTable->setItem(i, 8, new QTableWidgetItem((*currentVec)[i]->get_penCapStyleString()));
+            ui->ReportsTable->setItem(i, 9, new QTableWidgetItem((*currentVec)[i]->get_penJoinStyleString()));
+            ui->ReportsTable->setItem(i, 10, new QTableWidgetItem((*currentVec)[i]->get_brushColorString()));
+            ui->ReportsTable->setItem(i, 11, new QTableWidgetItem((*currentVec)[i]->get_brushStyleString()));
         }
         else
         {
             //Text Stuff goes here
+            // Text String, Text Color, Text Alignment, Text Point size, Text Font Family, Text Font Style, Text Font Weight
+            ui->ReportsTable->setItem(i, 12, new QTableWidgetItem((*currentVec)[i]->get_textString()));
+            ui->ReportsTable->setItem(i, 13, new QTableWidgetItem((*currentVec)[i]->get_textColor()));
+            ui->ReportsTable->setItem(i, 14, new QTableWidgetItem((*currentVec)[i]->get_textAllignment()));
+            ui->ReportsTable->setItem(i, 15, new QTableWidgetItem(QString::number((*currentVec)[i]->get_textPointSize())));
+            ui->ReportsTable->setItem(i, 16, new QTableWidgetItem((*currentVec)[i]->get_textFont()));
+            ui->ReportsTable->setItem(i, 17, new QTableWidgetItem((*currentVec)[i]->get_textFontStyle()));
+            ui->ReportsTable->setItem(i, 18, new QTableWidgetItem((*currentVec)[i]->get_textFontWeight()));
+
+            qDebug() << "Font style from reports: " <<(*currentVec)[i]->get_textFontStyle();
         }
     }
 }
