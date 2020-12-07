@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "addupdateshape.h"
 #include "ui_addupdateshape.h"
+
+#include "ui_deleteShape.h"
 #include "line.h"
 #include <QDebug>
 #include <QTimer>
@@ -288,4 +290,10 @@ void MainWindow::populateReportsTable()
             qDebug() << "Font style from reports: " <<(*currentVec)[i]->get_textFontStyle();
         }
     }
+}
+
+void MainWindow::on_DeleteShapeButton_clicked()
+{
+    deleteShapeWindow = new deleteShape(ui->drawArea->getVec());
+    deleteShapeWindow->show();
 }

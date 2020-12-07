@@ -1,4 +1,4 @@
-#ifndef VECTOR_H
+ #ifndef VECTOR_H
 #define VECTOR_H
 #include <stdexcept>
 #include <iostream>
@@ -267,6 +267,7 @@ public:
         temp = nullptr;
 
         return returnIt;
+        return NULL;
     }
 private:
       //CURRENT COUNT OF ELEMENTS IN INTERNAL ARRAY

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "addupdateshape.h"
+#include "deleteshape.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -45,10 +46,13 @@ private slots:
 
     void on_ReportsSortByEntry_currentIndexChanged(int index);
 
+    void on_DeleteShapeButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     int colorCounter;
     AddUpdateShape *addUpdateWindow;
+    deleteShape *deleteShapeWindow;
     void populateReportsTable();
 
 };

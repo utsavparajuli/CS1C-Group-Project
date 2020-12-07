@@ -49,36 +49,3 @@ PenCapStyle: RoundCap
 PenJoinStyle: RoundJoin
 BrushColor: blue
 BrushStyle: HorPattern
-
-ShapeId: 6
-ShapeType: Ellipse
-ShapeDimensions: 520, 200, 170, 100
-PenColor: black
-PenWidth: 12
-PenStyle: SolidLine
-PenCapStyle: FlatCap
-PenJoinStyle: MiterJoin
-BrushColor: white
-BrushStyle: NoBrush
-
-ShapeId: 7
-ShapeType: Circle
-ShapeDimensions: 750, 150, 200
-PenColor: black
-PenWidth: 12
-PenStyle: SolidLine
-PenCapStyle: FlatCap
-PenJoinStyle: MiterJoin
-BrushColor: magenta
-BrushStyle: SolidPattern
-
-ShapeId: 8
-ShapeType: Text
-ShapeDimensions: 250, 425, 500, 50
-TextString: Class Project 2 - 2D Graphics Modeler
-TextColor: blue
-TextAlignment: AlignCenter
-TextPointSize: 10
-TextFontFamily: Comic Sans MS
-TextFontStyle: FlatCap
-TextFontWeight: Normal

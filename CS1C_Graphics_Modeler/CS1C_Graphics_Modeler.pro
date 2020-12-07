@@ -13,6 +13,7 @@ SOURCES += \
     DrawingWidget.cpp \
     addupdateshape.cpp \
     circle.cpp \
+    deleteshape.cpp \
     ellipse.cpp \
     line.cpp \
     main.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     DrawingWidget.h \
     addupdateshape.h \
     circle.h \
+    deleteshape.h \
     ellipse.h \
     line.h \
     mainwindow.h \
@@ -47,6 +49,7 @@ HEADERS += \
 
 FORMS += \
     addupdateshape.ui \
+    deleteshape.ui \
     mainwindow.ui
 
 # Default rules for deployment.

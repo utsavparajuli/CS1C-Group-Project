@@ -1,6 +1,7 @@
 debug/DrawingWidget.o
 debug/addupdateshape.o
 debug/circle.o
+debug/deleteshape.o
 debug/ellipse.o
 debug/line.o
 debug/main.o
@@ -15,4 +16,5 @@ debug/shape.o
 debug/square.o
 debug/text.o
 debug/moc_addupdateshape.o
+debug/moc_deleteshape.o
 debug/moc_mainwindow.o

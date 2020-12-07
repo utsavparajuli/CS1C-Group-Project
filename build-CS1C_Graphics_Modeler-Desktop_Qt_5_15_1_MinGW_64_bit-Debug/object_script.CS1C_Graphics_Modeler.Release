@@ -1,6 +1,7 @@
 release/DrawingWidget.o
 release/addupdateshape.o
 release/circle.o
+release/deleteshape.o
 release/ellipse.o
 release/line.o
 release/main.o
@@ -15,4 +16,5 @@ release/shape.o
 release/square.o
 release/text.o
 release/moc_addupdateshape.o
+release/moc_deleteshape.o
 release/moc_mainwindow.o
