@@ -809,17 +809,20 @@ void AddUpdateShape::saveAddShape()
             if(dimensions.count() != 0 && dimensions.count()%2 == 0)
             {
                 polyline *newPolyine = new polyline;
-                updatePolyline(newPolyine);
                 QPoint *pointArray = new QPoint[dimensions.size() / 2];
 
                     int point = 0;
-                    for(int i = 0; i < dimensions.size() / 2; i++)
+                    for(int i = 0; i < (dimensions.size() / 2); i++)
                     {
                         pointArray[i] = QPoint(dimensions[point].toInt(), dimensions[point + 1].toInt());
                         point += 2;
                     }
                 newPolyine->setPoints(pointArray, dimensions.size() / 2);
 
+                ui->XCordEntry->setValue(newPolyine->get_cords().x());
+                ui->YCordEntry->setValue(newPolyine->get_cords().y());
+
+                updatePolyline(newPolyine);
                 newShape = newPolyine;
                 shapeVector->push_back(newShape);
             }
@@ -831,33 +834,146 @@ void AddUpdateShape::saveAddShape()
         }
         else if(ui->ShapeTypeEntry->currentText() == "Polygon")
         {
-            newShape = new polygon;
-            updatePolygon(newShape);
+            dimensions = ui->ShapeDimensionsEntry->toPlainText().split(", ");
+
+            if(dimensions.count() != 0 && dimensions.count()%2 == 0)
+            {
+                polygon *newPolygon = new polygon;
+                QPoint *pointArray = new QPoint[dimensions.size() / 2];
+
+                    int point = 0;
+                    for(int i = 0; i < (dimensions.size() / 2); i++)
+                    {
+                        pointArray[i] = QPoint(dimensions[point].toInt(), dimensions[point + 1].toInt());
+                        point += 2;
+                    }
+                newPolygon->setPoints(pointArray, dimensions.size() / 2);
+
+                ui->XCordEntry->setValue(newPolygon->get_cords().x());
+                ui->YCordEntry->setValue(newPolygon->get_cords().y());
+
+                updatePolygon(newPolygon);
+                newShape = newPolygon;
+                shapeVector->push_back(newShape);
+            }
+            else
+            {
+                invalidDimensions.setText("ERROR: Invalid dimensions");
+                invalidDimensions.exec();
+            }
         }
         else if(ui->ShapeTypeEntry->currentText() == "Rectangle")
         {
-            newShape = new rectangle;
-            updateRectangle(newShape);
+            dimensions = ui->ShapeDimensionsEntry->toPlainText().split(", ");
+
+            if(dimensions.count() == 4)
+            {
+                rectangle *newRectangle = new rectangle;
+
+                newRectangle->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
+
+                ui->XCordEntry->setValue(newRectangle->get_cords().x());
+                ui->YCordEntry->setValue(newRectangle->get_cords().y());
+
+                updateRectangle(newRectangle);
+                newShape = newRectangle;
+                shapeVector->push_back(newShape);
+            }
+            else
+            {
+                invalidDimensions.setText("ERROR: Invalid dimensions");
+                invalidDimensions.exec();
+            }
         }
         else if(ui->ShapeTypeEntry->currentText() == "Square")
         {
-            newShape = new square;
-            updateSquare(newShape);
+            dimensions = ui->ShapeDimensionsEntry->toPlainText().split(", ");
+
+            if(dimensions.count() == 3)
+            {
+                square *newSquare = new square;
+
+                newSquare->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt());
+
+                ui->XCordEntry->setValue(newSquare->get_cords().x());
+                ui->YCordEntry->setValue(newSquare->get_cords().y());
+
+                updateSquare(newSquare);
+                newShape = newSquare;
+                shapeVector->push_back(newShape);
+            }
+            else
+            {
+                invalidDimensions.setText("ERROR: Invalid dimensions");
+                invalidDimensions.exec();
+            }
         }
         else if(ui->ShapeTypeEntry->currentText() == "Ellipse")
         {
-            newShape = new ellipse;
-            updateEllipse(newShape);
+            dimensions = ui->ShapeDimensionsEntry->toPlainText().split(", ");
+
+            if(dimensions.count() == 4)
+            {
+                ellipse *newEllipse = new ellipse(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
+
+                ui->XCordEntry->setValue(newEllipse->get_cords().x());
+                ui->YCordEntry->setValue(newEllipse->get_cords().y());
+
+                updateEllipse(newEllipse);
+                newShape = newEllipse;
+                shapeVector->push_back(newShape);
+            }
+            else
+            {
+                invalidDimensions.setText("ERROR: Invalid dimensions");
+                invalidDimensions.exec();
+            }
         }
         else if(ui->ShapeTypeEntry->currentText() == "Circle")
         {
-            newShape = new circle;
-            updateCircle(newShape);
+            dimensions = ui->ShapeDimensionsEntry->toPlainText().split(", ");
+
+            if(dimensions.count() == 3)
+            {
+                circle *newCircle = new circle;
+
+                newCircle->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt());
+
+                ui->XCordEntry->setValue(newCircle->get_cords().x());
+                ui->YCordEntry->setValue(newCircle->get_cords().y());
+
+                updateCircle(newCircle);
+                newShape = newCircle;
+                shapeVector->push_back(newShape);
+            }
+            else
+            {
+                invalidDimensions.setText("ERROR: Invalid dimensions");
+                invalidDimensions.exec();
+            }
         }
         else
         {
-            newShape = new text;
-            updateText(newShape);
+            dimensions = ui->ShapeDimensionsEntry->toPlainText().split(", ");
+
+            if(dimensions.count() == 4)
+            {
+                text *newText = new text;
+
+                newText->setPoints(dimensions[0].toInt(), dimensions[1].toInt(), dimensions[2].toInt(), dimensions[3].toInt());
+
+                ui->XCordEntry->setValue(newText->get_cords().x());
+                ui->YCordEntry->setValue(newText->get_cords().y());
+
+                updateText(newText);
+                newShape = newText;
+                shapeVector->push_back(newShape);
+            }
+            else
+            {
+                invalidDimensions.setText("ERROR: Invalid dimensions");
+                invalidDimensions.exec();
+            }
         }
 
         this->close();
