@@ -418,17 +418,21 @@ void AddUpdateShape::on_HelpButton_clicked()
 void AddUpdateShape::addShapeSetup()
 {
     ui->AddUpdateTitle->setText("Add Shape");
-    ui->ShapesEntry->setEnabled(false);
+    ui->ShapesEntry->setVisible(false);
     ui->ShapeTypeEntry->setEnabled(true);
     ui->ShapeDimensionsEntry->setEnabled(true);
     ui->XCordEntry->setEnabled(false);
     ui->YCordEntry->setEnabled(false);
+    ui->ShapeIdEntry->setValue(getNextID());
+    ui->ShapeIdEntry->setEnabled(true);
+    ui->XCordEntry->setValue(0);
+    ui->YCordEntry->setValue(0);
 }
 
 void AddUpdateShape::updateShapeSetup()
 {
     ui->AddUpdateTitle->setText("Update Shape");
-    ui->ShapesEntry->setEnabled(true);
+    ui->ShapesEntry->setVisible(true);
     ui->ShapeTypeEntry->setEnabled(false);
     ui->ShapeDimensionsEntry->setEnabled(false);
     ui->XCordEntry->setEnabled(true);
@@ -614,21 +618,21 @@ void AddUpdateShape::saveUpdateShape()
         //If the ID has not been changed OR the Id is unique (i.e. the ID is valid)
     {
         if(ui->ShapeTypeEntry->currentText() == "Line")
-            updateLine();
+            updateLine((*shapeVector)[ui->ShapesEntry->currentIndex()]);
         else if(ui->ShapeTypeEntry->currentText() == "Polyline")
-            updatePolyline();
+            updatePolyline((*shapeVector)[ui->ShapesEntry->currentIndex()]);
         else if(ui->ShapeTypeEntry->currentText() == "Polygon")
-            updatePolygon();
+            updatePolygon((*shapeVector)[ui->ShapesEntry->currentIndex()]);
         else if(ui->ShapeTypeEntry->currentText() == "Rectangle")
-            updateRectangle();
+            updateRectangle((*shapeVector)[ui->ShapesEntry->currentIndex()]);
         else if(ui->ShapeTypeEntry->currentText() == "Square")
-            updateSquare();
+            updateSquare((*shapeVector)[ui->ShapesEntry->currentIndex()]);
         else if(ui->ShapeTypeEntry->currentText() == "Ellipse")
-            updateEllipse();
+            updateEllipse((*shapeVector)[ui->ShapesEntry->currentIndex()]);
         else if(ui->ShapeTypeEntry->currentText() == "Circle")
-            updateCircle();
+            updateCircle((*shapeVector)[ui->ShapesEntry->currentIndex()]);
         else
-            updateText();
+            updateText((*shapeVector)[ui->ShapesEntry->currentIndex()]);
         this->close();
     }
     else
@@ -648,6 +652,10 @@ void AddUpdateShape::on_pushButton_clicked()
     {
         saveUpdateShape();
     }
+    else
+    {
+        saveAddShape();
+    }
 }
 
 void AddUpdateShape::on_pushButton_2_clicked()
@@ -656,9 +664,8 @@ void AddUpdateShape::on_pushButton_2_clicked()
 }
 //void set_pen(Qt::GlobalColor color, int width, Qt::PenStyle penStyle, Qt::PenCapStyle penCapStyle, Qt::PenJoinStyle penJoinStyle,
 //             QString newPenColorName,  QString newPenStyleName, QString newPenCapStyleName, QString newPenJoinStyleName);
-void AddUpdateShape::updateLine()
+void AddUpdateShape::updateLine(shape *currentShape)
 {
-    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
     currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
@@ -667,9 +674,8 @@ void AddUpdateShape::updateLine()
                           ui->PenStyleEntry->currentText(), ui->PenCapStyleEntry->currentText(), ui->PenJoinStyleEntry->currentText());
 }
 
-void AddUpdateShape::updatePolyline()
+void AddUpdateShape::updatePolyline(shape *currentShape)
 {
-    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
     currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
@@ -678,22 +684,8 @@ void AddUpdateShape::updatePolyline()
                           ui->PenStyleEntry->currentText(), ui->PenCapStyleEntry->currentText(), ui->PenJoinStyleEntry->currentText());
 }
 
-void AddUpdateShape::updatePolygon()
+void AddUpdateShape::updatePolygon(shape *currentShape)
 {
-    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
-    currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
-    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
-    currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
-                          stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
-                          stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),
-                          ui->PenStyleEntry->currentText(), ui->PenCapStyleEntry->currentText(), ui->PenJoinStyleEntry->currentText());
-    currentShape->set_brush(stringToColor(ui->BrushColorEntry->currentText()),stringToBrushStyle(ui->BrushStyleEntry->currentText()),
-                            ui->BrushColorEntry->currentText(), ui->BrushStyleEntry->currentText());
-}
-
-void AddUpdateShape::updateRectangle()
-{
-    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
     currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
@@ -704,9 +696,8 @@ void AddUpdateShape::updateRectangle()
                             ui->BrushColorEntry->currentText(), ui->BrushStyleEntry->currentText());
 }
 
-void AddUpdateShape::updateSquare()
+void AddUpdateShape::updateRectangle(shape *currentShape)
 {
-    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
     currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
@@ -717,9 +708,20 @@ void AddUpdateShape::updateSquare()
                             ui->BrushColorEntry->currentText(), ui->BrushStyleEntry->currentText());
 }
 
-void AddUpdateShape::updateEllipse()
+void AddUpdateShape::updateSquare(shape *currentShape)
 {
-    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
+    currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
+    currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
+    currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
+                          stringToPenStyle(ui->PenStyleEntry->currentText()), stringToPenCapStyle(ui->PenCapStyleEntry->currentText()),
+                          stringToPenJoinStyle(ui->PenJoinStyleEntry->currentText()), ui->PenColorEntry->currentText(),
+                          ui->PenStyleEntry->currentText(), ui->PenCapStyleEntry->currentText(), ui->PenJoinStyleEntry->currentText());
+    currentShape->set_brush(stringToColor(ui->BrushColorEntry->currentText()),stringToBrushStyle(ui->BrushStyleEntry->currentText()),
+                            ui->BrushColorEntry->currentText(), ui->BrushStyleEntry->currentText());
+}
+
+void AddUpdateShape::updateEllipse(shape *currentShape)
+{
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
     currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
@@ -731,9 +733,8 @@ void AddUpdateShape::updateEllipse()
 
 }
 
-void AddUpdateShape::updateCircle()
+void AddUpdateShape::updateCircle(shape *currentShape)
 {
-    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value()); //Set ID
     currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
     currentShape->set_pen(stringToColor(ui->PenColorEntry->currentText()), ui->PenWidthEntry->value(),
@@ -744,9 +745,8 @@ void AddUpdateShape::updateCircle()
                             ui->BrushColorEntry->currentText(), ui->BrushStyleEntry->currentText());
 }
 
-void AddUpdateShape::updateText()
+void AddUpdateShape::updateText(shape *currentShape)
 {
-    shape *currentShape = (*shapeVector)[ui->ShapesEntry->currentIndex()];
     currentShape->set_ShapeId(ui->ShapeIdEntry->value());
     currentShape->move(ui->XCordEntry->value(), ui->YCordEntry->value());
 
@@ -767,4 +767,108 @@ void AddUpdateShape::updateText()
                            ui->FontWeightEntry->currentText());
 
     qDebug() << "Font style from add shape: " << ui->FontStyleEntry->currentText();
+}
+
+void AddUpdateShape::saveAddShape()
+{
+
+    if(ui->ShapeIdEntry->value() == (*shapeVector)[ui->ShapesEntry->currentIndex()]->getID()
+            ||(ui->ShapeIdEntry->value() != (*shapeVector)[ui->ShapesEntry->currentIndex()]->getID()
+            && uniqueShapeID(ui->ShapeIdEntry->value())))
+        //If the ID has not been changed OR the Id is unique (i.e. the ID is valid)
+    {
+        QMessageBox invalidDimensions;
+
+        shape *newShape;
+        QStringList dimensions;
+
+        if(ui->ShapeTypeEntry->currentText() == "Line")
+        {
+            dimensions = ui->ShapeDimensionsEntry->toPlainText().split(", ");
+
+            if(dimensions.count() == 4)
+            {
+                line *newLine = new line;
+                updateLine(newLine);
+                newLine->setPoints(QPoint(dimensions[0].toInt(), dimensions[1].toInt()),
+                        QPoint(dimensions[2].toInt(), dimensions[3].toInt()));
+
+                newShape = newLine;
+                shapeVector->push_back(newShape);
+            }
+            else
+            {
+                invalidDimensions.setText("ERROR: Invalid dimensions");
+                invalidDimensions.exec();
+            }
+        }
+        else if(ui->ShapeTypeEntry->currentText() == "Polyline")
+        {
+            dimensions = ui->ShapeDimensionsEntry->toPlainText().split(", ");
+
+            if(dimensions.count() != 0 && dimensions.count()%2 == 0)
+            {
+                polyline *newPolyine = new polyline;
+                updatePolyline(newPolyine);
+                QPoint *pointArray = new QPoint[dimensions.size() / 2];
+
+                    int point = 0;
+                    for(int i = 0; i < dimensions.size() / 2; i++)
+                    {
+                        pointArray[i] = QPoint(dimensions[point].toInt(), dimensions[point + 1].toInt());
+                        point += 2;
+                    }
+                newPolyine->setPoints(pointArray, dimensions.size() / 2);
+
+                newShape = newPolyine;
+                shapeVector->push_back(newShape);
+            }
+            else
+            {
+                invalidDimensions.setText("ERROR: Invalid dimensions");
+                invalidDimensions.exec();
+            }
+        }
+        else if(ui->ShapeTypeEntry->currentText() == "Polygon")
+        {
+            newShape = new polygon;
+            updatePolygon(newShape);
+        }
+        else if(ui->ShapeTypeEntry->currentText() == "Rectangle")
+        {
+            newShape = new rectangle;
+            updateRectangle(newShape);
+        }
+        else if(ui->ShapeTypeEntry->currentText() == "Square")
+        {
+            newShape = new square;
+            updateSquare(newShape);
+        }
+        else if(ui->ShapeTypeEntry->currentText() == "Ellipse")
+        {
+            newShape = new ellipse;
+            updateEllipse(newShape);
+        }
+        else if(ui->ShapeTypeEntry->currentText() == "Circle")
+        {
+            newShape = new circle;
+            updateCircle(newShape);
+        }
+        else
+        {
+            newShape = new text;
+            updateText(newShape);
+        }
+
+        this->close();
+    }
+    else
+    {
+        ui->ShapeIdLabel->setStyleSheet("color:red;");
+        ui->ShapeIdEntry->setStyleSheet("color:red;");
+        QMessageBox error;
+        error.setText("ERROR - Shape ID must be unique!");
+        error.exec();
+    }
+
 }

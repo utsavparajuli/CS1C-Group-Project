@@ -537,17 +537,12 @@ border: 3px solid black;</string>
       </column>
       <column>
        <property name="text">
-        <string>Perimeter</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
         <string>Area</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Dimensions</string>
+        <string>Perimeter</string>
        </property>
       </column>
       <column>

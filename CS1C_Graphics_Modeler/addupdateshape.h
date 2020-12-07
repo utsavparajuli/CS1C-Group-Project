@@ -55,14 +55,15 @@ private:
     int getNextID();
 
     void saveUpdateShape();
-    void updateLine();
-    void updatePolyline();
-    void updatePolygon();
-    void updateRectangle();
-    void updateSquare();
-    void updateEllipse();
-    void updateCircle();
-    void updateText();
+    void saveAddShape();
+    void updateLine(shape*);
+    void updatePolyline(shape*);
+    void updatePolygon(shape*);
+    void updateRectangle(shape*);
+    void updateSquare(shape*);
+    void updateEllipse(shape*);
+    void updateCircle(shape*);
+    void updateText(shape*);
 
     int shapeToInt(ShapeType);
     custom::vector<shape*> *shapeVector;

@@ -320,8 +320,8 @@ public:
         ReportsSortLabel->setObjectName(QString::fromUtf8("ReportsSortLabel"));
         ReportsSortLabel->setGeometry(QRect(540, 50, 47, 13));
         ReportsTable = new QTableWidget(ReportsPage);
-        if (ReportsTable->columnCount() < 19)
-            ReportsTable->setColumnCount(19);
+        if (ReportsTable->columnCount() < 18)
+            ReportsTable->setColumnCount(18);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         ReportsTable->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
@@ -358,8 +358,6 @@ public:
         ReportsTable->setHorizontalHeaderItem(16, __qtablewidgetitem16);
         QTableWidgetItem *__qtablewidgetitem17 = new QTableWidgetItem();
         ReportsTable->setHorizontalHeaderItem(17, __qtablewidgetitem17);
-        QTableWidgetItem *__qtablewidgetitem18 = new QTableWidgetItem();
-        ReportsTable->setHorizontalHeaderItem(18, __qtablewidgetitem18);
         ReportsTable->setObjectName(QString::fromUtf8("ReportsTable"));
         ReportsTable->setGeometry(QRect(30, 110, 1151, 531));
         ReportsTable->setRowCount(0);
@@ -424,39 +422,37 @@ public:
         QTableWidgetItem *___qtablewidgetitem1 = ReportsTable->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QCoreApplication::translate("MainWindow", "Type", nullptr));
         QTableWidgetItem *___qtablewidgetitem2 = ReportsTable->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "Perimeter", nullptr));
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "Area", nullptr));
         QTableWidgetItem *___qtablewidgetitem3 = ReportsTable->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QCoreApplication::translate("MainWindow", "Area", nullptr));
+        ___qtablewidgetitem3->setText(QCoreApplication::translate("MainWindow", "Perimeter", nullptr));
         QTableWidgetItem *___qtablewidgetitem4 = ReportsTable->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QCoreApplication::translate("MainWindow", "Dimensions", nullptr));
+        ___qtablewidgetitem4->setText(QCoreApplication::translate("MainWindow", "Pen Color", nullptr));
         QTableWidgetItem *___qtablewidgetitem5 = ReportsTable->horizontalHeaderItem(5);
-        ___qtablewidgetitem5->setText(QCoreApplication::translate("MainWindow", "Pen Color", nullptr));
+        ___qtablewidgetitem5->setText(QCoreApplication::translate("MainWindow", "Pen Width", nullptr));
         QTableWidgetItem *___qtablewidgetitem6 = ReportsTable->horizontalHeaderItem(6);
-        ___qtablewidgetitem6->setText(QCoreApplication::translate("MainWindow", "Pen Width", nullptr));
+        ___qtablewidgetitem6->setText(QCoreApplication::translate("MainWindow", "Pen Style", nullptr));
         QTableWidgetItem *___qtablewidgetitem7 = ReportsTable->horizontalHeaderItem(7);
-        ___qtablewidgetitem7->setText(QCoreApplication::translate("MainWindow", "Pen Style", nullptr));
+        ___qtablewidgetitem7->setText(QCoreApplication::translate("MainWindow", "Pen Cap Style", nullptr));
         QTableWidgetItem *___qtablewidgetitem8 = ReportsTable->horizontalHeaderItem(8);
-        ___qtablewidgetitem8->setText(QCoreApplication::translate("MainWindow", "Pen Cap Style", nullptr));
+        ___qtablewidgetitem8->setText(QCoreApplication::translate("MainWindow", "Pen Join Style", nullptr));
         QTableWidgetItem *___qtablewidgetitem9 = ReportsTable->horizontalHeaderItem(9);
-        ___qtablewidgetitem9->setText(QCoreApplication::translate("MainWindow", "Pen Join Style", nullptr));
+        ___qtablewidgetitem9->setText(QCoreApplication::translate("MainWindow", "Brush Color", nullptr));
         QTableWidgetItem *___qtablewidgetitem10 = ReportsTable->horizontalHeaderItem(10);
-        ___qtablewidgetitem10->setText(QCoreApplication::translate("MainWindow", "Brush Color", nullptr));
+        ___qtablewidgetitem10->setText(QCoreApplication::translate("MainWindow", "Brush Style", nullptr));
         QTableWidgetItem *___qtablewidgetitem11 = ReportsTable->horizontalHeaderItem(11);
-        ___qtablewidgetitem11->setText(QCoreApplication::translate("MainWindow", "Brush Style", nullptr));
+        ___qtablewidgetitem11->setText(QCoreApplication::translate("MainWindow", "Text String", nullptr));
         QTableWidgetItem *___qtablewidgetitem12 = ReportsTable->horizontalHeaderItem(12);
-        ___qtablewidgetitem12->setText(QCoreApplication::translate("MainWindow", "Text String", nullptr));
+        ___qtablewidgetitem12->setText(QCoreApplication::translate("MainWindow", "Text Color", nullptr));
         QTableWidgetItem *___qtablewidgetitem13 = ReportsTable->horizontalHeaderItem(13);
-        ___qtablewidgetitem13->setText(QCoreApplication::translate("MainWindow", "Text Color", nullptr));
+        ___qtablewidgetitem13->setText(QCoreApplication::translate("MainWindow", "Text Alignment", nullptr));
         QTableWidgetItem *___qtablewidgetitem14 = ReportsTable->horizontalHeaderItem(14);
-        ___qtablewidgetitem14->setText(QCoreApplication::translate("MainWindow", "Text Alignment", nullptr));
+        ___qtablewidgetitem14->setText(QCoreApplication::translate("MainWindow", "Text Point Size", nullptr));
         QTableWidgetItem *___qtablewidgetitem15 = ReportsTable->horizontalHeaderItem(15);
-        ___qtablewidgetitem15->setText(QCoreApplication::translate("MainWindow", "Text Point Size", nullptr));
+        ___qtablewidgetitem15->setText(QCoreApplication::translate("MainWindow", "Text Font Family", nullptr));
         QTableWidgetItem *___qtablewidgetitem16 = ReportsTable->horizontalHeaderItem(16);
-        ___qtablewidgetitem16->setText(QCoreApplication::translate("MainWindow", "Text Font Family", nullptr));
+        ___qtablewidgetitem16->setText(QCoreApplication::translate("MainWindow", "Text Font Style", nullptr));
         QTableWidgetItem *___qtablewidgetitem17 = ReportsTable->horizontalHeaderItem(17);
-        ___qtablewidgetitem17->setText(QCoreApplication::translate("MainWindow", "Text Font Style", nullptr));
-        QTableWidgetItem *___qtablewidgetitem18 = ReportsTable->horizontalHeaderItem(18);
-        ___qtablewidgetitem18->setText(QCoreApplication::translate("MainWindow", "Text Font Weight", nullptr));
+        ___qtablewidgetitem17->setText(QCoreApplication::translate("MainWindow", "Text Font Weight", nullptr));
     } // retranslateUi
 
 };

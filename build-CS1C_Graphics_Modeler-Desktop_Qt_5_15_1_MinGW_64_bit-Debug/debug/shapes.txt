@@ -1,7 +1,7 @@
 
 ShapeId: 1
 ShapeType: Line
-ShapeDimensions: 20, 90, 100, 20
+ShapeDimensions: 50, 90, 130, 20
 PenColor: blue
 PenWidth: 2
 PenStyle: DashDotLine
@@ -63,7 +63,7 @@ BrushStyle: NoBrush
 
 ShapeId: 7
 ShapeType: Circle
-ShapeDimensions: 750, 400, 200
+ShapeDimensions: 400, 400, 200
 PenColor: black
 PenWidth: 12
 PenStyle: SolidLine
@@ -80,5 +80,32 @@ TextColor: magenta
 TextAlignment: AlignCenter
 TextPointSize: 10
 TextFontFamily: Comic Sans MS
-TextFontStyle: 
+TextFontStyle: StyleItalic
 TextFontWeight: Normal
+
+ShapeId: 9
+ShapeType: Line
+ShapeDimensions: 10, 10, 500, 500
+PenColor: green
+PenWidth: 8
+PenStyle: SolidLine
+PenCapStyle: FlatCap
+PenJoinStyle: MiterJoin
+
+ShapeId: 10
+ShapeType: Line
+ShapeDimensions: 300, 400, 350, 450
+PenColor: red
+PenWidth: 2
+PenStyle: SolidLine
+PenCapStyle: FlatCap
+PenJoinStyle: MiterJoin
+
+ShapeId: 11
+ShapeType: Line
+ShapeDimensions: 5, 5, 6, 6
+PenColor: blue
+PenWidth: 2
+PenStyle: DashDotLine
+PenCapStyle: FlatCap
+PenJoinStyle: MiterJoin
