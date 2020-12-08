@@ -48,7 +48,7 @@ PenStyle: SolidLine
 PenCapStyle: RoundCap
 PenJoinStyle: RoundJoin
 BrushColor: blue
-BrushStyle: HorPattern
+BrushStyle: SolidPattern
 
 ShapeId: 6
 ShapeType: Ellipse
@@ -60,17 +60,6 @@ PenCapStyle: FlatCap
 PenJoinStyle: MiterJoin
 BrushColor: white
 BrushStyle: NoBrush
-
-ShapeId: 7
-ShapeType: Circle
-ShapeDimensions: 750, 150, 200
-PenColor: black
-PenWidth: 12
-PenStyle: SolidLine
-PenCapStyle: FlatCap
-PenJoinStyle: MiterJoin
-BrushColor: magenta
-BrushStyle: SolidPattern
 
 ShapeId: 8
 ShapeType: Text

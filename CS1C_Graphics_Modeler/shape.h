@@ -51,7 +51,6 @@ public:
 
         //default settings for brush and pen
         void default_style();
-        void draw_rect(int width, int height);
 
         QString construct_ID_String(QString shapeName, int shapeID);
 
