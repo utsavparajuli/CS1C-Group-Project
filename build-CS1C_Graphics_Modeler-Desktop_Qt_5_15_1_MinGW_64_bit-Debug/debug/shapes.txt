@@ -52,7 +52,7 @@ BrushStyle: SolidPattern
 
 ShapeId: 6
 ShapeType: Ellipse
-ShapeDimensions: 520, 200, 170, 100
+ShapeDimensions: 100, 200, 170, 100
 PenColor: black
 PenWidth: 12
 PenStyle: SolidLine

@@ -251,7 +251,11 @@ private:
 
     /* saveAddShape */
     /*!
-     * \brief Function ensures the id entered in the shape id input field is valid and saves updated information about the edited shape into its respective shape object.
+     * \brief Function ensures the id entered in the shape id input field is valid and saves information about the added shape into the vector of shapes.
+     *
+     * The function will perform checks to ensure the id of the shape being added is unique. If it is not, an error will display. A new shape is constructed
+     * containing the information entered into the ui input fields. The information entered is checked for validity and throws an error if it is invalid. The
+     * function will then push the new shape into the vector.
      */
 
     void saveAddShape();
