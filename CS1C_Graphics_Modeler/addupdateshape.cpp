@@ -98,7 +98,10 @@ AddUpdateShape::AddUpdateShape(custom::vector<shape*> *vec, QWidget *parent) :
     ui->FontWeightEntry->addItem("Normal");
     ui->FontWeightEntry->addItem("Bold");
 
-    on_ShapesEntry_currentIndexChanged(0);
+    if(shapeVector->size() != 0)
+    {
+        on_ShapesEntry_currentIndexChanged(0);
+    }
 
 }
 
@@ -771,10 +774,19 @@ void AddUpdateShape::updateText(shape *currentShape)
 
 void AddUpdateShape::saveAddShape()
 {
-
-    if(ui->ShapeIdEntry->value() == (*shapeVector)[ui->ShapesEntry->currentIndex()]->getID()
+    bool validID = false;
+    if(shapeVector->size() == 0)
+    {
+        validID = true;
+    }
+    else if(ui->ShapeIdEntry->value() == (*shapeVector)[ui->ShapesEntry->currentIndex()]->getID()
             ||(ui->ShapeIdEntry->value() != (*shapeVector)[ui->ShapesEntry->currentIndex()]->getID()
             && uniqueShapeID(ui->ShapeIdEntry->value())))
+    {
+        validID = true;
+    }
+
+    if(validID)
         //If the ID has not been changed OR the Id is unique (i.e. the ID is valid)
     {
         QMessageBox invalidDimensions;

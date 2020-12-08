@@ -141,9 +141,18 @@ void MainWindow::on_AddShapeButton_clicked()
 
 void MainWindow::on_EditShapeButton_clicked()
 {
-    addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
-    addUpdateWindow->updateShapeSetup();
-    addUpdateWindow->show();
+    if(ui->drawArea->getVec()->size() == 0)
+    {
+        QMessageBox noShapes;
+        noShapes.setText("WARNING: There must be at least one shape to open the edit window.");
+        noShapes.exec();
+    }
+    else
+    {
+        addUpdateWindow = new AddUpdateShape(ui->drawArea->getVec());
+        addUpdateWindow->updateShapeSetup();
+        addUpdateWindow->show();
+    }
 }
 
 void MainWindow::on_TestimonialsButton_clicked()

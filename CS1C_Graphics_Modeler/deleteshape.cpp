@@ -27,6 +27,6 @@ void deleteShape::on_deleteShapeCancelButton_clicked()
 
 void deleteShape::on_deleteShapeDeleteButton_clicked()
 {
-    shapeVector->erase(shapeVector->begin() + ui->deleteShapeEntry->currentIndex());
+    shapeVector->erase(ui->deleteShapeEntry->currentIndex());
     this->close();
 }

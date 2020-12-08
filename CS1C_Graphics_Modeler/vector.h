@@ -241,23 +241,17 @@ public:
         return returnIt;
     }
      
-    iterator erase(iterator p) // remove element pointed to by p
+    void erase(int indexToDelete) // remove element pointed to by p
     {
         T* temp = new T[space];
-        int i = 0;
-        iterator j;
-        for (j= begin(); j < p; j++)
+        int x = 0;
+        for(int i = 0; i < size_v; i++)
         {
-            temp[i] = *j;
-        }
-
-        iterator returnIt = temp + i;
-        i++;
-
-        for (i; i < size_v; ++i)
-        {
-            temp[i] = *j;
-            j++;
+            if(i != indexToDelete)
+            {
+                temp[x] = elem[i];
+                x++;
+            }
         }
 
         size_v--;
@@ -265,9 +259,6 @@ public:
         delete[] elem;
         elem = temp;
         temp = nullptr;
-
-        return returnIt;
-        return NULL;
     }
 private:
       //CURRENT COUNT OF ELEMENTS IN INTERNAL ARRAY
