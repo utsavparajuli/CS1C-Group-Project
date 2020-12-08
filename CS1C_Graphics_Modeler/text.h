@@ -338,6 +338,13 @@ private:
 
      QString textFontWeightName;
 
+     /*!
+      * \brief shapeName is a private QString variable holding the name of the text object.
+      *
+      * Used in displaying the text ID
+      */
+     QString shapeName = "Text";
+
 };
 
 #endif // TEXT_H
