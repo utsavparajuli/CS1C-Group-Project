@@ -8,9 +8,7 @@
 #include <QCoreApplication>
 #include <QMessageBox>
 
-<<<<<<< Updated upstream
 void saveFile(custom::vector<shape*>&, const QString);
-=======
 /*! \file saveFile.h
  *  \brief A file containing functionality to save shape information to an external file.
  *
@@ -33,18 +31,5 @@ void saveFile(custom::vector<shape*>&, const QString);
  */
 
 void saveFile(custom::vector<shape*> &shapeList, const QString fileName);
-
-
-
-QString saveLine(shape*);
-QString savePolyline(shape*);
-QString savePolygon(shape*);
-QString saveRectangle(shape*);
-QString saveSquare(shape*);
-QString saveEllipse(shape*);
-QString saveCircle(shape*);
-QString saveText(shape*);
-QString shapeToString(ShapeType);
->>>>>>> Stashed changes
 
 #endif // SAVEFILE_H
