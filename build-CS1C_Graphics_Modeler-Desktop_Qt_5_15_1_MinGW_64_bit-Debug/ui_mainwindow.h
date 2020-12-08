@@ -224,7 +224,7 @@ public:
 
         drawArea = new DrawingWidget(MainPage);
         drawArea->setObjectName(QString::fromUtf8("drawArea"));
-        drawArea->setGeometry(QRect(30, 70, 1091, 531));
+        drawArea->setGeometry(QRect(30, 70, 1141, 531));
         drawArea->setStyleSheet(QString::fromUtf8("background-color:white;\n"
 "border: 3px solid black;"));
         pushButton = new QPushButton(MainPage);
@@ -282,7 +282,7 @@ public:
         output->setFont(font5);
         backButton = new QPushButton(ViewTestimonials);
         backButton->setObjectName(QString::fromUtf8("backButton"));
-        backButton->setGeometry(QRect(0, 10, 112, 32));
+        backButton->setGeometry(QRect(20, 10, 112, 32));
         stackedWidget->addWidget(ViewTestimonials);
         ContactPage = new QWidget();
         ContactPage->setObjectName(QString::fromUtf8("ContactPage"));
@@ -374,7 +374,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
