@@ -231,12 +231,6 @@ public:
          */
 
         void default_style();
-<<<<<<< Updated upstream
-=======
-
-        // not defined
-        void draw_rect(int width, int height);
->>>>>>> Stashed changes
 
         /* construct_ID_String */
         /*!

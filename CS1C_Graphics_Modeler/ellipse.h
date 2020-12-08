@@ -3,146 +3,208 @@
 
 #include "shape.h"
 
-//  Derived class from base class Shape
+/*! \file ellipse.h
+ *  \brief A file outlining the ellipse class methods.
+ */
 
-/*  Ellipse is a derived class of the Shape class.
- *  Takes two points, and draws an ellipse with them.
- *  Ellipse can be styled with different pens and brushes.
+/*!
+ * \brief The ellipse class inherits from shape and is used to create, modify, and draw a 2D ellipse.
+ *
+ * The ellipse class inherits from shape and overrides virtual functions declared in the shape class.
+ * The ellipse class includes functions to set the coordinates of the polygon, move the polygon, draw the polygon
+ * to the canvas, calculate its perimeter, and calculate its area.
  */
 
 class ellipse: public shape
 {
 public:
-
-    // Default Ellipse constructor
-    /* Function calls setShape() and setPoint() functions
-    *  Base class constructor calls setShape() and assigns
-    *  enum Ellipse to the Shape base class, assigns x, y,
-    *  width, height values.
-    */
-
+    // default constructor
     ellipse(){};
 
-    // Overloaded Ellipse constructor
-    /* Function calls setShape() and setPoint() functions
-    *  Base class constructor calls setShape() and assigns
-    *  enum Ellipse to the Shape base class, assigns x, y,
-    *  width, height values that were passed.
-    */
+    /* constructor */
+    /*!
+     * \brief Constructor creates an ellipse object with passed parameters.
+     * \param x is an integer holding the x coordinate for the ellipse.
+     * \param y is an integer holding the y coordinate for the ellipse.
+     * \param width is an integer holding the width of the ellipse.
+     * \param height is an integer holding the height of the ellipse.
+     */
+
 
     ellipse(int x, int y, int width, int height);
 
-    // Ellipse copy constructor
-    /* Copy constructor for Ellipse objects
-     * \param &source is an Ellipse object
-     * passed by const reference.
-    */
+    /* copy constructor */
+    /*!
+     * \brief Copy constructor creates an ellipse object with passed ellipse object's data.
+     * \param source is a constant reference to an ellipse object whose data members are copied.
+     */
 
      ellipse(const ellipse& source);
 
-    // Ellipse destructor
-    /* Destructor is called automatically.
-     * Overrides base class virtual destructor.
-    */
+     /* destructor */
+     /*!
+      * \brief virtual destructor will automatically destroy the ellipse object when appropriate. Overrides the shape class destructor.
+      */
 
     ~ellipse()override;
 
-
-    // setter function setCenter sets QPoint center
-    /* Passed two int values.
-    *  \param x sets the x coordinate of the object's center.
-    *  \param y sets the y coordinate of the object's center.
-    */
+     /* setCenter */
+     /*!
+      * \brief Function takes two integer arguments and uses them to set the x and y coordinates of the ellipse's center.
+      * \param x is an integer used to set the ellipse's x coordinate.
+      * \param y is an integer used to set the ellipse's y coordinate.
+      */
 
     void setCenter(int x, int y);
 
-    // setter function setHeight sets object's width.
-    /* Passed an int value.
-    *  \param width sets the width of the object.
-    */
+    /* setWidth */
+    /*!
+     * \brief Function takes an integer argument and uses it to set the ellpse object's width.
+     * \param width is an integer argument used to set the ellipse's width.
+     */
 
     void setWidth(int width);
 
-    // setter function setHeight sets object's height.
-    /* Passed an int value.
-    *  \param width sets the height of the object.
-    */
+    /* setHeight */
+    /*!
+     * \brief Function takes an integer argument and uses it to set the ellpse object's height.
+     * \param height is an integer argument used to set the ellipse's height.
+     */
 
     void setHeight(int height);
 
-    // function that returns the y value of the ellipse center
+    /* getX */
+    /*!
+     * \brief Function returns the value of the ellipse's center x coordinate. Function is constant.
+     * \return integer holding the x coordinate of the ellipse's center.
+     */
 
     int getX()const;
 
-    // function that returns the y value of the ellipse center
+    /* getY */
+    /*!
+     * \brief Function returns the value of the ellipse's center y coordinate. Function is constant.
+     * \return integer holding the y coordinate of the ellipse's center.
+     */
 
     int getY()const;
 
-    // function that returns the width of the ellipse
+    /* getWidth */
+    /*!
+     * \brief Function returns the value of the ellipse's width. Function is constant.
+     * \return integer holding the width of the ellipse.
+     */
 
     int getWidth()const;
 
-    // function that returns the height of the ellipse
+    /* getHeight */
+    /*!
+     * \brief Function returns the value of the ellipse's height. Function is constant.
+     * \return integer holding the height of the ellipse.
+     */
 
     int getHeight()const;
 
-    // function that returns the QString StringID of the ellipse
+    /* getShapeID */
+    /*!
+     * \brief Function returns the shape'd ID as a string. Function is constant.
+     * \return QString object holding the ID of the ellipse.
+     */
 
     QString getShapeID()const;
 
-    // draw function draws an ellipse on the screen
-    /* Overrides base class virtual function.
-    *  Sets the QPainter object pen.
-    *  Sets the QPainter object brush.
-    *  Sets the QPainter coordinates with which to draw an ellipse.
-    *  Passed two int values which default to 0.
-    *  \param x is the center x position of the ellipse
-    *  \param y is the center y position of the ellipse
-    */
+    /* draw */
+    /*!
+     * \brief This function takes QPaintDevice as an argument and draws the ellipse on the canvas. Overrides the shape class method.
+     * \param device is a QPaintDevice pointer holding the canvas to be drawn.
+     */
 
-    void draw(QPaintDevice*)override;
+    void draw(QPaintDevice *device)override;
 
-    // move function changes the position of the object
-    /* Overrides base class virtual function.
-     * Checks to make sure that the new coordinates that are
-    *  passed as parameters does not force the object off the screen.
-    *  If it passes the logic check, the passed parameters are saved
-    *  as the new QPoint center.
-    *  \param x is the x-axis value of the ellipse center
-    *  \param y is the y-axis value of the ellipse center
-    */
+    /* move */
+    /*!
+     * \brief This function takes 2 const int parameters and uses them to move the ellipse to the new coordinates.
+     * \param x the x coordinate for the new center point.
+     * \param y the y coordinate for the new center point.
+     */
 
     void move(const int x,const int y) override;
 
-    // function calculates and returns the perimeter of the ellipse
-    /* Overrides base class virtual function.
-     * Returns a double value with the perimeter of the ellipse.
-    */
+    /* calcPerimeter */
+    /*!
+     * \brief Function calculates and returns the perimeter of the ellipse. Overrides the shape class method.
+     * \return A double value is returned holding the ellipse's perimeter.
+     */
 
     double calcPerimeter() override {return 2 * M_PI * sqrt(((height * height) + (width * width)) / 2);}
 
-    // function calculates and returns the area of the ellipse
-    /* Overrides base class virtual function.
-     * Returns a double value with the area of the ellipse.
-    */
+    /* calcArea */
+    /*!
+     * \brief Function calculates and returns the area of the ellipse. Overrides the shape class method.
+     * \return A double value is returned holding the ellipse's area.
+     */
 
     double calcArea()override{return M_PI * height * width;}
 
-    // function draws a label for the ellipse shape id at its top left corner
-    /* Finds the top - left corner of an object, and assigns
-     * an integer value to the object that displays on screen.
-    */
+    /* get_cords */
+    /*!
+     * \brief This function returns a QPoint object which holds the ellipse's x and y coordinates. Overrides the shape class method.
+     * \return A QPoint object constructed using the ellipse's x and y coordinates.
+     */
 
     QPoint get_cords() override {return QPoint(this->x, this->y);}
 
+    // not defined
     void drawID();
+
+    /* getShapeString */
+    /*!
+     * \brief Virtual function returns a string documenting all of the object's member variables and their values. Overrides the shape class method.
+     * \return A QString object holding a string list of all of the object's member variables and their values.
+     */
+
     virtual QString getShapeString()override;
 
 private:
+
+    /*!
+     * \brief x is a private integer variable holding the x coordinate of the ellipse.
+     *
+     * Used in drawing the ellipse on the canvas at a specific location.
+     */
+
     int x;
+
+    /*!
+     * \brief y is a private integer variable holding the y coordinate of the ellipse.
+     *
+     * Used in drawing the ellipse on the canvas at a specific location.
+     */
+
     int y;
+
+    /*!
+     * \brief width is a private integer variable holding the width coordinate of the ellipse.
+     *
+     * Used in drawing the ellipse on the canvas at a specific location.
+     */
+
     int width;
+
+    /*!
+     * \brief height is a private integer variable holding the height coordinate of the ellipse.
+     *
+     * Used in drawing the ellipse on the canvas at a specific location.
+     */
+
     int height;
+
+    /*!
+     * \brief shapeName is a private QString variable holding the name of this shape.
+     *
+     * Used in creating and displaying the ellipse's label.
+     */
+
     QString shapeName = "Ellipse";
 
 };
